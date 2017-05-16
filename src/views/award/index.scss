@@ -1,0 +1,92 @@
+.trophy {
+  width: 100%;
+  clear: both;
+  display:inline-block;
+  overflow-y: scroll;
+  .number{
+    font-size: 18px;
+  }
+  .title {
+    color: #6cadff;
+    font-size: 18px;
+    margin-top: 45px;
+    &:first-child{
+      margin: 0;
+    }
+  }
+  ul {
+    clear:both;
+    display:table;
+    margin-top: 25px;
+    padding: 0;
+    li {
+      float: left;
+      text-align: left;
+      .item-inner{
+        float:left;
+        text-align:center;
+      }
+      .image{
+        width: 100%;
+        height: 60px;
+        display:table;
+        vertical-align: bottom;
+        img{
+          vertical-align: bottom;
+        }
+      }
+      p {
+        margin: 5px;
+      }
+    }
+  }
+  ul.comprehensive{
+    width: 100%;
+    li{
+      width: 24%;
+    }
+  }
+  ul.single{
+    width: 80%;
+    li{
+      width: 33%;
+    }
+  }
+  ul.other{
+    width: 735px;
+  }
+  .ranking {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .gold {
+    .color {
+      color: #e3c048;
+    }
+  }
+  .light {
+    .color {
+      color: #888;
+    }
+  }
+  .copper {
+    .color {
+      color: #d4b46f;
+    }
+  }
+  .good {
+    padding-top: 8px;
+    .color {
+      color: #448ce4;
+    }
+  }
+  .info {
+    line-height: 24px;
+    img {
+      position: relative;
+      top: 3px;
+      margin-right: 3px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+#cooperation {
+  .info {
+    .sponsor{
+      width: 750px;
+    }
+    .title {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    ul {
+      margin-top: 20px;
+      width: 100%;
+      padding: 0;
+      clear: both;
+      display: table;
+    }
+    li {
+      margin-bottom: 20px;
+      margin-right: 40px;
+      width: 146px;
+      float: left;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

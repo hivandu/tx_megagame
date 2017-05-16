@@ -1,0 +1,42 @@
+@media screen and (max-width:1300px) {
+  .goto {
+    position: fixed;
+    &.upload {
+      top: 112px;
+    }
+    &.all {
+      top: 167px;
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .goto {
+    position: absolute;
+  }
+}
+
+.goto {
+  right: 19px;
+  width: 135px;
+  height: 45px;
+  background: #fff url(../../../ossweb-img/image/ic_forward.png) no-repeat;
+  background-position: 130px center;
+  color: #116fe1;
+  font-size: 14px;
+  line-height: 45px;
+  text-align: center;
+  padding-right: 20px;
+  opacity: 0.75;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.upload {
+  top: 70px;
+}
+
+.all {
+  top: 70+10+45px;
+}

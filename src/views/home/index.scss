@@ -1,0 +1,23 @@
+#home {
+    position: relative;
+    z-index:0;
+  .bg-front, .bg-nav {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+  }
+  .bg-front{
+    background: url(../../../ossweb-img/image/bg-nav.jpg) no-repeat;
+    background-size: cover;
+    background-pointer: center;
+  }
+  .logo{
+    position: absolute;
+    left:0;
+    top:30px;
+    left:-190px;
+    z-index:999;
+  }
+}

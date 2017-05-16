@@ -1,0 +1,27 @@
+[{
+  "name":"精彩前瞻"
+},{
+  "name": "大赛首页",
+  "link": "/home"
+}, {
+  "name": "大赛简介",
+  "link": "/introduce"
+}, {
+  "name": "奖项设置",
+  "link": "/award"
+}, {
+  "name": "大赛评委",
+  "link": "/mentor"
+}, {
+  "name": "精彩回顾",
+  "link": "/review"
+}, {
+  "name": "赛事规则",
+  "link": "/rule"
+}, {
+  "name": "活动资讯",
+  "link": "/activityItems"
+},{
+  "name": "合作伙伴",
+  "link": "/cooperation"
+}]

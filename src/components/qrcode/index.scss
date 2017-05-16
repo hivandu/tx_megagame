@@ -1,0 +1,94 @@
+@media screen and (max-width:1300px) {
+  #qrcode {
+    position: fixed;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  #qrcode {
+    position: absolute;
+  }
+}
+
+#qrcode {
+  top: 600px;
+  right: 19px;
+  z-index: 99;
+  clear: both;
+  display: table;
+  .tab {
+    width: 100%;
+    display: table;
+    a {
+      border-right: 1px solid #2b85f6;
+      display: table-cell;
+      width: 50%;
+      text-align: center;
+      text-decoration: none;
+      line-height: 40px;
+      border-bottom: 1px solid #2b85f6;
+      color: #2b85f6;
+      background-color: #eee;
+      &.selected {
+        background-color: #fff;
+        font-weight: bold;
+        border-bottom: none;
+      }
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+  .content {
+    padding: 30px 15px;
+  }
+  .qrcode-code {
+    width: 100px;
+    height: 100px;
+    float: left;
+  }
+  .qr-info {
+    float: left;
+    margin-left: 15px;
+    margin-top: 3px;
+    width: 130px;
+    color: #2b85f6;
+  }
+  .hoverBtn {
+    width: 80px;
+    width: 80px;
+    opacity: 0.75;
+    .qr-thum {
+      padding: 8px;
+      background-color: #fff;
+    }
+  }
+  &:hover {
+    .qrcode {
+      display: inline-block;
+    }
+    .hoverBtn{
+      opacity: 1;
+    }
+  }
+  .hoverBtn {
+    float: right;
+    cursor: pointer;
+  }
+  .qrcode {
+    display: none;
+    margin-right: 10px;
+    width: 280px;
+    height: 220px;
+    background-color: #fff;
+  }
+  .btnInfo {
+    margin-top: 5px;
+    width: 80px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    background-color: #fff;
+    color: #2b85f6;
+  }
+}

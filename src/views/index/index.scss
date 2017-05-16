@@ -1,0 +1,66 @@
+#wrap {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  .bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url(../../../ossweb-img/image/bg.jpg) no-repeat;
+    background-size: cover;
+    background-pointer: center;
+  }
+  #canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    vertical-align: baseline;
+    z-index: 1;
+    opacity: 0.23;
+  }
+}
+
+#content {
+  position: absolute;
+  width: 990px;
+  left: 191px;
+  margin-bottom: 50px;
+  z-index:2;
+}
+
+.content {
+  position: relative;
+  .content-title {
+    margin-top: 30px;
+    color: #fff;
+    font-size: 16px;
+    width: 735px;
+    .title-1 {
+      font-size: 30px;
+    }
+    .title-2 {
+      img {
+        height: 15px;
+      }
+    }
+    .title-info {
+      margin-top: 35px;
+    }
+  }
+}
+
+.certificate {
+  margin-top: 100px;
+  width: 264px;
+  p {
+    text-align: center;
+    font-size: 22px;
+  }
+}
+

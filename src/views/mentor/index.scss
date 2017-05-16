@@ -1,0 +1,68 @@
+#mentor {
+  position: relative;
+  .title .title-info {
+    width: 655px;
+    font-size: 16px;
+  }
+  .info {
+    position: relative;
+    ul {
+      margin-top: 20px;
+      width: 660px;
+      padding-left: 72px;
+      clear: both;
+      display: inline-block;
+    }
+    li {
+      text-align: center;
+      float: left;
+      margin-left: 30px;
+      overflow: hidden;
+      &:first-child {
+        margin-left: 0;
+      }
+      .image {
+        border: 4px solid #2471dd;
+        width: 192px;
+        height: 186px;
+        overflow: hidden;
+      }
+      img {
+        width: 100%;
+      }
+      .name {
+        font-size: 16px;
+      }
+      .info {
+        font-size: 14px;
+        margin-top: 0;
+      }
+    }
+  }
+  .person-info {
+    width: 200px;
+    height: 50px;
+    color: #fff;
+    background-color: #2471dd;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    margin-top: -23px;
+    cursor: pointer;
+  }
+  .swiper-button-next {right: 184px;
+      transform: rotate(180deg);}
+  .swiper-button-prev,
+  .swiper-button-next {
+    background: none;
+  }
+}
+.swiper-content{
+  position: relative;
+}
+.swiper-element{
+  position: absolute;
+  top:0;
+}

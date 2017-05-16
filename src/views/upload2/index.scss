@@ -1,0 +1,72 @@
+#upload-sec {
+  .info {
+    margin-top: 40px;
+    width: 613px;
+    padding-right: 30px;
+  }
+  div.submit {
+    margin-top: 50px;
+    input.submit {
+      cursor: pointer;
+      margin-left: 50px;
+    }
+  }
+  input[type="file"] {
+    width: 135px;
+    // height: 38px;
+    padding-left: 30px;
+    background-color: #2471dd;
+    color: #fff;
+    border: none;
+    margin-left: 10px;
+    background: #2471dd url('../../../ossweb-img/image/ic-add.png') no-repeat;
+    background-position: 30px center;
+  }
+  label.none {
+    background: none;
+  }
+  .fileUp {
+    position: relative;
+    overflow: hidden;
+    input[type="file"] {
+      position: absolute;
+      top: 0;
+      left: 110px;
+      font-size: 38px;
+      opacity: 0;
+      cursor: pointer;
+      &.image {
+        font-size: 200px;
+        width: 255px;
+        height: 240px;
+      }
+    }
+    .cover {
+      margin-top: 50px;
+      margin-left: 110px;
+      width: 255px;
+      height: 190px;
+      background: #d7e2ff url('../../../ossweb-img/image/bg-addfile.png') no-repeat;
+    }
+    .instructions {
+      margin-top: 45px;
+      margin-left: 110px;
+      color: #2b85f6;
+      font-size: 14px;
+    }
+    .fileAdd {
+      float: left;
+      line-height: 38px;
+      width: 105px;
+      height: 38px;
+      padding-left: 30px;
+      background-color: #2471dd;
+      color: #fff;
+      border: none;
+      margin-left: 10px;
+      background: #2471dd url('../../../ossweb-img/image/ic-add.png') no-repeat;
+      background-position: 30px center;
+      text-align: center;
+    }
+  }
+}

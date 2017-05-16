@@ -1,0 +1,81 @@
+#slide {
+  position: absolute;
+  top: 40px;
+  transition: all 0.3s;
+  ul {
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 410px;
+    margin: 0;
+    width: 135px;
+    position: absolute;
+    top: 0;
+    padding-left: 30px;
+    li:last-child::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      left: -34px;
+      top: 40%;
+      background: url(../../../ossweb-img/image/slide-point.png) no-repeat;
+      transition: .5s ease;
+    }
+    li {
+      cursor: pointer;
+      position: relative;
+      text-align: left;
+      height: 50px;
+      line-height: 50px;
+      font-size: 20px;
+      color: #fff;
+    }
+    li.selected {
+      font-size: 26px;
+      color: #2b85f6;
+      height: 50px;
+      line-height: 50px;
+    }
+    li:nth-child(2).selected ~ li:last-child::before {
+      top: -668%;
+    }
+    li:nth-child(3).selected ~ li:last-child::before {
+      top: -568%;
+    }
+    li:nth-child(4).selected ~ li:last-child::before {
+      top: -468%;
+    }
+    li:nth-child(5).selected ~ li:last-child::before {
+      top: -368%;
+    }
+    li:nth-child(6).selected ~ li:last-child::before {
+      top: -268%;
+    }
+    li:nth-child(7).selected ~ li:last-child::before {
+      top: -168%;
+    }
+    li:nth-child(8).selected ~ li:last-child::before {
+      top: -68%;
+    }
+    li:nth-child(9).selected ~ li:last-child::before {
+      top:50%;
+      color: red;
+    }
+  }
+  .line {
+    width: 8px;
+    height: 492px;
+    background: url(../../../ossweb-img/image/slide-line.png) no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+#slide.pushdown{
+  top:102px;
+}

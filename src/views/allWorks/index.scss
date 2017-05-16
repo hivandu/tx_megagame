@@ -1,0 +1,40 @@
+#all-work {
+  .info {
+    ul {
+      padding: 0;
+      clear: both;
+      display: table;
+    }
+  }
+  .items{
+    padding-top: 20px;
+  }
+  .item {
+    width: 250px;
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 175px;
+      vertical-align: bottom
+    }
+    .link {
+      width: 100%;
+      height: 50px;
+      background-color: #fff;
+      color: #051740;
+      a {
+        color: #051740;
+        text-decoration: none;
+        line-height: 50px;
+        &:link,
+        &:hover,
+        &:visited {
+          color: #051740;
+        }
+      }
+    }
+  }
+}

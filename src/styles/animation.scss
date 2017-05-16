@@ -1,0 +1,123 @@
+@import "./keyframe";
+// push up
+.push-up-enter {
+  opacity: 0;
+  transform: translate(0, 100%);
+  transition: all .1s ease;
+}
+
+.push-up-enter-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: all 0.5s ease;
+}
+
+.push-up-leave {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: all .1s ease;
+}
+
+.push-up-leave-active {
+  opacity: 0;
+  transform: translate(0, -100%);
+  transition: all 0.5s ease;
+}
+
+// push
+.push-left-enter {
+  opacity: 0;
+  transform: translate(100%, 0);
+  transition: all .1s ease;
+}
+
+.push-left-enter-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: all 1s ease;
+}
+
+.push-left-leave {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: all .1s ease;
+}
+
+.push-left-leave-active {
+  opacity: 0;
+  transform: translate(-100%, 0);
+  transition: all 1s ease;
+}
+
+.push-right-enter {
+  opacity: 0;
+  transform: translate(-100%, 0);
+  transition: all .1s ease;
+}
+
+.push-right-enter-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: all 1s ease;
+}
+
+.push-right-leave {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: all .1s ease;
+}
+
+.push-right-leave-active {
+  opacity: 0;
+  transform: translate(100%, 0);
+  transition: all 1s ease;
+}
+
+.fade-enter-active {
+  transition: opacity .2s ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  opacity: 0;
+}
+
+.fadeInLeftBig {
+  animation: fadeInLeftBig 0.8s .2s cubic-bezier(0, 0.54, 0, 0.76) both;
+}
+
+.fadeInLeftBig_2 {
+  animation: fadeInLeftBig 0.9s .3s cubic-bezier(0, 0.54, 0, 0.76) both;
+}
+
+.fadeInLeftBig_3 {
+  animation: fadeInLeftBig 1.3s 0.2s cubic-bezier(0, 0.54, 0, 0.76) both;
+}
+
+.fadeInUp {
+  animation: fadeInUp 1s 1.4s ease both;
+}
+
+@keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    transform: translateX(-2000px) rotateX(45deg) rotateZ(60deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotateX(45deg) rotateZ(60deg);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px)
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
