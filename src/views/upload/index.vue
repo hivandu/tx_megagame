@@ -69,11 +69,18 @@
 export default {
   name: 'upload-first',
   updated() {
-    console.log('change');
+
   },
   watch: {
-    formData(val) {
-      console.log('formData change');
+    // formData(val) {
+    //   console.log('formData change');
+    // },
+
+    formData:{
+      deep:true,
+      handler:function(val, oldVal){
+        this.submitStatus = true;
+      }
     },
     // 监听验证码输入
     verification(val, oldVal) {
@@ -120,10 +127,8 @@ export default {
       this.$http.get('ossweb-img/mock/submit_info.json', {
         _formData
       }).then(function(res) {
+        _this.submitStatus = false;
         sessionStorage.setItem('formData', JSON.stringify(_this.formData));
-        _this.$router.push({
-          path: '/uploadSec'
-        });
       }).catch(function(err) {
         alert('提交失败');
         console.log(err);

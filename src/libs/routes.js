@@ -10,13 +10,10 @@ export default [
   , { path: '/activityItems', component: Views.ActivityItems } //
   , { path: '/allWorks', component: Views.AllWorks } //
   , { path: '/award', component: Views.Award } //
-  , { path: '/look', component: Views.Look } //
-  , { path: '/looksec', component: Views.LookSec } //
   , { path: '/mentor', component: Views.Mentor } //
   , { path: '/review', component: Views.Review } //
   , { path: '/rule', component: Views.Rule } //
   , { path: '/upload', component: Views.Upload }
-  , { path: '/uploadSec', component: Views.UploadSec } 
   , { path: '/workInfo', component: Views.WorkInfo } //
   , { path: '/cooperation/', component: Views.Cooperation } //
 ]

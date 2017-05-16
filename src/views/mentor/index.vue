@@ -12,13 +12,13 @@
       </div>
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" v-for="item in 3">
-            <ul v-for="item in 2">
-              <li class="foto" v-for="item in 3">
-                <div class="image"><img src="../../../ossweb-img/image/pw2.jpg" alt=""></div>
+          <div class="swiper-slide" v-for="(slide, key) in mentorData">
+            <ul v-for="(group, key) in slide.result">
+              <li class="foto" v-for="(item, key) in group.result" :key="key">
+                <div class="image"><img :src=item.image alt=""></div>
                 <div class="person-info">
-                  <div class="name">某某某 Nora</div>
-                  <div class="info">腾讯某部门总监什么的</div>
+                  <div class="name">{{item.name}}</div>
+                  <div class="info">{{item.info}}</div>
                 </div>
               </li>
             </ul>
@@ -35,24 +35,51 @@
 export default {
   name: 'mentor',
   data() {
-    return {}
+    return {
+
+      mentorData: Array
+    }
   },
-  mounted() {
-    var mySwiper = new Swiper('.swiper-container', {
-      direction: 'horizontal',
+  watch:{
+    mentorData:{
+      deep: true,
+      handler:function(val, oldVal){
+        this.setSlide();
+      }
+    }
+  },
+  created() {
+    this.getMentor();
+  },
+  methods: {
+    getMentor() {
+      const _this = this;
+      this.$http.get('../../../ossweb-img/mock/mentor.json').then(function(res) {
+        if (res.data.success) {
+          _this.mentorData = res.data.obj;
+        }
+      }).catch(function(err) {
 
-      // 如果需要分页器
-      pagination: '.swiper-pagination',
+      })
+    },
 
-      // 如果需要前进后退按钮
-      nextButton: '.swiper-button-next',
-      prevButton: '.swiper-button-prev',
+    setSlide() {
+      var mySwiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
 
-      watchSlidesProgress: true,
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
 
-      // 关闭拖动
-      onlyExternal: true,
-    });
+        // 如果需要前进后退按钮
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+
+        watchSlidesProgress: true,
+
+        // 关闭拖动
+        onlyExternal: true,
+      });
+    }
   }
 }
 </script>
