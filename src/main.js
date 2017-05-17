@@ -13,7 +13,9 @@ import routes from './libs/routes'
 import axios from 'axios'
 
 // 导入base64转换
-import VueBase64FileUpload from 'vue-base64-file-upload';
+import VueBase64FileUpload from 'vue-base64-file-upload'
+
+import Swiper from 'swiper'
 
 Vue.use(VueRouter)
 
@@ -31,6 +33,10 @@ Vue.prototype.$http = axios.create({
   }]
 })
 
+const mySwiper = new Swiper();
+
+console.log(mySwiper);
+
 const router = new VueRouter({
   mode: 'hash',
   template: '<App/>',
@@ -39,25 +45,6 @@ const router = new VueRouter({
 })
 
 Vue.config.productionTip = false
-
-// 判断IE版本
-var isIE = function(ver) {
-  var b = document.createElement('b')
-  b.innerHTML = '<!--[if IE ' + ver + ']><i></i><![endif]-->'
-  return b.getElementsByTagName('i').length === 1
-}
-if (isIE(6)) {
-  // IE 6
-}
-// ...
-if (isIE(9)) {
-  // IE 9
-}
-var ie = isIE()
-if (isIE(6)||isIE(7)||isIE(8)) {
-  console.log('更换浏览器');
-}
-// alert('ie6:' + isIE(6) + '\n' + 'ie7:' + isIE(7) + '\n' + 'ie8:' + isIE(8) + '\n' + 'ie9:' + isIE(9) + '\n' + 'ie:' + isIE())
 
 
 /* eslint-disable no-new */

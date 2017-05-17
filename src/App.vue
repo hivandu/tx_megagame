@@ -118,7 +118,7 @@ export default {
 .login {
   font-weight: bold;
   width: 155px;
-  right: 19px;
+  right: 50px;
   z-index: 99;
   color: #fff;
   text-align: right;

@@ -25,11 +25,16 @@
         }
       }
       p {
-        margin-top: 5px;
         .color {
           display:inline-block;
           color: #2b85f6;
           margin-top: 15px;
+        }
+        &.title{
+          margin-top:20px;
+        }
+        &.mt{
+          margin-top:10px;
         }
       }
     }

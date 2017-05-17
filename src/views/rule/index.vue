@@ -76,27 +76,27 @@
       </div>
       <div class="info-title">评审纬度</div>
       <div class="info-main">
-        <p>综合奖项评审纬度：</p>
+        <p class="title">（1）综合奖项评审纬度：</p>
         <div>
-          <p><span class="color">作品创意得分</span>（50%）：</p>
+          <p class="mt">作品创意得分（50%）</p>
           <p>说明：从游戏玩法创新性、关卡设计的趣味性等方面考量。</p>
-          <p><span class="color">美术风格得分</span>（30%）：</p>
+          <p class="mt">美术风格得分（30%）</p>
           <p>说明：美术风格与作品的匹配度、美术风格的独特性、美术设计的美感等方面考量。</p>
-          <p><span class="color">游戏完成度得分</span>（20%）:</p>
+          <p class="mt">游戏完成度得分（20%）</p>
           <p>说明：从游戏内容实现程度、游戏操作体验感等方面考量。</p>
-          <p><span class="color">赛事主题贴合度：</span></p>
+          <p class="mt">赛事主题贴合度</p>
           <p>说明：凡是创作贴合本次赛事三个主题，可获得总分额外1分的加分。</p>
         </div>
-      </div>
-      <div class="info-title">单项奖评审纬度：</div>
-      <div class="info-main">
-        <p>“最佳创意设计奖”-作品创意得分（100%）</p>
-        <p>“最佳美术设计奖”-美术风格得分（100%）</p>
-        <p>“最佳人气奖”-决赛现场大众评委投票产生</p>
-      </div>
-      <div class="info-title">最佳导师团奖评审纬度：</div>
-      <div class="info-main">
-        <p>团队对导师团无严重负面反馈及投诉。</p>
+        <p class="title">（2）单项奖评审纬度：</p>
+        <div>
+          <p class="mt">“最佳创意设计奖”-作品创意得分（100%）</p>
+          <p class="mt">“最佳美术设计奖”-美术风格得分（100%）</p>
+          <p class="mt">“最佳人气奖”-决赛现场大众评委投票产生</p>
+        </div>
+        <p class="title">（3）最佳导师团奖评审纬度：</p>
+        <div>
+          <p class="mt">团队对导师团无严重负面反馈及投诉。</p>
+        </div>
       </div>
       <div class="info-title">版权声明</div>
       <div class="info-main">

@@ -8,7 +8,7 @@
     </div>
     <div class="info scroll">
       <div class="nav-info">
-        决赛评委将由腾讯游戏学院、腾讯各工作室、及研发发行部门boss组成，同时也会邀请到 行业媒体及大牛参与。各大工作室导师联盟在赛事过程中对参赛者进行培养，为参赛学生 提供寻求问题解决的途径和相应的指导。
+        决赛评委将由腾讯游戏学院、腾讯各工作室、及研发发行部门boss组成，同时也会邀请到行业媒体及大牛参与。各大工作室导师联盟在赛事过程中对参赛者进行培养，为参赛学生提供寻求问题解决的途径和相应的指导。
       </div>
       <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -32,19 +32,22 @@
   </div>
 </template>
 <script>
+import Swiper from 'swiper'
+
 export default {
   name: 'mentor',
   data() {
     return {
-
+      Swiper: Swiper,
       mentorData: Array
     }
   },
-  watch:{
-    mentorData:{
+  watch: {
+    mentorData: {
       deep: true,
-      handler:function(val, oldVal){
-        this.setSlide();
+      handler: function(val, oldVal) {
+        this.setSwiper();
+        $('.swiper-button-next').removeClass('class name')
       }
     }
   },
@@ -63,19 +66,15 @@ export default {
       })
     },
 
-    setSlide() {
+    setSwiper() {
       var mySwiper = new Swiper('.swiper-container', {
         direction: 'horizontal',
-
-        // 如果需要分页器
-        pagination: '.swiper-pagination',
-
+        autoplay : 5000,
+        autoplayDisableOnInteraction : true,
         // 如果需要前进后退按钮
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
-
-        watchSlidesProgress: true,
-
+        observer:true,
         // 关闭拖动
         onlyExternal: true,
       });

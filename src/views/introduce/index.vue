@@ -9,8 +9,8 @@
       </div>
     </div>
     <div class="scroll info">
-      <div class="nav-info">
-        由腾讯游戏学院主办，旨在通过游戏创意制作过程及作品产出发掘高校优秀的游戏研发人才和创意作品，给学生一个展示自己的舞台，打造属于高校游戏人自己的赛事。
+      <div class="nav-info" style="text-align:justify">
+        游戏，就真造一次！为了给高校学生一个展示自我的舞台，打造属于高校游戏人自己的赛事，由腾讯游戏学院主办的腾讯NEXT IDEA高校游戏创意制作大赛再度扬帆起航！对于高校生力军来说，赛事不但提供游戏创意展示的平台，更为大家提供进入腾讯的绿色通道。游戏达人们，一起来做一款属于你的游戏吧！
       </div>
       <div class="timeline navigation">
         <img class="line" src="../../../ossweb-img/image/timeLine.png" height="85" width="732" alt="">
@@ -60,13 +60,14 @@
         </div>
         <div class="info">
           <div class="info-1" v-show="tabShow == 1">
+            <p>游戏除了是休闲娱乐产品，你可曾想过，游戏还能拥有改变世界的力量——在游戏中探索未知的太空，用游戏让非物质文化遗产焕然新生，在游戏里解决找不到男/女朋友、堵车等社会问题……你觉得在游戏世界中，我们可以做些什么呢？</p>
             <p>2017年<span class="blueFont">赛事主题</span>围绕“<span class="blueFont">游戏的力量</span>”来展开，包含三个方向</p>
             <ul>
-              <li><span>1</span>用游戏保护传统弄个文化--回顾过去；</li>
-              <li><span>2</span>用游戏改变、解决社会问题——着手当下；</li>
-              <li><span>3</span>用游戏探索未来——未来科技；</li>
+              <li><span>1</span>用游戏保护传统文化</li>
+              <li><span>2</span>用游戏改变、解决社会问题</li>
+              <li><span>3</span>用游戏探索未来</li>
             </ul>
-            <p>参赛者可以自主发挥创作，也可以围绕赛事主题进行创作。</p>
+            <p>参赛者可以围绕赛事主题进行创作，也可以自主发挥，契合主题的作品将获得额外加分。</p>
           </div>
           <div class="info-2" v-show="tabShow == 2">
             <div class="left">

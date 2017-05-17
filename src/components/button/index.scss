@@ -17,7 +17,7 @@
 }
 
 .goto {
-  right: 19px;
+  right: 50px;
   width: 135px;
   height: 45px;
   background: #fff url(../../../ossweb-img/image/ic_forward.png) no-repeat;
@@ -27,9 +27,9 @@
   line-height: 45px;
   text-align: center;
   padding-right: 20px;
-  opacity: 0.75;
+  opacity: 1;
   &:hover {
-    opacity: 1;
+    opacity: 0.75;
   }
 }
 

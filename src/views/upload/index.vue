@@ -60,6 +60,7 @@
         <div class="form-line submit">
           <label for=""></label>
           <input type="submit" class="next" value="提交" :disabled="!submitStatus">
+          <a href="javascript:;" class="download">下载上传作品说明</a>
         </div>
       </form>
     </div>

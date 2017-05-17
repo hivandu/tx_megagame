@@ -108,20 +108,22 @@
     p {
       margin: 5px 0;
     }
-    .info-2{
-      clear:both;
-      display:table;
+    .info-1{
+      p{
+        width:640px;
+        margin-top: 10px;
+        text-align: justify;
+      }
     }
     .left{
-      width: 60%;
-      float:left;
+      width:640px;
       p, ul{
         width:85%;
       }
     }
     .right{
-      width: 37%;
-      float:left;
+      width:640px;
+      margin-top: 30px;
     }
     ul {
       padding: 0;

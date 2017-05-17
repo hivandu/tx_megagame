@@ -1,22 +1,43 @@
-.work-title{
+.nav-title {
   font-size: 18px;
-  .name{
+  .name {
     font-weight: bold;
   }
 }
 
-table{
-  width:50%;
-  th, td{
+.game-info {
+  margin-top: 30px;
+}
+
+.members {
+  margin-top:20px;
+  p {
+    margin-top: 20px;
+  }
+  table {
+    margin-top:10px;
+    tr {
+      th,
+      td {
+        padding: 3px 0;
+      }
+    }
+  }
+}
+
+table {
+  width: 50%;
+  th,
+  td {
     text-align: left;
   }
-  td{
+  td {
     color: #2c8aff;
   }
 }
 
-embed{
-  margin-top:50px;
+embed {
+  margin-top: 50px;
   width: 640px;
   height: 500px;
 }
