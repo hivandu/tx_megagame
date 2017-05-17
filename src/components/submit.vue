@@ -23,13 +23,13 @@ export default{
 </script>
 <style lang="scss">
   #submit{
-    width:345px;
-    height:240px;
+    width:690px;
+    height:480px;
     position: fixed;
     top:50%;
     left:50%;
-    margin-top: -120px;
-    margin-left: - 172px;
+    margin-top: -240px;
+    margin-left: -345px;
     z-index:999;
     img{
       width:100%;

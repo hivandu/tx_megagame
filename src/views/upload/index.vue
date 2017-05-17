@@ -10,7 +10,7 @@
       <div class="nav-info">
         团队信息登记，队长录入信息后，其他队员登录对应QQ后可以直接查看（团队成员无法修改团队信息和上传作品）。
       </div>
-      <form @submit.prevent="submitForm" action="index_submit" method="get" accept-charset="utf-8">
+      <form @submit.prevent="submitForm($event)" action="index_submit" method="get" accept-charset="utf-8">
         <div class="form-line">
           <label for="">队长QQ</label>
           <input type="text" v-model="formData.captainQQ" placeholder="请输入10位QQ号码">
@@ -60,7 +60,7 @@
         <div class="form-line submit">
           <label for=""></label>
           <input type="submit" class="next" value="提交" :disabled="!submitStatus">
-          <a href="javascript:;" class="download">下载上传作品说明</a>
+          <a target="_blank" href="http://www.pdf995.com/samples/pdf.pdf" class="download">下载上传作品说明</a>
         </div>
       </form>
     </div>
@@ -69,14 +69,7 @@
 <script>
 export default {
   name: 'upload-first',
-  updated() {
-
-  },
   watch: {
-    // formData(val) {
-    //   console.log('formData change');
-    // },
-
     formData:{
       deep:true,
       handler:function(val, oldVal){
@@ -121,15 +114,11 @@ export default {
   methods: {
 
     // 提交表单事件
-    submitForm(event) {
+    submitForm() {
       const _this = this;
-      const _formData = new FormData(event.target);
-      this.$emit('accSubmit'); // 显示提交成功
-      this.$http.get('ossweb-img/mock/submit_info.json', {
-        _formData
-      }).then(function(res) {
+      this.$http.post('ossweb-img/mock/submit_info.json', _this.formData).then(function(res) {
         _this.submitStatus = false;
-        sessionStorage.setItem('formData', JSON.stringify(_this.formData));
+        _this.$emit('accSubmit'); // 显示提交成功
       }).catch(function(err) {
         alert('提交失败');
         console.log(err);

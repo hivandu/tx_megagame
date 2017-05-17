@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="info scroll">
-      <div class="nav-title"><span class="name">{{workInfo.title}}</span>{{workInfo.subTitle}}</div>
+      <div class="nav-title"><span class="name">{{workInfo.title}} </span> {{workInfo.subTitle}}</div>
       <img :src="workInfo.navImage" alt="" class="work-figure">
       <div class="team">
         <div class="team-name">
@@ -91,7 +91,7 @@ export default {
       player.setCurVideo(video);
       player.addParam("adplay", "0");
       player.addParam("wmode", "opaque");
-      player.addParam('autoplay',false);
+    player.addParam('autoplay',false);
       player.addParam("flashskin", "http://imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf");
       player.write("videoCon");
     }

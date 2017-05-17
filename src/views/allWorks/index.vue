@@ -48,7 +48,7 @@
       // 转到详情页
       gotoInfo(item){
         console.log('goto click');
-        this.$router.push({path:'/workinfo'});
+        this.$router.push({path:'/workinfo', query:{"vid": item.vid}});
 
         // 正式环境替换为资讯详情页面路径
         // this.$router.push({path:item.link});

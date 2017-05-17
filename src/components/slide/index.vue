@@ -46,9 +46,13 @@ export default {
   },
   methods: {
     route(item, index) {
-      this.$router.push({
-        path: item.link
-      });
+      if (index != 0) {
+        this.$router.push({
+          path: item.link
+        });
+      }else{
+        window.location.href= item.link;
+      }
     }
   }
 }
