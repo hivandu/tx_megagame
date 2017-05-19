@@ -153,6 +153,19 @@ var slideAnimationEnd = function(index) {
     $('.process-item').removeClass('info-fadeIn');
     $('.line').removeClass('info-fadeIn');
   }
+
+  if (_index == 5) {
+    setTimeout(function(){
+      $('.slide-5 .element').addClass('fadeIn');
+    }, 400);
+
+    setTimeout(function(){
+      $('.slide-5 .center').find('a').addClass('info-fadeIn');
+    }, 1300);
+  }else{
+    $('.slide-5 .element').removeClass('fadeIn');
+    $('.slide-5 .center').find('a').removeClass('info-fadeIn');
+  }
 }
 
 var slideAnimationStart = function(index){

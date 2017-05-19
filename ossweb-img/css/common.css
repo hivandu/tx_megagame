@@ -457,10 +457,16 @@ body {
   text-align: center;
   transition: all 0.5s;
 }
+.letter-paper p {
+  line-height: 1.5;
+}
 .letter-paper .title {
+  display: inline-block;
   margin-top: 40px;
+  margin-bottom: 30px;
   z-index: 998;
   line-height: 2;
+  border-bottom: 1px solid #eee;
 }
 
 .paper-pushUp {
@@ -484,6 +490,10 @@ body {
   opacity: 1 !important;
 }
 
+.fadeIn {
+  opacity: 1 !important;
+}
+
 .mentor {
   width: 700px;
   height: 600px;
@@ -500,6 +510,8 @@ body {
 .mentor .mentor-5 {
   position: absolute;
   overflow: hidden;
+  width: 200px;
+  height: 250px;
 }
 .mentor .mentor-1 .person,
 .mentor .mentor-2 .person,
@@ -523,18 +535,18 @@ body {
 .mentor .mentor-3 .person .person-inner,
 .mentor .mentor-4 .person .person-inner,
 .mentor .mentor-5 .person .person-inner {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  width: 90%;
+  position: absolute;
+  display: inline-block;
+  bottom: 20px;
+  left: 10px;
 }
 .mentor .mentor-1 .person .name,
 .mentor .mentor-2 .person .name,
 .mentor .mentor-3 .person .name,
 .mentor .mentor-4 .person .name,
 .mentor .mentor-5 .person .name {
-  font-size: 21px;
+  font-size: 18px;
 }
 .mentor .mentor-1 .person .job,
 .mentor .mentor-2 .person .job,
@@ -548,7 +560,7 @@ body {
 .mentor .mentor-3 .person .intor,
 .mentor .mentor-4 .person .intor,
 .mentor .mentor-5 .person .intor {
-  margin-top: 20px;
+  font-size: 16px;
 }
 .mentor .mentor-1:hover,
 .mentor .mentor-2:hover,
@@ -565,35 +577,25 @@ body {
   display: flex;
 }
 .mentor .mentor-1 {
-  top: 0;
-  left: 0;
-  width: 220px;
-  height: 275px;
+  top: 20px;
+  left: 20px;
 }
 .mentor .mentor-2 {
-  top: 20px;
-  right: 30px;
-  width: 220px;
-  height: 275px;
+  top: 40px;
+  right: 60px;
 }
 .mentor .mentor-3 {
   top: 18%;
   left: 35%;
-  width: 220px;
-  height: 275px;
   z-index: 998;
 }
 .mentor .mentor-4 {
-  left: 30px;
-  bottom: 20px;
-  width: 220px;
-  height: 275px;
+  left: 50px;
+  bottom: 40px;
 }
 .mentor .mentor-5 {
-  right: 0;
-  bottom: 0;
-  width: 220px;
-  height: 275px;
+  right: 20px;
+  bottom: 20px;
 }
 
 .slide-4 .info {
@@ -653,7 +655,8 @@ body {
   color: #fff;
   bottom: -30px;
 }
-.process .item-3 p, .process .item-4 p {
+.process .item-3 p,
+.process .item-4 p {
   color: #01193b;
   top: -100px;
 }
@@ -668,6 +671,67 @@ body {
 }
 .process .item-4 {
   transition: all 1.2s;
+}
+
+.slide-5 .center a {
+  background-color: #116fe1;
+  color: #fff;
+  opacity: 0;
+  transition: all 1.3s;
+}
+.slide-5 .title {
+  margin-top: 50px;
+}
+.slide-5 .center-element {
+  width: 710px;
+  height: 320px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -355px;
+  margin-top: -160px;
+}
+.slide-5 .center-element .element {
+  position: absolute;
+  opacity: 0;
+}
+.slide-5 .center-element .item-1 {
+  right: 0;
+  bottom: 0;
+  transition: all .3s;
+}
+.slide-5 .center-element .item-2 {
+  top: 0;
+  left: 135px;
+  transition: all .8s;
+}
+.slide-5 .center-element .item-3 {
+  left: 0;
+  bottom: 0;
+  transition: all .6s;
+}
+.slide-5 .center-element .item-4 {
+  top: 0;
+  right: 135px;
+  transition: all .9s;
+}
+.slide-5 .center-element .item-5 {
+  bottom: 0;
+  left: 50%;
+  margin-left: -70px;
+  transition: all 1.2s;
+}
+.slide-5 .center-element .left.element {
+  top: 31%;
+  margin-top: -100px;
+  left: -208px;
+  transition: all 1.2s;
+}
+.slide-5 .center-element .right.element {
+  top: 28%;
+  margin-top: -100px;
+  right: -235px;
+  transition: all .2s;
 }
 
 @keyframes slideIcon {
