@@ -22,9 +22,14 @@
     }
     .link {
       width: 100%;
-      height: 50px;
       background-color: #fff;
       color: #051740;
+      padding-top:10px;
+      padding-bottom:10px;
+      p{
+        text-align:left;
+        padding-left:15px;
+      }
       a {
         color: #051740;
         text-decoration: none;

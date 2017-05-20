@@ -2,10 +2,8 @@
   <div id="cooperation" class="content">
     <div id="sponsor">
       <div class="content-title">
-        <div class="title-1">主办方</div>
-        <div class="title-2">
-          <img src="../../../ossweb-img/image/title-sponsor.png" alt="">
-        </div>
+        <div class="first-title">主办方</div>
+        <div class="second-title blue-font">SPONSOR</div>
       </div>
       <div class="info">
         <ul class="sponsor items">
@@ -17,17 +15,15 @@
     </div>
     <div id="partners">
       <div class="content-title">
-        <div class="title-1">合作媒体</div>
-        <div class="title-2">
-          <img src="../../../ossweb-img/image/title-partners.png" alt="">
-        </div>
+        <div class="first-title">合作媒体</div>
+        <div class="second-title blue-font">PARTNERS</div>
       </div>
       <div class="info">
-        <div class="title">腾讯业务</div>
+        <div class="second-title mt10">腾讯业务</div>
         <ul class="partners items">
           <li></li>
         </ul>
-        <div class="title">外部伙伴</div>
+        <div class="second-title mt10">外部伙伴</div>
         <ul class="partners items">
           <li v-for="item in 10">
             <img src="../../../ossweb-img/image/partners-item.png" alt="">

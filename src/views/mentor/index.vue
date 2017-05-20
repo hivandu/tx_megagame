@@ -1,10 +1,8 @@
 <template>
   <div id="mentor" class="content">
     <div class="content-title">
-      <div class="title-1">大赛评委</div>
-      <div class="title-2">
-        <img src="../../../ossweb-img/image/title-judges.png" alt="">
-      </div>
+      <div class="first-title">大赛评委</div>
+      <div class="second-title blue-font">JUDGES</div>
     </div>
     <div class="info scroll">
       <div class="nav-info">
@@ -17,7 +15,7 @@
               <li class="foto" v-for="(item, key) in group.result" :key="key">
                 <div class="image"><img :src=item.image alt=""></div>
                 <div class="person-info">
-                  <div class="name">{{item.name}}</div>
+                  <div class="name second-title">{{item.name}}</div>
                   <div class="info">{{item.info}}</div>
                 </div>
               </li>

@@ -1,17 +1,16 @@
 <template>
   <div id="all-work" class="content">
     <div class="content-title">
-      <div class="title-1">全部作品</div>
-      <div class="title-2">
-        <img src="../../../ossweb-img/image/title-work.png" alt="">
-      </div>
+      <div class="first-title">全部作品</div>
+      <div class="second-title blue-font">ALL WORKS</div>
     </div>
     <div class="info scroll">
       <ul class="items">
         <li class="item" v-for="(item, index) in workItems" @click="gotoInfo(item)">
           <img :src=item.img alt="">
           <div class="link">
-            <a href="javascript:;">{{item.title}}</a>
+            <p>{{item.title}}</p>
+            <p>作者：{{item.author}}</p>
           </div>
         </li>
       </ul>

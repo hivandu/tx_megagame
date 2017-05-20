@@ -5,14 +5,14 @@
       <t-slide class="slide" slot="slide" :path="path"></t-slide>
       <div slot="login" class="login">
         <div class="logged" v-if="userInfo">
-          <span>欢迎, </span><span>{{userInfo.nickName}}</span><span @click="logout" class="action">【注销】</span>
+          <span>欢迎您, </span><span>{{userInfo.nickName}}</span><span @click="logout" class="action">【注销】</span>
         </div>
         <div class="unLogged" v-else>
           <span class="action" @click="login">登录</span>
         </div>
       </div>
-      <t-button :buttonText="'上传作品及报名'" :path="'/upload'" class="button upload" slot="button-up"></t-button>
-      <t-button :buttonText="'全部作品'" :path="'/allWorks'" class="button all" slot="button-all"></t-button>
+      <t-button :buttonText="'上传作品及报名'" :path="'/upload'" :class="['button upload', path=='/upload'?'changed':'']" slot="button-up"></t-button>
+      <t-button :buttonText="'全部作品'" :path="'/allWorks'" :class="['button all', path=='/allWorks'?'changed':'']" slot="button-all"></t-button>
       <t-qrcode slot="qrcode" class="qr"></t-qrcode>
     </index>
   </div>
@@ -35,7 +35,7 @@ export default {
   },
   watch: {
     '$route' (val) {
-      // console.log(val.path);
+      this.path = val.path;
     },
     display(val) {
       const _this = this;
@@ -44,10 +44,8 @@ export default {
       }, 5000)
     }
   },
-  created() {
-    this.path = this.$route.path;
-  },
   mounted() {
+    this.path = this.$route.path;
     this.getUserInfo()
   },
   data() {
@@ -116,12 +114,17 @@ export default {
 }
 
 .login {
+  font-size: 14px;
   font-weight: bold;
-  width: 155px;
+  width: 300px;
   right: 50px;
   z-index: 99;
   color: #fff;
   text-align: right;
+}
+
+.goto.changed{
+  background-color: #ddd;
 }
 
 .action {

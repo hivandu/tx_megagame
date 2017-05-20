@@ -1,23 +1,108 @@
 #home {
-    position: relative;
-    z-index:0;
-  .bg-front, .bg-nav {
+  position: relative;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  .bg-front,
+  .bg-nav {
     position: fixed;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
   }
-  .bg-front{
-    background: url(../../../ossweb-img/image/bg-nav.jpg) no-repeat;
-    background-size: cover;
-    background-pointer: center;
-  }
-  .logo{
+  // .bg-front {
+  //   background: url(../../../ossweb-img/image/bg-nav.png) no-repeat;
+  //   background-size: cover;
+  //   background-pointer: center;
+  // }
+  .logo {
     position: absolute;
-    left:0;
-    top:30px;
-    left:-190px;
-    z-index:999;
+    left: 0;
+    top: 30px;
+    left: -190px;
+    z-index: 999;
+  }
+  .bg-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .plane {
+    width: 3%;
+    position: fixed;
+    top: 10%;
+    left: 30%;
+    animation: leftRight 15s ease-in-out infinite;
+  }
+  .console-boat {
+    width: 19%;
+    position: fixed;
+    bottom: -2%;
+    right: 38%;
+    animation: updown 15s ease-in-out infinite;
+    z-index: 998;
+  }
+  .headset {
+    width: 7%;
+    position: fixed;
+    bottom: 20%;
+    right: 38%;
+    animation: updown 12s ease-in-out infinite;
+    z-index: 997;
+  }
+  .riflemen {
+    width: 10%;
+    position: fixed;
+    bottom: -10%;
+    left: 30%;
+    animation: updown 10s ease-in-out infinite;
+    z-index: 994;
+  }
+  .tablets {
+    width: 34%;
+    position: fixed;
+    bottom: -2%;
+    right: 20%;
+    animation: updown 27s ease-in-out infinite;
+    z-index: 992;
+  }
+  .robot-2 {
+    width: 7%;
+    position: fixed;
+    bottom: 14%;
+    right: 25%;
+    animation: updown 27s ease-in-out infinite;
+    z-index: 993;
+  }
+  .keyboard {
+    width: 10%;
+    position: fixed;
+    bottom: -5%;
+    left: 0;
+    animation: updown 6s ease-in-out infinite;
+    z-index: 995;
+  }
+  .planet {
+    width: 13%;
+    position: fixed;
+    bottom: 34%;
+    right: 13%;
+    animation: planet 25s ease-in-out infinite;
+    z-index: 999;
+    transition: all .5s;
+  }
+  .robot {
+    width: 15%;
+    position: fixed;
+    bottom: 3%;
+    left: 8%;
+    animation: updown 23s ease-in-out infinite;
+    z-index: 996;
+    transition: all .5s;
   }
 }

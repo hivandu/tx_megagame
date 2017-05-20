@@ -21,7 +21,7 @@ export default {
   name: 'index',
   watch:{
     '$route' (to, from){
-      this.setCanvas();
+      // this.setCanvas();
     }
   },
   mounted(){

@@ -8,74 +8,135 @@
     text-transform: uppercase;
     flex-direction: column;
     box-sizing: border-box;
-    height: 410px;
     margin: 0;
     width: 135px;
     position: absolute;
-    top: 0;
     padding-left: 30px;
-    li:last-child::before {
-      content: '';
-      display: inline-block;
-      position: absolute;
-      width: 15px;
-      height: 15px;
-      left: -34px;
-      top: 40%;
-      background: url(../../../ossweb-img/image/slide-point.png) no-repeat;
-      transition: .5s ease;
-    }
     li {
       cursor: pointer;
       position: relative;
       text-align: left;
-      height: 50px;
-      line-height: 50px;
-      font-size: 20px;
+      height: 54px;
+      line-height: 54px;
+      font-size: 18px;
       color: #fff;
+      &:hover{
+        a{
+          color: #136fe4;
+        }
+      }
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+      &:first-child,
+      &:last-child {
+        &:before {
+          content: '';
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          position: absolute;
+        }
+      }
+      &:last-child {
+        &:before {
+          background-color: #3250d4;
+          left: -33px;
+          top: 24px;
+        }
+      }
+      &:first-child {
+        margin-top: -21px;
+        &:before {
+          background-color: #2a9cef;
+          left: -33px;
+          top: 21px;
+        }
+      }
     }
     li.selected {
-      font-size: 24px;
-      color: #2b85f6;
-      height: 50px;
-      line-height: 50px;
+      a {
+        color: #136fe4;
+        font-weight: bold;
+      }
     }
-    li:nth-child(2).selected ~ li:last-child::before {
-      top: -668%;
-    }
-    li:nth-child(3).selected ~ li:last-child::before {
-      top: -568%;
-    }
-    li:nth-child(4).selected ~ li:last-child::before {
-      top: -468%;
-    }
-    li:nth-child(5).selected ~ li:last-child::before {
-      top: -368%;
-    }
-    li:nth-child(6).selected ~ li:last-child::before {
-      top: -268%;
-    }
-    li:nth-child(7).selected ~ li:last-child::before {
-      top: -168%;
-    }
-    li:nth-child(8).selected ~ li:last-child::before {
-      top: -68%;
-    }
-    li:nth-child(9).selected ~ li:last-child::before {
-      top:50%;
-      color: red;
-    }
+    // li:nth-child(2).selected ~ li:last-child::before {
+    //   top: -668%;
+    // }
+    // li:nth-child(3).selected ~ li:last-child::before {
+    //   top: -568%;
+    // }
+    // li:nth-child(4).selected ~ li:last-child::before {
+    //   top: -468%;
+    // }
+    // li:nth-child(5).selected ~ li:last-child::before {
+    //   top: -368%;
+    // }
+    // li:nth-child(6).selected ~ li:last-child::before {
+    //   top: -268%;
+    // }
+    // li:nth-child(7).selected ~ li:last-child::before {
+    //   top: -168%;
+    // }
+    // li:nth-child(8).selected ~ li:last-child::before {
+    //   top: -68%;
+    // }
+    // li:nth-child(9).selected ~ li:last-child::before {
+    //   top: 50%;
+    //   color: red;
+    // }
   }
   .line {
     width: 8px;
     height: 492px;
     background: url(../../../ossweb-img/image/slide-line.png) no-repeat;
+    background-position: 0px 10px;
     position: absolute;
-    top: 0;
+    top: -5px;
     left: 0;
+  }
+  .point {
+    display: inline-block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: -7px;
+    top: -1000px;
+    background: url(../../../ossweb-img/image/slide-point.png) no-repeat;
+    transition: .5s ease;
+    z-index:999;
+    &.index-0 {
+      top: -1000px;
+    }
+    &.index-1 {
+      top: 51px;
+    }
+    &.index-2 {
+      top: 105px;
+    }
+    &.index-3 {
+      top: 159px;
+    }
+    &.index-4 {
+      top: 213px;
+    }
+    &.index-5 {
+      top: 267px;
+    }
+    &.index-6 {
+      top: 321px;
+    }
+    &.index-7 {
+      top: 375px;
+    }
+    &.index-8 {
+      top: 429px;
+    }
   }
 }
 
-#slide.pushdown{
-  top:102px;
+#slide.pushdown {
+  top: 102px;
 }

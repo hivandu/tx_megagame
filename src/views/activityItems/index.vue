@@ -1,10 +1,8 @@
 <template>
   <div id="activity-items" class="content">
     <div class="content-title">
-      <div class="title-1">活动资讯</div>
-      <div class="title-2">
-        <img src="../../../ossweb-img/image/title-information.png" alt="">
-      </div>
+      <div class="first-title">活动资讯</div>
+      <div class="second-title blue-font">INFORMATION</div>
     </div>
     <div class="info scroll">
       <ul class="items">

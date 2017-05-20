@@ -1,21 +1,30 @@
 #app {
-  font-size: 14px;
   min-width: 1440px;
   height: 100%;
   position: relative;
+  font-size: 14px;
   font-family: 'Microsoft YaHei', 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  .blueFont {
-    color: #55a1ff;
-  }
   .slide,
   .button {
     z-index: 99;
   }
   .button {
     cursor: pointer;
+  }
+  .first-title{
+    font-size: 24px;
+  }
+  .second-title{
+    font-size: 16px;
+  }
+  .blue-font{
+    color:#136fe4;
+  }
+  .blodTitle{
+    font-weight: bold;
   }
 }
 
@@ -36,32 +45,29 @@
 
 .nav-info {
   width: 655px;
-  font-size: 16px;
 }
 
 
 /* 设置滚动条的样式 */
 
 .scroll::-webkit-scrollbar {
-  width: 12px;
+  width: 7px;
 }
 
 
 /* 滚动槽 */
 
 .scroll::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(43, 133, 246, 0);
+  -webkit-box-shadow: inset 0 0 6px rgba(85,161,255,0);
+  border-radius: 15px;
 }
-
 
 /* 滚动条滑块 */
 
 .scroll::-webkit-scrollbar-thumb {
   // border-radius: 10px;
-  background: rgba(43, 133, 246, 1);
-  -webkit-box-shadow: inset 0 0 6px rgba(43, 133, 246, 1);
-}
+  background: rgba(85,161,255,0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(85,161,255,0.3);
+  border-radius: 15px;
 
-.scroll::-webkit-scrollbar-thumb:window-inactive {
-  background: rgba(255, 0, 0, 1);
 }

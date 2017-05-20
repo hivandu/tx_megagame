@@ -1,13 +1,12 @@
 <template>
   <div id="activity-info">
     <div class="content-title">
-      <div class="title-1">作品详情</div>
-      <div class="title-2">
-        <img src="../../../ossweb-img/image/title-workdetail.png" alt="">
-      </div>
+      <div class="first-title">作品详情</div>
+      <div class="second-title blue-font">DETAILS OF THE WORK</div>
     </div>
     <div class="info scroll">
-      <div class="nav-title"><span class="name">{{workInfo.title}} </span> {{workInfo.subTitle}}</div>
+      <div class="nav-guide"><span @click="$router.back();">{{fromReview?'精彩回顾':'全部作品'}}</span><span> » </span> <span>作品详情</span></div>
+      <div class="nav-title second-title"><span class="name">{{workInfo.title}} </span> {{workInfo.subTitle}}</div>
       <img :src="workInfo.navImage" alt="" class="work-figure">
       <div class="team">
         <div class="team-name">
@@ -30,19 +29,19 @@
         </div>
       </div>
       <div class="game-info">
-        {{workInfo.infoFirst}}
+        <p v-for="(item,key) in workInfo.infoFirst">{{item}}</p>
       </div>
       <div class="video-box">
         <div id="videoPop" class="video-pop">
           <div id="videoCon" class="video-con">
-            
           </div>
         </div>
       </div>
       <div class="game-info">
-        {{workInfo.infoSec}}
+        <p v-for="(item,key) in workInfo.infoSec">{{item}}</p>
       </div>
       <div class="game-ppt">
+        <img :src="workInfo.navImage" alt="" class="work-figure">
       </div>
     </div>
   </div>
@@ -60,12 +59,17 @@ export default {
   },
   mounted() {
     let _vid = this.$route.query.vid;
-    console.log(_vid);
+    if (this.$route.query.from == 'review') {
+      this.fromReview = 1;
+    }else{
+      this.fromReview = 0;
+    }
     this.getWorkInfo(_vid);
   },
   data() {
     return {
-      workInfo: Object
+      workInfo: Object,
+      fromReview: 0
     }
   },
   methods: {

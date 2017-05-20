@@ -1,15 +1,21 @@
-#activity-info{
-  .info{
-    margin-top:90px;
-    width: 735px;
-    padding-right: 45px;
-    height:650px;
+#activity-info {
+  .info {
+    margin-top: 90px;
+    width: 990px;
+    height: 650px;
     overflow-y: scroll;
-    p{
-      margin-top:10px;
+    p {
+      width: 730px;
+      margin-top: 10px;
     }
-    img{
-      margin:30px 0;
+    img {
+      margin: 30px 0;
     }
   }
+}
+
+.nav-guide {
+  font-size: 14px;
+  margin-bottom: 15px;
+  cursor: pointer;
 }

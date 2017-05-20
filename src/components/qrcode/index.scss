@@ -16,18 +16,20 @@
   z-index: 99;
   clear: both;
   display: table;
+  font-size: 14px;
   .tab {
+    font-weight: bold;
     width: 100%;
     display: table;
     a {
-      border-right: 1px solid #2b85f6;
+      border-right: 1px solid #136fe4;
       display: table-cell;
       width: 50%;
       text-align: center;
       text-decoration: none;
       line-height: 40px;
-      border-bottom: 1px solid #2b85f6;
-      color: #2b85f6;
+      border-bottom: 1px solid #136fe4;
+      color: #136fe4;
       background-color: #eee;
       &.selected {
         background-color: #fff;
@@ -40,28 +42,30 @@
     }
   }
   .content {
-    padding: 30px 15px;
+    padding: 20px 10px;
   }
   .qrcode-code {
-    width: 100px;
-    height: 100px;
     float: left;
   }
   .qr-info {
     float: left;
-    margin-left: 15px;
-    margin-top: 3px;
-    width: 130px;
-    color: #2b85f6;
+    margin-left: 10px;
+    width: 140px;
+    color: #136fe4;
+    text-align:justify;
   }
   .hoverBtn {
-    width: 80px;
-    width: 80px;
     opacity: 1;
     transition: all .3s;
+    img{
+      width: 40px;
+      height: 40px;
+    }
     .qr-thum {
-      padding: 8px;
+      padding: 10px;
+      height:40px;
       background-color: #fff;
+      text-align:center;
     }
   }
   &:hover {
@@ -80,16 +84,16 @@
     display: none;
     margin-right: 10px;
     width: 280px;
-    height: 220px;
+    padding-bottom:20px;
     background-color: #fff;
   }
   .btnInfo {
     margin-top: 5px;
-    width: 80px;
+    width: 90px;
     height: 24px;
     line-height: 24px;
     text-align: center;
     background-color: #fff;
-    color: #2b85f6;
+    color: #136fe4;
   }
 }

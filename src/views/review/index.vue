@@ -1,13 +1,11 @@
 <template>
   <div id="review" class="content">
     <div class="content-title">
-      <div class="title-1">精彩回顾</div>
-      <div class="title-2">
-        <img src="../../../ossweb-img/image/title-highlights.png" alt="">
-      </div>
+      <div class="first-title">精彩回顾</div>
+      <div class="second-title blue-font">HIGHLIGHTS</div>
     </div>
     <div class="review-items info scroll">
-      <div class="nav-info">历届大赛优秀作品展</div>
+      <div class="nav-info second-title">历届大赛优秀作品展</div>
       <ul>
         <li @click="gotoWorkInfo(item.vid)" v-for="(item, index) in workItems">
           <div class="review-main">
@@ -48,7 +46,8 @@ export default {
       this.$router.push({
         path: '/workinfo',
         query: {
-          "vid": vid
+          "vid": vid,
+          "from": 'review'
         }
       });
     }

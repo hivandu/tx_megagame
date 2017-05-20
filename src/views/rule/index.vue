@@ -1,21 +1,19 @@
 <template>
   <div id="rule" class="content">
     <div class="content-title">
-      <div class="title-1">赛事规则</div>
-      <div class="title-2">
-        <img src="../../../ossweb-img/image/title-contents.png" alt="">
-      </div>
+      <div class="first-title">赛事规则</div>
+      <div class="second-title blue-font">INTRODUCTION OF CONTEST</div>
     </div>
     <div class="info scroll">
-      <div class="info-title first">参赛对象</div>
+      <div class="info-title first second-title blue-font">参赛对象</div>
       <div class="info-main">
         <p>中国大陆及国际高校在校学生</p>
       </div>
-      <div class="info-title">作品要求</div>
+      <div class="info-title second-title blue-font">作品要求</div>
       <div class="info-main">
         <p>参赛团队可以选择今年的赛事年度主题“游戏的力量”作为自己作品的创意方向来获得更多的加分；也可以不限主题及玩法，自主选择作品方向，以求精品呈现，作品形式需要包含ppt，视频及可运行demo。</p>
       </div>
-      <div class="info-title">赛事日程</div>
+      <div class="info-title second-title blue-font">赛事日程</div>
       <div class="info-main">
         <p>时间：2017年6月1日-7月21日</p>
         <p>事项：初赛报名及作品提交（ppt、演示视频及demo）</p>
@@ -37,7 +35,7 @@
         <p>事项：总决赛评审及现场点评</p>
         <p>特别说明：总决赛将现场角逐出最终的获奖情况并当场公布；后续会在官网公布决赛获奖结果。</p>
       </div>
-      <div class="info-title">参赛方式</div>
+      <div class="info-title second-title blue-font">参赛方式</div>
       <div class="info-main">
         <ul>
           <li>
@@ -46,7 +44,7 @@
             <label>（2）</label>参赛团队队长报名后，如有其他队员，需注册关联队伍，每个队伍不得超过5人。</li>
         </ul>
       </div>
-      <div class="info-title">参赛规则</div>
+      <div class="info-title second-title blue-font">参赛规则</div>
       <div class="info-main">
         <ul>
           <li>
@@ -61,7 +59,7 @@
             <label>（5）</label>如发现抄袭作品，对赛事的意见建议等可反馈至邮箱 xxxx@xxxx.com，需详细说明原因理由便于赛事组委会进行审查。</li>
         </ul>
       </div>
-      <div class="info-title">评审方式</div>
+      <div class="second-title blue-font">评审方式</div>
       <div class="info-main">
         <ul>
           <li>
@@ -74,7 +72,7 @@
             <label>（4）</label>邀请进入决赛的团队代表参与决赛现场陈述演示及决赛评选。</li>
         </ul>
       </div>
-      <div class="info-title">评审纬度</div>
+      <div class="info-title second-title blue-font">评审纬度</div>
       <div class="info-main">
         <p class="title">（1）综合奖项评审纬度：</p>
         <div>
@@ -98,7 +96,7 @@
           <p class="mt">团队对导师团无严重负面反馈及投诉。</p>
         </div>
       </div>
-      <div class="info-title">版权声明</div>
+      <div class="info-title second-title blue-font">版权声明</div>
       <div class="info-main">
         <ul>
           <li>
@@ -111,7 +109,7 @@
             <label>（4）</label>所有参赛作品的知识产权归参赛者所有。腾讯公司可将作品用于赛事及相关活动宣传品制作；用于指定及授权媒体发布；用于颁奖典礼、展览等相关落地活动。参赛者同意腾讯公司可将作品免费用于公益事业。腾讯公司在对优秀作品投入孵化资源、进行商业开发前，应由双方（参赛者、腾讯公司）协商一致并签订书面协议。</li>
         </ul>
       </div>
-      <div class="info-title">保证作品的合法性</div>
+      <div class="info-title second-title blue-font">保证作品的合法性</div>
       <div class="info-main">
         <p>作品内容不允许含有以下信息，包括但不限于：</p>
         <ul>

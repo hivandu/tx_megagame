@@ -1,12 +1,8 @@
 <template>
   <div id="introduce" class="content">
     <div class="content-title">
-      <div class="title-1">
-        大赛简介
-      </div>
-      <div class="title-2">
-        <img src="../../../ossweb-img/image/title-overview.png" height="15" width="110" alt="">
-      </div>
+      <div class="first-title">大赛简介</div>
+      <div class="second-title blue-font">OVERVIEW</div>
     </div>
     <div class="scroll info">
       <div class="nav-info" style="text-align:justify">
@@ -18,15 +14,15 @@
           <li class="time-1">
             <img src="../../../ossweb-img/image/time-line-point.png" alt="" class="point">
             <div class="info">
-              <p class="date">2017.5.22-7.21</p>
-              <p class="link"><span class="blueFont">初赛报名及作品提交</span></p>
+              <p class="date">2017.6.6-7.21</p>
+              <p class="link"><span class="blue-font">初赛报名及作品提交</span></p>
             </div>
           </li>
           <li class="time-2">
             <img src="../../../ossweb-img/image/time-line-point.png" alt="" class="point">
             <div class="info">
               <p class="date">2017.7.24-8.4</p>
-              <p class="link"><span class="blueFont">初赛评审</span></p>
+              <p class="link"><span class="blue-font">初赛评审</span></p>
             </div>
           </li>
           <li class="time-3">
@@ -34,7 +30,7 @@
             <div class="info">
               <p class="date">2017.8.7-9.15</p>
               <p class="link">
-                <span class="blueFont">导师团介入指导<br>复赛作品优化及作品提交</span>
+                <span class="blue-font">导师团介入指导<br>复赛作品优化及作品提交</span>
               </p>
             </div>
           </li>
@@ -42,14 +38,14 @@
             <img src="../../../ossweb-img/image/time-line-point.png" alt="" class="point">
             <div class="info">
               <p class="date">2017.9.18-9.29</p>
-              <p class="link"><span class="blueFont">复赛评审</span></p>
+              <p class="link"><span class="blue-font">复赛评审</span></p>
             </div>
           </li>
           <li class="time-5">
             <img src="../../../ossweb-img/image/time-line-point.png" alt="" class="point">
             <div class="info">
               <p class="date">2017.9.18-9.29</p>
-              <p class="link"><span class="blueFont">总决赛评审及现场点评</span></p>
+              <p class="link"><span class="blue-font">总决赛评审及现场点评</span></p>
             </div>
           </li>
         </ul>
@@ -61,11 +57,11 @@
         <div class="info">
           <div class="info-1" v-show="tabShow == 1">
             <p>游戏除了是休闲娱乐产品，你可曾想过，游戏还能拥有改变世界的力量——在游戏中探索未知的太空，用游戏让非物质文化遗产焕然新生，在游戏里解决找不到男/女朋友、堵车等社会问题……你觉得在游戏世界中，我们可以做些什么呢？</p>
-            <p>2017年<span class="blueFont">赛事主题</span>围绕“<span class="blueFont">游戏的力量</span>”来展开，包含三个方向</p>
+            <p>2017年赛事主题围绕“游戏的力量”来展开，包含三个方向</p>
             <ul>
-              <li><span>1</span>用游戏保护传统文化</li>
-              <li><span>2</span>用游戏改变、解决社会问题</li>
-              <li><span>3</span>用游戏探索未来</li>
+              <li>1. 用游戏保护传统文化</li>
+              <li>2. 用游戏改变、解决社会问题</li>
+              <li>3. 用游戏探索未来</li>
             </ul>
             <p>参赛者可以围绕赛事主题进行创作，也可以自主发挥，契合主题的作品将获得额外加分。</p>
           </div>
@@ -73,10 +69,10 @@
             <div class="left">
               <p>一：评审方式</p>
               <ul>
-                <li><span>1</span>评委将由腾讯公司专家组成，以游戏创意为主要出发点，对作品进行专业纬度打分，经过初赛筛选，复赛评审，决赛共三轮评审。</li>
-                <li><span>2</span>经过初赛评审并进入复赛的作品会分配导师团，参赛团队可就自己的作品寻求专业辅导；</li>
-                <li><span>3</span>复赛选出10个作品进入决赛；</li>
-                <li><span>4</span>邀请进入决赛的团队代表参与决赛现场陈述演示及决赛评选。</li>
+                <li>1. 评委将由腾讯公司专家组成，以游戏创意为主要出发点，对作品进行专业纬度打分，经过初赛筛选，复赛评审，决赛共三轮评审。</li>
+                <li>2. 经过初赛评审并进入复赛的作品会分配导师团，参赛团队可就自己的作品寻求专业辅导；</li>
+                <li>3. 复赛选出10个作品进入决赛；</li>
+                <li>4. 邀请进入决赛的团队代表参与决赛现场陈述演示及决赛评选。</li>
               </ul>
             </div>
             <div class="right">

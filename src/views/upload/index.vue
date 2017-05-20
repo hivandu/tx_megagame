@@ -1,10 +1,8 @@
 <template>
   <div id="upload-first" class="wrap-upload">
     <div class="content-title">
-      <div class="title-1">上传作品</div>
-      <div class="title-2">
-        <img src="../../../ossweb-img/image/title-upload.png" alt="">
-      </div>
+      <div class="first-title">上传作品及报名</div>
+      <div class="second-title blue-font">UPLOAD WORKS AND SIGN UP</div>
     </div>
     <div class="info">
       <div class="nav-info">

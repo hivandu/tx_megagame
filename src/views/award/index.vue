@@ -1,78 +1,76 @@
 <template>
   <div id="award" class="content">
     <div class="content-title">
-      <div class="title-1">奖项设置</div>
-      <div class="title-2">
-        <img src="../../../ossweb-img/image/title-prize.png" alt="">
-      </div>
+      <div class="first-title">奖项设置</div>
+      <div class="second-title blue-font">PRIZE</div>
     </div>
     <div class="trophy scroll info">
-      <p class="title">综合奖项</p>
+      <p class="second-title blue-font title">综合奖项</p>
       <ul class="comprehensive">
         <li class="gold">
           <div class="item-inner">
             <img src="../../../ossweb-img/image/trophy-gold.png" alt="">
-            <p class="ranking color">金奖1名</p>
-            <p class="info">18000元奖金 + 奖杯 + 获奖证书</p>
+            <p class="ranking">金奖1名</p>
+            <p class="info">18000元RMB + 奖杯 + 获奖证书</p>
           </div>
         </li>
         <li class="light">
           <div class="item-inner">
             <img src="../../../ossweb-img/image/trophy-light.png" alt="">
-            <p class="ranking color">银奖2名</p>
-            <p class="info">10000元奖金 + 奖杯 + 获奖证书</p>
+            <p class="ranking">银奖2名</p>
+            <p class="info">10000元RMB + 奖杯 + 获奖证书</p>
           </div>
         </li>
         <li class="copper">
           <div class="item-inner">
             <img src="../../../ossweb-img/image/trophy-copper.png" alt="">
-            <p class="ranking color">铜奖3名</p>
-            <p class="info">5000元奖金 + 奖杯 + 获奖证书</p>
+            <p class="ranking">铜奖3名</p>
+            <p class="info">5000元RMB + 奖杯 + 获奖证书</p>
           </div>
         </li>
         <li class="good">
           <div class="item-inner">
             <img src="../../../ossweb-img/image/trophy-good.png" alt="">
-            <p class="ranking color">入围奖4名</p>
-            <p class="info">3000元奖金 + 奖杯 + 获奖证书</p>
+            <p class="ranking">入围奖4名</p>
+            <p class="info">3000元RMB + 获奖证书</p>
           </div>
         </li>
       </ul>
-      <p class="title">单项奖品</p>
+      <p class="second-title blue-font title">单项奖品</p>
       <ul class="single">
         <li>
           <div class="item-inner">
             <div class="image"><img src="../../../ossweb-img/image/award-design.png" alt=""></div>
             <p class="info">最佳创意设计奖：1名</p>
-            <p class="info"><span class="number">10000</span>RMB + 获奖证书</p>
+            <p class="info">10000元RMB + 获奖证书</p>
           </div>
         </li>
         <li>
           <div class="item-inner">
             <div class="image"><img src="../../../ossweb-img/image/award-draw.png" alt=""></div>
             <p class="info">最佳美术设计奖：1名</p>
-            <p class="info"><span class="number">10000</span>RMB + 获奖证书</p>
+            <p class="info">10000元RMB + 获奖证书</p>
           </div>
         </li>
         <li>
           <div class="item-inner">
             <div class="image"><img src="../../../ossweb-img/image/award-xz.png" alt=""></div>
             <p class="info">最佳人气奖：1名</p>
-            <p class="info"><span class="number">1000</span>RMB + 获奖证书</p>
+            <p class="info">1000元RMB + 获奖证书</p>
           </div>
         </li>
       </ul>
-      <p class="title">导师团荣誉奖</p>
+      <p class="title second-title blue-font">导师团荣誉奖</p>
       <ul class="honor">
         <li>
           <div class="item-inner">
             <div class="image"><img src="../../../ossweb-img/image/honor-mentor.png" alt=""></div>
             <p class="info">荣誉导师奖：若干</p>
-            <p class="info"><span class="number">1000</span>RMB + 获奖证书</p>
+            <p class="info">1000元RMB + 获奖证书</p>
           </div>
         </li>
       </ul>
-      <p class="title">其他</p>
+      <p class="second-title blue-font title">其他</p>
       <ul class="other">
         <li>1. 获奖团队应届毕业生有机会获得“腾讯boss面试直通车”资格，由腾讯游戏各工作室boss挑选认可的团队，直接面试并提供职业规划参考建议；</li>
         <li>2. 获奖团队应届毕业生，特别优秀者可获得校招破格补录面试机会；</li>
