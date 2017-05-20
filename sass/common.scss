@@ -490,12 +490,12 @@ body {
     }
     p {
       position: absolute;
-      left: -52px;
-      width: 260px;
+      left: -63px;
+      width: 280px;
       font-size: 20px;
       text-align: center;
       span {
-        font-size: 10px;
+        font-size: 12px;
       }
     }
   }
@@ -536,8 +536,11 @@ body {
       transition: all 1.3s;
     }
   }
-  .title {
+  .info {
     margin-top: 50px;
+    transform: translateY(200px);
+    opacity: 0;
+    transition: all .5s;
   }
   .center-element {
     width: 710px;
@@ -546,7 +549,7 @@ body {
     top: 50%;
     left: 50%;
     margin-left: -355px;
-    margin-top: -160px;
+    margin-top: -220px;
     .element {
       position: absolute;
       opacity: 0;

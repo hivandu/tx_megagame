@@ -642,13 +642,13 @@ body {
 }
 .process .process-item p {
   position: absolute;
-  left: -52px;
-  width: 260px;
+  left: -63px;
+  width: 280px;
   font-size: 20px;
   text-align: center;
 }
 .process .process-item p span {
-  font-size: 10px;
+  font-size: 12px;
 }
 .process .item-1 p,
 .process .item-2 p {
@@ -679,8 +679,11 @@ body {
   opacity: 0;
   transition: all 1.3s;
 }
-.slide-5 .title {
+.slide-5 .info {
   margin-top: 50px;
+  transform: translateY(200px);
+  opacity: 0;
+  transition: all .5s;
 }
 .slide-5 .center-element {
   width: 710px;
@@ -689,7 +692,7 @@ body {
   top: 50%;
   left: 50%;
   margin-left: -355px;
-  margin-top: -160px;
+  margin-top: -220px;
 }
 .slide-5 .center-element .element {
   position: absolute;

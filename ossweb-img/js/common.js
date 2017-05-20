@@ -109,22 +109,22 @@ animation();
 var slideAnimationEnd = function(index) {
   var _index = index + 1;
   if (_index != 1) {
+    $('.planet').addClass('planet-second undis');
+    $('.robot').addClass('robot-second undis');
+    $('.keyboard').addClass('undis');
     $('.swiper-slide').find('.bg').removeClass('push-in');
     $('.slide-' + _index).find('.bg').addClass('push-in');
-    $('.robot').addClass('robot-second undis');
-    $('.planet').addClass('planet-second undis');
-    $('.keyboard').addClass('undis');
   } else {
+    $('.swiper-slide').find('.bg').removeClass('push-in');
     $('.planet').removeClass('planet-second undis');
     $('.robot').removeClass('robot-second undis');
-    $('.swiper-slide').find('.bg').removeClass('push-in');
   }
 
   if (_index == 2) {
-    setTimeout(function(){
+    setTimeout(function() {
       $('.letter').addClass('letter-fadeIn');
     }, 300);
-    setTimeout(function(){
+    setTimeout(function() {
       $('.letter-paper').addClass('paper-pushUp')
     }, 600);
   } else {
@@ -133,22 +133,22 @@ var slideAnimationEnd = function(index) {
   }
 
   if (_index == 3) {
-    setTimeout(function(){
+    setTimeout(function() {
       $('.slide-3 .info').addClass('info-fadeIn');
     }, 300);
-  }else{
+  } else {
     $('.slide-3 .info').removeClass('info-fadeIn');
   }
 
   if (_index == 4) {
-    setTimeout(function(){
+    setTimeout(function() {
       $('.slide-4 .info').addClass('info-fadeIn');
       $('.process-item').addClass('info-fadeIn');
     }, 300);
-    setTimeout(function(){
+    setTimeout(function() {
       $('.line').addClass('info-fadeIn');
     }, 1200);
-  }else{
+  } else {
     $('.slide-4 .info').removeClass('info-fadeIn');
     $('.process-item').removeClass('info-fadeIn');
     $('.line').removeClass('info-fadeIn');
@@ -156,24 +156,33 @@ var slideAnimationEnd = function(index) {
 
   if (_index == 5) {
     setTimeout(function(){
+      $('.slide-5 .info').addClass('info-fadeIn');
+    }, 300);
+    setTimeout(function() {
       $('.slide-5 .element').addClass('fadeIn');
     }, 400);
 
-    setTimeout(function(){
+    setTimeout(function() {
       $('.slide-5 .center').find('a').addClass('info-fadeIn');
     }, 1300);
-  }else{
+  } else {
+    $('.slide-5 .info').removeClass('info-fadeIn');
     $('.slide-5 .element').removeClass('fadeIn');
     $('.slide-5 .center').find('a').removeClass('info-fadeIn');
   }
 }
 
-var slideAnimationStart = function(index){
+var slideAnimationStart = function(index) {
   var _index = index + 1;
   $('.slide-' + _index).find('.bg').removeClass('push-in');
+  if (_index != 1) {
+    $('.planet').addClass('planet-second undis');
+    $('.robot').addClass('robot-second undis');
+    $('.keyboard').addClass('undis');
+  }
 }
 
-var slideanimationRestart = function(index){
+var slideanimationRestart = function(index) {
   var _index = index + 1;
   $('.slide-' + _index).find('.bg').addClass('push-in');
 }
