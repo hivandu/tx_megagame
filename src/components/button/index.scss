@@ -1,22 +1,5 @@
-@media screen and (max-width:1300px) {
-  .goto {
-    position: fixed;
-    &.upload {
-      top: 112px;
-    }
-    &.all {
-      top: 167px;
-    }
-  }
-}
-
-@media screen and (min-width: 1300px) {
-  .goto {
-    position: absolute;
-  }
-}
-
 .goto {
+  position: fixed;
   font-size: 14px;
   right: 50px;
   width: 135px;
@@ -27,16 +10,16 @@
   line-height: 45px;
   text-align: center;
   padding-right: 20px;
-  opacity: 1;
+  opacity: 0.5;
   &:hover {
-    opacity: 0.75;
+    opacity: 1;
   }
 }
 
 .upload {
-  top: 70px;
+  top: 107px;
 }
 
 .all {
-  top: 70+10+45px;
+  top: 107+10+45px;
 }

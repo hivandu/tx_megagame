@@ -10,6 +10,7 @@
           <img :src=item.img alt="">
           <div class="link">
             <p>{{item.title}}</p>
+            <br>
             <p>作者：{{item.author}}</p>
           </div>
         </li>

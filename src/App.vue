@@ -99,21 +99,10 @@ export default {
 <style lang="scss">
 @import "./styles/reset.scss";
 @import "./styles/common.scss";
-@media screen and (max-width:1300px) {
-  .login {
-    position: fixed;
-    top: 82px;
-  }
-}
-
-@media screen and (min-width: 1300px) {
-  .login {
-    position: absolute;
-    top: 40px;
-  }
-}
 
 .login {
+  position:fixed;
+  top: 82px;
   font-size: 14px;
   font-weight: bold;
   width: 300px;
@@ -124,7 +113,7 @@ export default {
 }
 
 .goto.changed{
-  background-color: #ddd;
+  opacity:1;
 }
 
 .action {

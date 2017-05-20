@@ -19,6 +19,11 @@
       background-position: 2px 22px;
       margin-right: 35px;
       margin-top: 40px;
+      &:hover{
+        .review-name{
+          text-decoration: underline;
+        }
+      }
     }
   }
   .review-main {

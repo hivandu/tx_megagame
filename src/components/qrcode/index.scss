@@ -1,22 +1,13 @@
-@media screen and (max-width:1300px) {
-  #qrcode {
-    position: fixed;
-  }
-}
-
-@media screen and (min-width: 1300px) {
-  #qrcode {
-    position: absolute;
-  }
-}
-
 #qrcode {
-  top: 600px;
+  position: fixed;
+  bottom:180px;
   right: 50px;
   z-index: 99;
   clear: both;
   display: table;
   font-size: 14px;
+  clear:both;
+  display:table;
   .tab {
     font-weight: bold;
     width: 100%;
@@ -55,7 +46,7 @@
     text-align:justify;
   }
   .hoverBtn {
-    opacity: 1;
+    opacity: 0.5;
     transition: all .3s;
     img{
       width: 40px;
@@ -69,11 +60,12 @@
     }
   }
   &:hover {
+    width: 380px;
     .qrcode {
       display: inline-block;
     }
     .hoverBtn{
-      opacity: .75;
+      opacity: 1;
     }
   }
   .hoverBtn {
@@ -81,10 +73,13 @@
     cursor: pointer;
   }
   .qrcode {
+    position: absolute;
+    top:0;
+    right: 100px;
     display: none;
-    margin-right: 10px;
+    // margin-right: 10px;
     width: 280px;
-    padding-bottom:20px;
+    // padding-bottom:20px;
     background-color: #fff;
   }
   .btnInfo {

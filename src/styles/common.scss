@@ -1,7 +1,5 @@
 #app {
   min-width: 1440px;
-  height: 100%;
-  position: relative;
   font-size: 14px;
   font-family: 'Microsoft YaHei', 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -51,7 +49,7 @@
 /* 设置滚动条的样式 */
 
 .scroll::-webkit-scrollbar {
-  width: 7px;
+  width: 6px;
 }
 
 

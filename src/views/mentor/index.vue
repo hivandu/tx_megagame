@@ -11,8 +11,8 @@
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide" v-for="(slide, key) in mentorData">
-            <ul v-for="(group, key) in slide.result">
-              <li class="foto" v-for="(item, key) in group.result" :key="key">
+            <ul>
+              <li class="foto" v-for="(item, key) in slide.result" :key="key">
                 <div class="image"><img :src=item.image alt=""></div>
                 <div class="person-info">
                   <div class="name second-title">{{item.name}}</div>

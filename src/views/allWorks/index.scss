@@ -20,6 +20,13 @@
       height: 175px;
       vertical-align: bottom
     }
+    &:hover{
+      .link{
+        p{
+         text-decoration: underline;
+        }
+      }
+    }
     .link {
       width: 100%;
       background-color: #fff;
@@ -27,8 +34,10 @@
       padding-top:10px;
       padding-bottom:10px;
       p{
+        display:inline-block;
+        line-height: 21px;
         text-align:left;
-        padding-left:15px;
+        margin-left:15px;
       }
       a {
         color: #051740;
