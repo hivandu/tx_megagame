@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "msg": "",
+  "obj": [{
+    "slide": "",
+    "result": [{
+      "name": "夏琳",
+      "image": "../ossweb-img/image/foto-sammi.jpg",
+      "info": "腾讯游戏学院院长"
+    }, {
+      "name": "刘子建",
+      "image": "../ossweb-img/image/foto-jim.jpg",
+      "info": "腾讯游戏学院副院长"
+    }, {
+      "name": "张晗劲",
+      "image": "../ossweb-img/image/foto-hanjin.jpg",
+      "info": "魔方工作室群总裁"
+    }, {
+      "name": "沈黎",
+      "image": "../ossweb-img/image/foto-lishen.jpg",
+      "info": "NEXT研发中心总经理"
+    }, {
+      "name": "刘丹",
+      "image": "../ossweb-img/image/foto-walker.jpg",
+      "info": "天行工作室总经理"
+    }]
+  }, {
+    "slide": "",
+    "result": [{
+      "name": "夏琳",
+      "image": "../ossweb-img/image/foto-sammi.jpg",
+      "info": "腾讯游戏学院院长"
+    }, {
+      "name": "刘子建",
+      "image": "../ossweb-img/image/foto-jim.jpg",
+      "info": "腾讯游戏学院副院长"
+    }, {
+      "name": "张晗劲",
+      "image": "../ossweb-img/image/foto-hanjin.jpg",
+      "info": "魔方工作室群总裁"
+    },{
+      "name": "沈黎",
+      "image": "../ossweb-img/image/foto-lishen.jpg",
+      "info": "NEXT研发中心总经理"
+    }, {
+      "name": "刘丹",
+      "image": "../ossweb-img/image/foto-walker.jpg",
+      "info": "天行工作室总经理"
+    }]
+  }]
+}
