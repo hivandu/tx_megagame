@@ -7,6 +7,22 @@
   export default{
     name:'goto',
     props:['buttonText', 'path'],
+    watch:{
+      $route(val){
+        if (val.query.from == 'allWorks') {
+          $('.button.all').addClass('changed');
+        }else if (val.path == '/allWorks'){
+          $('.button.all').addClass('changed');
+        }else {
+          $('.button.all').removeClass('changed');
+        }
+      }
+    },
+    mounted(){
+      if (this.$route.query.from == 'allWork') {
+
+      }
+    },
     data(){
       return{
       }

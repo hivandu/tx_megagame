@@ -5,7 +5,7 @@
       <div class="second-title blue-font">HIGHLIGHTS</div>
     </div>
     <div class="review-items info scroll">
-      <div class="nav-info second-title">历届大赛优秀作品展</div>
+      <div class="nav-info second-title">2016年大赛优秀作品展</div>
       <ul>
         <li @click="gotoWorkInfo(item.vid)" v-for="(item, index) in workItems">
           <div class="review-main">

@@ -12,8 +12,9 @@
   ul.other{
     li{
       text-align: left;
-      display: block;
       padding:3px 0;
+      clear:both;
+      display:table;
     }
   }
   ul {

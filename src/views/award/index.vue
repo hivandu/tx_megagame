@@ -36,7 +36,7 @@
           </div>
         </li>
       </ul>
-      <p class="second-title blue-font title">单项奖品</p>
+      <p class="second-title blue-font title">单项奖</p>
       <ul class="single">
         <li>
           <div class="item-inner">
@@ -78,7 +78,7 @@
         <li>4. 获奖团队及作品Next Idea会直接推荐进入“国家双创人才库”评选的终审环节；</li>
         <li>5. 获奖团队的作品有机会纳入联合国游戏数字图书馆；</li>
         <li>6. 获奖团队及作品有机会纳入Discovery纪录片花絮素材；</li>
-        <li>7. 获奖团队奖有机会得到腾讯专业的游戏研发过程指导，并在腾讯极光计划等研发、发行资源的孵化扶持。</li>
+        <li>7. 获奖团队奖有机会得到腾讯专业的游戏研发过程指导，并有机会获得腾讯极光计划等研发、发行资源的孵化扶持。</li>
       </ul>
     </div>
   </div>

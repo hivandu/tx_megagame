@@ -73,6 +73,9 @@ export default {
           break;
         case '/activityInfo':
           this.index = 'index-7';
+          setTimeout(function() {
+            $('.slide-7').addClass('selected');
+          }, 100);
           break;
         case '/cooperation':
           this.index = 'index-8';

@@ -5,7 +5,7 @@
       <div class="second-title blue-font">DETAILS OF THE WORK</div>
     </div>
     <div class="info scroll">
-      <div class="nav-guide"><span @click="$router.back();">{{fromReview?'精彩回顾':'全部作品'}}</span><span> » </span> <span>作品详情</span></div>
+      <div class="nav-guide"><span @click="$router.back();">{{fromReview?'精彩回顾':'全部作品'}}</span><span> » </span> <span class="blue-font">作品详情</span></div>
       <div class="nav-title second-title"><span class="name">{{workInfo.title}} </span> {{workInfo.subTitle}}</div>
       <img :src="workInfo.navImage" alt="" class="work-figure">
       <div class="team">

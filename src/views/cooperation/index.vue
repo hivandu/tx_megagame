@@ -15,7 +15,7 @@
     </div>
     <div id="partners">
       <div class="content-title">
-        <div class="first-title">合作媒体</div>
+        <div class="first-title">合作方</div>
         <div class="second-title blue-font">PARTNERS</div>
       </div>
       <div class="info">

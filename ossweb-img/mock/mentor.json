@@ -16,13 +16,13 @@
       "image": "../ossweb-img/image/foto-hanjin.jpg",
       "info": "魔方工作室群总裁"
     }, {
-      "name": "刘丹",
-      "image": "../ossweb-img/image/foto-walker.jpg",
-      "info": "天行工作室总经理"
-    }, {
       "name": "沈黎",
       "image": "../ossweb-img/image/foto-lishen.jpg",
       "info": "NEXT研发中心总经理"
+    }, {
+      "name": "刘丹",
+      "image": "../ossweb-img/image/foto-walker.jpg",
+      "info": "天行工作室总经理"
     }]
   }, {
     "slide": "",
@@ -38,14 +38,14 @@
       "name": "张晗劲",
       "image": "../ossweb-img/image/foto-hanjin.jpg",
       "info": "魔方工作室群总裁"
+    },{
+      "name": "沈黎",
+      "image": "../ossweb-img/image/foto-lishen.jpg",
+      "info": "NEXT研发中心总经理"
     }, {
       "name": "刘丹",
       "image": "../ossweb-img/image/foto-walker.jpg",
       "info": "天行工作室总经理"
-    }, {
-      "name": "沈黎",
-      "image": "../ossweb-img/image/foto-lishen.jpg",
-      "info": "NEXT研发中心总经理"
     }]
   }]
 }
