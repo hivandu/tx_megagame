@@ -8,7 +8,7 @@
       <div class="info">
         <ul class="sponsor items">
           <li v-for="item in 8">
-            <img src="../../../ossweb-img/image/ic-txyxxy.png" alt="">
+            <img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/ic-txyxxy.png" alt="">
           </li>
         </ul>
       </div>
@@ -26,7 +26,7 @@
         <div class="second-title mt10">外部伙伴</div>
         <ul class="partners items">
           <li v-for="item in 10">
-            <img src="../../../ossweb-img/image/partners-item.png" alt="">
+            <img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/partners-item.png" alt="">
           </li>
         </ul>
       </div>

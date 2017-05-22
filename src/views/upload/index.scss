@@ -23,6 +23,27 @@
       textarea {
         background-color: #d7e2ff;
       }
+      .judgment{
+        clear:both;
+        display:table;
+        line-height: 40px;
+        .title{
+          width: 100px;
+          margin-right:10px;
+        }
+        div{
+          float:left;
+          margin-right:10px;
+        }
+        input[type="radio"]{
+          float:left;
+          margin-top:12px;
+        }
+        label{
+          width:30px;
+          background: none;
+        }
+      }
       label {
         float: left;
         display: inline-block;
@@ -44,6 +65,9 @@
         padding-left: 10px;
         background-color: #d7e2ff;
         color: #041540;
+        &:disabled{
+          background-color: #ddd;
+        }
       }
       textarea {
         border: none;
@@ -54,6 +78,9 @@
         background-color: #d7e2ff;
         color: #041540;
         font-size: 18px;
+        &:disabled{
+          background-color: #ddd;
+        }
       }
       input.verification {
         width: 310px;
@@ -76,6 +103,14 @@
         color: #fff;
         border: none;
         float: left;
+        &:disabled{
+          opacity: 0.5;
+        }
+      }
+      input[type="button"]{
+        &:disabled{
+          opacity: 0.5;
+        }
       }
     }
   }

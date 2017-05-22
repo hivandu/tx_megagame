@@ -119,11 +119,11 @@ yarn test
   "msg":"已获取资讯信息",
   "obj":{
     "result":[{
-      "img":"../../../ossweb-img/image/information-item.png",
+      "img":"http://game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/information-item.png",
       "title":"16款新品深化精品布局 极光计划正式亮相",
       "link":"test"
     },{
-      "img":"../../../ossweb-img/image/information-item.png",
+      "img":"http://game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/information-item.png",
       "title":"16款新品深化精品布局 极光计划正式亮相",
       "link":"test"
     }]
@@ -148,12 +148,12 @@ yarn test
   "msg":"已获取资讯信息",
   "obj":{
     "result":[{
-      "img":"../../../ossweb-img/image/information-item.png",
+      "img":"http://game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/information-item.png",
       "title":"16款新品深化精品布局 极光计划正式亮相",
       "vid":"h0356wpiw14",
       "link":"test"
     },{
-      "img":"../../../ossweb-img/image/information-item.png",
+      "img":"http://game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/information-item.png",
       "title":"16款新品深化精品布局 极光计划正式亮相",
       "vid":"h0356wpiw14",
       "link":"test"
@@ -193,6 +193,8 @@ yarn test
 **大赛评委**
 
 大赛评委是动态拉取数据的，页面数据为`mentor.json`
+
+**「注意」: 一个slide分组内最多只能有六组导师信息**
 
 ```json
 /**

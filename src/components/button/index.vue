@@ -6,7 +6,7 @@
 <script>
   export default{
     name:'goto',
-    props:['buttonText', 'path'],
+    props:['buttonText', 'path', 'user'],
     watch:{
       $route(val){
         if (val.query.from == 'allWorks') {
@@ -29,7 +29,17 @@
     },
     methods:{
       route(){
-        this.$router.push({path: this.path});
+        const _this = this;
+        if (_this.path == '/allWorks') {
+          _this.$router.push({path: this.path});
+        }else{
+          console.log(_this.user);
+          if (userStatus) {
+            this.$router.push({path: this.path});
+          }else{
+            alert('请先登录');
+          }
+        }
       }
     }
   }

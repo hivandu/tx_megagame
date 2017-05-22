@@ -1,24 +1,23 @@
 <template>
   <div id="app">
-    <index v-on:accSubmit="subSuccess">
+    <index v-on:accSubmit="subSuccess" :user="userInfo">
       <t-submit slot="submit" v-on:undisSubmit="undisSubmit" v-show="display"></t-submit>
       <t-slide class="slide" slot="slide" :path="path"></t-slide>
       <div slot="login" class="login">
-        <div class="logged" v-if="userInfo">
+        <div class="logged" id="logined">
           <span>欢迎您, </span><span>{{userInfo.nickName}}</span><span @click="logout" class="action">【注销】</span>
         </div>
-        <div class="unLogged" v-else>
+        <div class="unLogged" id="unlogin">
           <span class="action" @click="login">登录</span>
         </div>
       </div>
-      <t-button :buttonText="'上传作品及报名'" :path="'/upload'" :class="['button upload', path=='/upload'?'changed':'']" slot="button-up"></t-button>
+      <t-button :user="userInfo" :buttonText="'上传作品及报名'" :path="'/upload'" :class="['button upload', path=='/upload'?'changed':'']" slot="button-up"></t-button>
       <t-button :buttonText="'全部作品'" :path="'/allWorks'" :class="['button all', path=='/allWorks'?'changed':'']" slot="button-all"></t-button>
       <t-qrcode slot="qrcode" class="qr"></t-qrcode>
     </index>
   </div>
 </template>
 <script>
-import BgImg from '../ossweb-img/image/bg.jpg'
 import Index from './views/index/'
 import TButton from './components/button/'
 import TSlide from './components/slide/'
@@ -46,14 +45,15 @@ export default {
   },
   mounted() {
     this.path = this.$route.path;
-    this.getUserInfo()
+    this.getUserInfo();
   },
   data() {
     return {
-      BgImg: BgImg,
       navBgShow: true,
       path: '',
-      userInfo: null,
+      userInfo:{
+        userName:''
+      },
       display: false
     }
   },
@@ -61,27 +61,35 @@ export default {
     // 获取用户状态
     getUserInfo() {
       const _this = this;
-      _this.$http.get('../ossweb-img/mock/user.json').then(function(res) {
-        if (res.data.success) {
-          if (res.data.obj.status) {
-            _this.userInfo = res.data.obj.userInfo;
-          } else {
-            _this.userInfo = null
-          }
-        }
-      }).catch(function(err) {
-        console.log(err)
-      })
+      //检查是否已登录，已登录则获取QQ号显示已登录状态
+      milo.ready(function() {
+        need("biz.login-min", function(LoginManager) {
+          LoginManager.checkLogin(function() {
+            console.log('login');
+            g("login_qq_span").innerHTML = LoginManager.getUserUin(); //获取QQ号
+            LoginManager.getNickName(function(loginInfo) {
+              if (loginInfo.isLogin) {
+                _this.userInfo.nickName = loginInfo.nickName;
+              }else{
+                _this.userInfo = null;
+              }
+              key = 1;
+            });
+          });
+        });
+      });
     },
 
     // 注销
     logout() {
-
+      LoginManager.logout();
+      this.getUserInfo();
     },
 
     // 登录
     login() {
-
+      LoginManager.login();
+      this.getUserInfo();
     },
 
     // 显示提交成功
@@ -99,9 +107,8 @@ export default {
 <style lang="scss">
 @import "./styles/reset.scss";
 @import "./styles/common.scss";
-
 .login {
-  position:fixed;
+  position: fixed;
   top: 82px;
   font-size: 14px;
   font-weight: bold;
@@ -112,8 +119,8 @@ export default {
   text-align: right;
 }
 
-.goto.changed{
-  opacity:1;
+.goto.changed {
+  opacity: 1;
 }
 
 .action {

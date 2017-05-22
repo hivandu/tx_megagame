@@ -1,7 +1,7 @@
 <template>
   <div id="submit" class="success">
     <div class="close" @click="undis"></div>
-    <img src="../../ossweb-img/image/submit-success.jpg" alt="">
+    <img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/submit-success.jpg" alt="">
     <div class="submit-mask"></div>
   </div>
 </template>

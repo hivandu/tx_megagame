@@ -6,7 +6,7 @@
       </div>
       <div class="content" v-show="qrIndex == 1">
         <div class="qrcode-code">
-          <img src="../../../ossweb-img/image/qrcode.jpg" alt="">
+          <img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/qrcode.jpg" alt="">
         </div>
         <div class="qr-info">
           <p class="blodTitle">快速组队</p>
@@ -15,7 +15,7 @@
       </div>
       <div class="content" v-show="qrIndex == 2">
         <div class="qrcode-code">
-          <img src="../../../ossweb-img/image/qrcode-2.jpg" alt="">
+          <img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/qrcode-2.jpg" alt="">
         </div>
         <div class="qr-info">
           <p class="blodTitle">赛事资讯</p>
@@ -25,7 +25,7 @@
     </div>
     <div class="hoverBtn">
       <div class="qr-thum">
-        <img src="../../../ossweb-img/image/qr-thum.png" alt="">
+        <img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/qr-thum.png" alt="">
       </div>
       <div class="btnInfo">组队及资讯</div>
     </div>

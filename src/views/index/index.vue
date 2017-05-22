@@ -8,7 +8,7 @@
     <slot name="qrcode"></slot>
     <div id="content" class="content">
       <transition :name="transitionName" mode="out-in">
-        <router-view class="view" v-on:accSubmit="submit"></router-view>
+        <router-view class="view" v-on:accSubmit="submit" :user="user"></router-view>
       </transition>
     </div>
     <canvas id="canvas"></canvas>
@@ -19,13 +19,15 @@
 <script>
 export default {
   name: 'index',
+  props:['user'],
   watch:{
     '$route' (to, from){
       // this.setCanvas();
     }
   },
   mounted(){
-    this.setCanvas();
+    // this.setCanvas();
+    
   },
   data() {
     return {

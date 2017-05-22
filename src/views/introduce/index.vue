@@ -9,24 +9,24 @@
         游戏，就真造一次！为了给高校学生一个展示自我的舞台，打造属于高校游戏人自己的赛事，由腾讯游戏学院主办的腾讯NEXT IDEA高校游戏创意制作大赛再度扬帆起航！对于高校生力军来说，赛事不但提供游戏创意展示的平台，更为大家提供进入腾讯的绿色通道。游戏达人们，一起来做一款属于你的游戏吧！
       </div>
       <div class="timeline navigation">
-        <img class="line" src="../../../ossweb-img/image/timeLine.png" height="85" width="732" alt="">
+        <img class="line" src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/timeLine.png" height="85" width="732" alt="">
         <ul>
           <li class="time-1">
-            <img src="../../../ossweb-img/image/time-line-point.png" alt="" class="point">
+            <img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/time-line-point.png" alt="" class="point">
             <div class="info">
               <p class="date">2017.6.6-7.21</p>
               <p class="link"><span class="blue-font">初赛报名及作品提交</span></p>
             </div>
           </li>
           <li class="time-2">
-            <img src="../../../ossweb-img/image/time-line-point.png" alt="" class="point">
+            <img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/time-line-point.png" alt="" class="point">
             <div class="info">
               <p class="date">2017.7.24-8.4</p>
               <p class="link"><span class="blue-font">初赛评审</span></p>
             </div>
           </li>
           <li class="time-3">
-            <img src="../../../ossweb-img/image/time-line-point.png" alt="" class="point">
+            <img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/time-line-point.png" alt="" class="point">
             <div class="info">
               <p class="date">2017.8.7-9.15</p>
               <p class="link">
@@ -35,14 +35,14 @@
             </div>
           </li>
           <li class="time-4">
-            <img src="../../../ossweb-img/image/time-line-point.png" alt="" class="point">
+            <img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/time-line-point.png" alt="" class="point">
             <div class="info">
               <p class="date">2017.9.18-9.29</p>
               <p class="link"><span class="blue-font">复赛评审</span></p>
             </div>
           </li>
           <li class="time-5">
-            <img src="../../../ossweb-img/image/time-line-point.png" alt="" class="point">
+            <img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/time-line-point.png" alt="" class="point">
             <div class="info">
               <p class="date">2017.10.16-10.20</p>
               <p class="link"><span class="blue-font">总决赛评审及现场点评</span></p>

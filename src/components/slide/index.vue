@@ -10,12 +10,11 @@
   </div>
 </template>
 <script>
-import Items from '../../../ossweb-img/mock/slide.json'
 export default {
   name: 'slide',
   data() {
     return {
-      items: Items,
+      items: '',
       index: '',
       path: '',
       from: ''
@@ -33,8 +32,20 @@ export default {
   mounted() {
     const _route = this.$route;
     this.changeRouter(_route);
+    this.getItems();
   },
   methods: {
+    getItems(){
+      const _this = this;
+      _this.$http.get(PathUtil.getPath('getSlideItems')).then(function(res){
+        if (res.data.success) {
+          _this.items = res.data.obj;
+        }else{
+        }
+      }).catch(function(err){
+        console.log(err);
+      })
+    },
     route(item, index) {
       if (index != 0) {
         this.$router.push({

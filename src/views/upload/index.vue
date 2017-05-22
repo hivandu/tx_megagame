@@ -10,49 +10,63 @@
       </div>
       <form @submit.prevent="submitForm($event)" action="index_submit" method="get" accept-charset="utf-8">
         <div class="form-line">
-          <label for="">队长QQ</label>
-          <input type="text" v-model="formData.captainQQ" placeholder="请输入10位QQ号码">
+          <label for="">个人QQ</label>
+          <input type="text" v-model="formData.personQQ" placeholder="请输入QQ号码" required>
         </div>
         <div class="form-line">
           <label for="">姓名</label>
-          <input type="text" v-model="formData.name">
+          <input type="text" v-model="formData.name" required>
         </div>
         <div class="form-line">
           <label for="">高校名称</label>
-          <input type="text" v-model="formData.colleges">
+          <input type="text" v-model="formData.colleges" required>
         </div>
         <div class="form-line">
           <label for="">年级</label>
-          <input type="text" v-model="formData.grade">
+          <input type="text" v-model="formData.grade" required>
         </div>
         <div class="form-line">
           <label for="">专业</label>
-          <input type="text" v-model="formData.pro">
+          <input type="text" v-model="formData.pro" required>
         </div>
         <div class="form-line">
           <label for="">手机</label>
-          <input type="text" v-model="formData.phone" placeholder="请输入11位手机号码">
+          <input type="text" v-model="formData.phone" placeholder="请输入11位手机号码" required>
         </div>
         <div class="form-line">
           <label for="">验证码</label>
           <input type="text" placeholder="请先获取验证码" :disabled="!verificationDis" v-model="verification" class="verification">
-          <input :value="authCodeInput" type="button" class="get" @click="getVerification">
+          <input :value="authCodeInput" type="button" class="get" @click="getVerificationFun" :disabled="!getVerification">
         </div>
         <div class="form-line">
           <label for="">邮箱</label>
-          <input type="text" v-model="formData.mail">
+          <input type="text" v-model="formData.mail" required>
         </div>
-        <div class="form-line">
-          <label for="">团队名称</label>
-          <input type="text" v-model="formData.teamName">
+        <div class="form-line judgment">
+          <div class="title second-title blue-font" for="">团队信息</div>
+          <div>团队信息只能由队长填写，你是否为队长？</div>
+          <input type="radio" id="captain" value="true" v-model="picked">
+          <label for="captain">是</label>
+          <input type="radio" id="uncaptain" value="false" v-model="picked">
+          <label for="uncaptain">否</label><span v-show="picked=='true'" class="blue-font">以下为必填项</span>
         </div>
-        <div class="form-line">
-          <label for="">团队成员</label>
-          <input type="text" v-model="formData.members" placeholder="团队成员须先注册，之后输入成员QQ号即可，多个成员用:隔开">
-        </div>
-        <div class="form-line">
-          <label for="">团队介绍</label>
-          <textarea name="" id="" cols="30" rows="5" v-model="formData.teamInfo"></textarea>
+        <div v-show="picked=='true'">
+          <div class="form-line">
+            <label for="">队长QQ</label>
+            <input type="text" :disabled="picked != 'true'" v-model="formData.captainQQ" placeholder="请输入10位QQ号码" :required="picked == 'true'">
+          </div>
+          <div class="form-line">
+            <label for="">团队名称</label>
+            <input type="text" v-model="formData.teamName" :disabled="picked != 'true'" :required="picked == 'true'">
+          </div>
+          <div class="form-line">
+            <label for="">团队成员</label>
+            <input type="text" v-model="formData.members" placeholder="团队成员须先注册，之后输入成员QQ号即可，多个成员用:隔开" :disabled="picked != 'true'" :required="picked == 'true'">
+          </div>
+          <div class="form-line">
+            <label for="">团队介绍</label>
+            <textarea name="" id="" cols="30" rows="5" v-model="formData.teamInfo" :disabled="picked != 'true'" :required="picked == 'true'"></textarea>
+          </div>
         </div>
         <!-- 如果需要使用默认form表单提交，去掉@click的prevent属性 -->
         <div class="form-line submit">
@@ -67,11 +81,24 @@
 <script>
 export default {
   name: 'upload-first',
+  props: ['user'],
   watch: {
-    formData:{
-      deep:true,
-      handler:function(val, oldVal){
-        this.submitStatus = true;
+    formData: {
+      deep: true,
+      handler: function(val, oldVal) {
+        const _this = this;
+        if(val.phone){
+          console.log(val.phone);
+          _this.getVerification = true;
+        }
+      }
+    },
+    picked(val){
+      if (val == 'false') {
+        this.formData.captainQQ = '',
+        this.formData.teamName = '',
+        this.formData.members = '',
+        this.formData.teamInfo = ''
       }
     },
     // 监听验证码输入
@@ -85,9 +112,15 @@ export default {
       }
     }
   },
+  mounted(){
+    if (!userStatus) {
+      this.$router.back();
+    }
+  },
   data() {
     return {
       formData: {
+        personQQ: '',
         captainQQ: '',
         name: '',
         colleges: '',
@@ -105,7 +138,9 @@ export default {
       Interval: null,
       timer: 60,
       timeStatus: false,
-      submitStatus: false
+      submitStatus: false,
+      getVerification: false,
+      picked: 'false',
 
     }
   },
@@ -124,15 +159,15 @@ export default {
     },
 
     //  获取验证码事件
-    getVerification() {
+    getVerificationFun() {
       const _this = this;
       _this.$http.get(PathUtil.getPath('getVerification'), {
-        params:{
+        params: {
           phone: _this.formData.phone
         }
       }).then(function(res) {
         if (res.data.success) {
-          _this.submitStatus = true;
+          // _this.submitStatus = true;
           _this.verificationDis = true;
           _this.Interval = setInterval(_this.authGet, 1000);
           $('.verification').val('').focus();
@@ -141,16 +176,22 @@ export default {
         }
       }).catch(function(err) {
         _this.authCodeInput = '重新获取'
+        console.log(err);
       })
     },
 
     // 验证码验证
     validationVerification(val) {
       const _this = this;
-      _this.$http.get('../../../ossweb-img/mock/verification.json').then(function(res) {
-
+      _this.$http.get(PathUtil.getPath('getVerification')).then(function(res) {
+        if (res.data.success) {
+          _this.submitStatus = true;
+        }else{
+          _this.submitStatus = false;
+        }
       }).catch(function(err) {
-
+        _this.submitStatus = false;
+        console.log(err);
       })
     },
 

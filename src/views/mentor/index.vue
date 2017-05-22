@@ -23,8 +23,8 @@
           </div>
         </div>
         <!-- 如果需要导航按钮 -->
-        <div class="swiper-button-prev"><img src="../../../ossweb-img/image/swiper-btn.png" alt="" class="forward"></div>
-        <div class="swiper-button-next"><img src="../../../ossweb-img/image/swiper-btn.png" alt="" class="next"></div>
+        <div class="swiper-button-prev"><img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/swiper-btn.png" alt="" class="forward"></div>
+        <div class="swiper-button-next"><img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/swiper-btn.png" alt="" class="next"></div>
       </div>
     </div>
   </div>

@@ -9,28 +9,28 @@
       <ul class="comprehensive">
         <li class="gold">
           <div class="item-inner">
-            <img src="../../../ossweb-img/image/trophy-gold.png" alt="">
+            <img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/trophy-gold.png" alt="">
             <p class="ranking">金奖1名</p>
             <p class="info">18000元RMB + 奖杯 + 获奖证书</p>
           </div>
         </li>
         <li class="light">
           <div class="item-inner">
-            <img src="../../../ossweb-img/image/trophy-light.png" alt="">
+            <img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/trophy-light.png" alt="">
             <p class="ranking">银奖2名</p>
             <p class="info">10000元RMB + 奖杯 + 获奖证书</p>
           </div>
         </li>
         <li class="copper">
           <div class="item-inner">
-            <img src="../../../ossweb-img/image/trophy-copper.png" alt="">
+            <img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/trophy-copper.png" alt="">
             <p class="ranking">铜奖3名</p>
             <p class="info">5000元RMB + 奖杯 + 获奖证书</p>
           </div>
         </li>
         <li class="good">
           <div class="item-inner">
-            <img src="../../../ossweb-img/image/trophy-good.png" alt="">
+            <img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/trophy-good.png" alt="">
             <p class="ranking">入围奖4名</p>
             <p class="info">3000元RMB + 获奖证书</p>
           </div>
@@ -40,21 +40,21 @@
       <ul class="single">
         <li>
           <div class="item-inner">
-            <div class="image"><img src="../../../ossweb-img/image/award-design.png" alt=""></div>
+            <div class="image"><img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/award-design.png" alt=""></div>
             <p class="info">最佳创意设计奖：1名</p>
             <p class="info">10000元RMB + 获奖证书</p>
           </div>
         </li>
         <li>
           <div class="item-inner">
-            <div class="image"><img src="../../../ossweb-img/image/award-draw.png" alt=""></div>
+            <div class="image"><img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/award-draw.png" alt=""></div>
             <p class="info">最佳美术设计奖：1名</p>
             <p class="info">10000元RMB + 获奖证书</p>
           </div>
         </li>
         <li>
           <div class="item-inner">
-            <div class="image"><img src="../../../ossweb-img/image/award-xz.png" alt=""></div>
+            <div class="image"><img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/award-xz.png" alt=""></div>
             <p class="info">最佳人气奖：1名</p>
             <p class="info">1000元RMB + 获奖证书</p>
           </div>
@@ -64,7 +64,7 @@
       <ul class="honor">
         <li>
           <div class="item-inner">
-            <div class="image"><img src="../../../ossweb-img/image/honor-mentor.png" alt=""></div>
+            <div class="image"><img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/honor-mentor.png" alt=""></div>
             <p class="info">荣誉导师奖：若干</p>
             <p class="info">1000元RMB + 获奖证书</p>
           </div>
