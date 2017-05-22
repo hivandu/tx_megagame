@@ -1,7 +1,7 @@
 <template>
   <div id="award" class="content">
     <div class="content-title">
-      <div class="first-title">奖项设置</div>
+      <div class="first-title">奖项设置 <span>备注：获奖者奖金的个人所得税统一由腾讯大赛组委会代扣代缴。</span></div>
       <div class="second-title blue-font">PRIZE</div>
     </div>
     <div class="trophy scroll info">

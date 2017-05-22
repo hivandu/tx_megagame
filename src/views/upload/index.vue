@@ -114,7 +114,7 @@ export default {
     // 提交表单事件
     submitForm() {
       const _this = this;
-      this.$http.post('ossweb-img/mock/submit_info.json', _this.formData).then(function(res) {
+      this.$http.post(PathUtil.getPath('postSubmit'), _this.formData).then(function(res) {
         _this.submitStatus = false;
         _this.$emit('accSubmit'); // 显示提交成功
       }).catch(function(err) {
@@ -126,8 +126,10 @@ export default {
     //  获取验证码事件
     getVerification() {
       const _this = this;
-      _this.$http.get('../../../ossweb-img/mock/verification.json', {
-
+      _this.$http.get(PathUtil.getPath('getVerification'), {
+        params:{
+          phone: _this.formData.phone
+        }
       }).then(function(res) {
         if (res.data.success) {
           _this.submitStatus = true;

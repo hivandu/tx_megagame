@@ -33,7 +33,7 @@ export default {
     // 获取作品列表
     getWorkItems() {
       const _this = this;
-      _this.$http.get('../../../ossweb-img/mock/oldWorkItems.json').then(function(res) {
+      _this.$http.get(PathUtil.getPath('getOldWork')).then(function(res) {
         if (res.data.success) {
           _this.workItems = res.data.obj;
         }

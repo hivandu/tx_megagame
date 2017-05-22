@@ -4,7 +4,7 @@ var path = require('path')
 module.exports = {
   build: {
     env: require('./prod.env'),
-    index: path.resolve(__dirname, '../dist/index.htm'),
+    index: path.resolve(__dirname, '../dist/index.shtml'),
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'ossweb-img',
     assetsPublicPath: '/',

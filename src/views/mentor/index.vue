@@ -55,7 +55,7 @@ export default {
   methods: {
     getMentor() {
       const _this = this;
-      this.$http.get('../../../ossweb-img/mock/mentor.json').then(function(res) {
+      this.$http.get(PathUtil.getPath('getMentor')).then(function(res) {
         if (res.data.success) {
           _this.mentorData = res.data.obj;
         }

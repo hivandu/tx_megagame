@@ -70,6 +70,10 @@ yarn test
 - README.md // 本文档
 ```
 
+## ossweb-img/js/config.js
+全部变量设置，接口地址定义都放在这里，根据接口修改就可以了。
+
+
 ## libs/routes
 路由设置文件，其中的路由组件关联设置全在这里
 
@@ -380,10 +384,9 @@ formData: {
 **注意：所有的方法内的ajax请求都需要另外修改地址。另外，index.html内的编码需要更改，由于展示服务器没有中文，为了展示防止乱码，暂时定位`lang=“en”`, `charset=“utf-8”`**
 
 有部分功能由于限制可能不完善，有什么问题请联系我,
-mailto:   `doo[at]hivan.me` 
+mailto:   `doo[at]hivan.me`
 wechat:  `hivandu`
 phone:  `18602198175`
-name: 杜斌 思烁
 
 ## 视频地址及要求
 --需求: 内置播放--

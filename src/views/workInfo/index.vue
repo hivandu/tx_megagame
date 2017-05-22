@@ -75,7 +75,11 @@ export default {
   methods: {
     getWorkInfo(vid) {
       const _this = this;
-      _this.$http.get('../../../ossweb-img/mock/workInfo.json').then(function(res) {
+      _this.$http.get(PathUtil.getPath('getWorkInfo'),{
+        params:{
+          vid: vid
+        }
+      }).then(function(res) {
         console.log(res);
         if (res.data.success) {
           _this.workInfo = res.data.obj[vid];

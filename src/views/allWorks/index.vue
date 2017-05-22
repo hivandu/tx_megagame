@@ -33,7 +33,7 @@
       // 获取作品列表信息
       getWorkItems(){
         const _this = this;
-        this.$http.get('../../../ossweb-img/mock/work.json').then(function(res){
+        this.$http.get(PathUtil.getPath('getWorkItems')).then(function(res){
           console.log(res.data);
           if (res.data.success) {
             _this.workItems = res.data.obj.result;

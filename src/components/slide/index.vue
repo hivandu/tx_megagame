@@ -3,7 +3,7 @@
     <div class="line"></div>
     <div :class="['point', index]"></div>
     <ul>
-      <li v-for="(item, index) in items" @click="route(item,index)" :class="['slide-'+index, item.link == path?'selected':'', index==1?'second':'']">
+      <li v-for="(item, index) in items" @click="route(item,index)" :class="['slide-'+index, item.link == path?'selected':'', index==1?'second':'', 'slide-item']">
         <span></span><a href="javascript:;">{{item.name}}</a>
       </li>
     </ul>
@@ -23,7 +23,7 @@ export default {
   },
   watch: {
     '$route' (val) {
-      $('.slide-5').removeClass('selected');
+      $('.slide-item').removeClass('selected');
       this.changeRouter(val);
     }
   },

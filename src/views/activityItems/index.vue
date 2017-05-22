@@ -31,7 +31,7 @@
       // 获取资讯信息
       getActivityItems(){
         const _this = this;
-        this.$http.get('../../../ossweb-img/mock/information.json').then(function(res){
+        this.$http.get(PathUtil.getPath('getActivityItems')).then(function(res){
           console.log(res.data);
           if (res.data.success) {
             _this.activityItems = res.data.obj.result;
@@ -46,7 +46,7 @@
       // 转到详情页
       gotoInfo(item){
         console.log('goto click');
-        this.$router.push({path:'/activityInfo'});
+        this.$router.push({path:'/activityInfo', query:{"id": item.id}});
         // 正式环境替换为资讯详情页面路径
         // this.$router.push({path:item.link});
       }
