@@ -26,7 +26,7 @@ export default {
     }
   },
   mounted(){
-    // this.setCanvas();
+    this.setCanvas();
     
   },
   data() {

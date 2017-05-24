@@ -33,7 +33,6 @@
         if (_this.path == '/allWorks') {
           _this.$router.push({path: this.path});
         }else{
-          console.log(_this.user);
           if (userStatus) {
             this.$router.push({path: this.path});
           }else{

@@ -9,7 +9,7 @@
   <meta name="Description" content="">
   <meta name="Keywords" content="腾讯游戏">
   <title>专题主题（标题）- 产品中文全称官方网站 - 腾讯游戏</title>
-  <link rel="stylesheet" type="text/css" href="ossweb-img/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="//gameinstitute.qq.com/act/a20170522nextidea/css/swiper.min.css">
   <style>
   .mask {
     width: 100%;
@@ -48,16 +48,46 @@
       <br> 请尝试更新浏览器后浏览！
     </div>
   </div>
-  <div id="app-box"></div>
+  <div id="app-box" :userStatus="userStatus"></div>
   <!-- built files will be auto injected -->
   <script type="text/javascript" src="//cdnjs.gtimg.com/cdnjs/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script type="text/javascript" src="ossweb-img/swiper.min.js"></script>
-  <script type="text/javascript" src="ossweb-img/config.js"></script>
+  <script type="text/javascript" src="//gameinstitute.qq.com/act/a20170522nextidea/js/swiper.min.js"></script>
+  <script type="text/javascript" src="//gameinstitute.qq.com/act/a20170522nextidea/js/config.js"></script>
   <script src="//ossweb-img.qq.com/images/js/title.js"></script>
   <script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
   <script src="//qzs.qq.com/tencentvideo_v1/js/tvp/tvp.player.js" charset="utf-8"></script>
   <script src="//ossweb-img.qq.com/images/js/milo/milo.js"></script>
   <script>
+  var userStatus = true;
+  var userName = null;
+  var userQQ = null;
+  milo.ready(function() {
+    need("biz.login-min", function(LoginManager) {
+      LoginManager.checkLogin(function() {
+        console.log('checkLogin');
+
+        // 如果页面内有这个id则插入值，没有则抛异常
+        try {
+          g("login_qq_span").value = LoginManager.getUserUin();
+        } catch (err) {
+          console.log(err);
+        }
+        userQQ = LoginManager.getUserUin(); //获取QQ号
+        console.log(userQQ);
+        LoginManager.getNickName(function(loginInfo) {
+          if (loginInfo.isLogin) {
+            userStatus = true;
+            g("login_nickname_span").innerHTML = loginInfo.nickName;
+            userName = loginInfo.nickName;
+          } else {
+            userStatus = false;
+          }
+          key = 1;
+        });
+      });
+    });
+  });
+
   var isIE = function(ver) {
     var b = document.createElement('b')
     b.innerHTML = '<!--[if IE ' + ver + ']><i></i><![endif]-->'

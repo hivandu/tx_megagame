@@ -5,7 +5,7 @@
       <t-slide class="slide" slot="slide" :path="path"></t-slide>
       <div slot="login" class="login">
         <div class="logged" id="logined">
-          <span>欢迎您, </span><span>{{userInfo.nickName}}</span><span @click="logout" class="action">【注销】</span>
+          <span>欢迎您, </span><span id="login_nickname_span" v-model="userInfo.userName"></span><span @click="logout" class="action">【注销】</span>
         </div>
         <div class="unLogged" id="unlogin">
           <span class="action" @click="login">登录</span>
@@ -25,6 +25,7 @@ import TQrcode from './components/qrcode/'
 import TSubmit from './components/submit.vue'
 export default {
   name: 'app',
+  props:['userStatus'],
   components: {
     Index,
     TButton,
@@ -44,52 +45,33 @@ export default {
     }
   },
   mounted() {
+    console.log(this.userStatus);
     this.path = this.$route.path;
-    this.getUserInfo();
+    if (userName) {
+      this.userInfo.userName = userName;
+    }
   },
   data() {
     return {
       navBgShow: true,
       path: '',
       userInfo:{
+        status: false,
         userName:''
       },
       display: false
     }
   },
   methods: {
-    // 获取用户状态
-    getUserInfo() {
-      const _this = this;
-      //检查是否已登录，已登录则获取QQ号显示已登录状态
-      milo.ready(function() {
-        need("biz.login-min", function(LoginManager) {
-          LoginManager.checkLogin(function() {
-            console.log('login');
-            g("login_qq_span").innerHTML = LoginManager.getUserUin(); //获取QQ号
-            LoginManager.getNickName(function(loginInfo) {
-              if (loginInfo.isLogin) {
-                _this.userInfo.nickName = loginInfo.nickName;
-              }else{
-                _this.userInfo = null;
-              }
-              key = 1;
-            });
-          });
-        });
-      });
-    },
-
     // 注销
     logout() {
       LoginManager.logout();
-      this.getUserInfo();
     },
 
     // 登录
     login() {
-      LoginManager.login();
-      this.getUserInfo();
+      let _l = LoginManager.login();
+      console.log(_l);
     },
 
     // 显示提交成功

@@ -6,9 +6,9 @@ module.exports = {
     env: require('./prod.env'),
     index: path.resolve(__dirname, '../dist/index.shtml'),
     assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: 'ossweb-img',
+    assetsSubDirectory: '',
     assetsPublicPath: '/',
-    productionSourceMap: true,
+    productionSourceMap: false,
     // Gzip off by default as many popular static hosts such as
     // Surge or Netlify already gzip all static assets for you.
     // Before setting to `true`, make sure to:
@@ -25,7 +25,7 @@ module.exports = {
     env: require('./dev.env'),
     port: 8089,
     autoOpenBrowser: true,
-    assetsSubDirectory: 'ossweb-img',
+    assetsSubDirectory: '',
     assetsPublicPath: '/',
     proxyTable: {},
     // CSS Sourcemaps off by default because relative paths are "buggy"

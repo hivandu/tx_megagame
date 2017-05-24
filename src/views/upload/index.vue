@@ -5,13 +5,13 @@
       <div class="second-title blue-font">UPLOAD WORKS AND SIGN UP</div>
     </div>
     <div class="info">
-      <div class="nav-info">
-        团队信息登记，队长录入信息后，其他队员登录对应QQ后可以直接查看（团队成员无法修改团队信息和上传作品）。
-      </div>
       <form @submit.prevent="submitForm($event)" action="index_submit" method="get" accept-charset="utf-8">
+        <div class="form-line judgment">
+          <div class="title second-title blue-font" for="">个人信息</div><span class="blue-font">以下为必填项</span>
+        </div>
         <div class="form-line">
           <label for="">个人QQ</label>
-          <input type="text" v-model="formData.personQQ" placeholder="请输入QQ号码" required>
+          <input type="text" id="login_qq_span" v-model="formData.personQQ" readonly>
         </div>
         <div class="form-line">
           <label for="">姓名</label>
@@ -87,18 +87,21 @@ export default {
       deep: true,
       handler: function(val, oldVal) {
         const _this = this;
-        if(val.phone){
+        if (val.phone) {
           console.log(val.phone);
           _this.getVerification = true;
         }
+        if (userQQ) {
+          this.formData.personQQ = userQQ;
+        }
       }
     },
-    picked(val){
+    picked(val) {
       if (val == 'false') {
         this.formData.captainQQ = '',
-        this.formData.teamName = '',
-        this.formData.members = '',
-        this.formData.teamInfo = ''
+          this.formData.teamName = '',
+          this.formData.members = '',
+          this.formData.teamInfo = ''
       }
     },
     // 监听验证码输入
@@ -110,11 +113,25 @@ export default {
       } else if (val.length > _len) {
         _this.verification = oldVal;
       }
+    },
+
+    user: {
+      handler: function(val, oldVal) {
+        console.log(val);
+        const _this = this;
+        if (!val.status) {
+          _this.$router.back();
+        }
+      }
     }
   },
-  mounted(){
+  mounted() {
+    console.log(this.user);
     if (!userStatus) {
       this.$router.back();
+    }
+    if (userQQ) {
+      this.formData.personQQ = userQQ;
     }
   },
   data() {
@@ -186,7 +203,7 @@ export default {
       _this.$http.get(PathUtil.getPath('getVerification')).then(function(res) {
         if (res.data.success) {
           _this.submitStatus = true;
-        }else{
+        } else {
           _this.submitStatus = false;
         }
       }).catch(function(err) {
