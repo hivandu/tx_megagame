@@ -1,0 +1,101 @@
+.slide-6 {
+  font-size: 0.14rem;
+  .title {
+    font-size: 0.24rem;
+    color: #fff;
+    position: absolute;
+    top: 0.25rem;
+    left: 0.26rem;
+    opacity:1 !important;
+  }
+  form {
+    position: absolute;
+    top: 0.84rem;
+    left: 0.26rem;
+    label,
+    input {
+      margin-bottom: 0.2rem;
+      line-height: 0.2rem;
+      border: none;
+    }
+    label {
+      height: 0.4rem;
+      line-height: 0.4rem;
+      float: left;
+      display: inline-block;
+      width: 0.55rem;
+      color: #fff;
+      background-color: #0E3B74;
+      text-align: center;
+    }
+    input[type="text"] {
+      float: left;
+      width: 2.50rem;
+      height: 0.2rem;
+      padding-left: 0.15rem;
+      padding-top:0.1rem;
+      padding-bottom:0.1rem;
+      background-color: #A5B0D0;
+      color: #333;
+      -webkit-appearance:none;
+      border-radius: 1px;
+      border:none;
+    }
+    input[type="submit"] {
+      width: 1.54rem;
+      height: 0.48rem;
+      line-height: 0.47rem;
+      border-radius: 0.7rem;
+      background-color: rgba(19,111,228, 0.7);
+      color:#fff;
+      font-size: 0.16rem;
+      position: absolute;
+      bottom: -1rem;
+      left: 0.85rem;
+    }
+    div {
+      clear: both;
+      display: table;
+    }
+    div.info {
+      position: relative;
+      color: #fff;
+      display:flex;
+      justify-content:flex-start;
+      margin-bottom:0.2rem;
+      span{
+        position:absolute;
+        left:0;
+        top:0;
+      }
+      p{
+        float:left;
+        padding-left:0.1rem;
+      }
+      input[type="text"]{
+        background: none;
+        border:none;
+        padding: 0;
+        margin: 0;
+        color: #fff;
+        line-height: 0.24rem;
+        height:0.24rem;
+        width: 2.13rem;
+        // &:disabled{
+        //   color:#fff;
+        //   background: none;
+        //   opacity:1;
+        // }
+      }
+      &.blue-font {
+        color: #2b85f7;
+      }
+    }
+  }
+}
+
+
+#webUrl{
+  display:inline-block;
+  margin-right:0.02rem;
+}

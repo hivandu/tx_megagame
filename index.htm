@@ -1,44 +1,110 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<!-- 使用 HTML5 doctype，不区分大小写 -->
+<html lang="zh-cmn-Hans">
+<!-- 更加标准的 lang 属性写法 -->
 
 <head>
-  <meta charset="utf-8">
-  <meta name="robots" content="all">
-  <meta name="author" content="Tencent-CP">
-  <meta name="Copyright" content="Tencent">
-  <meta name="Description" content="">
-  <meta name="Keywords" content="腾讯游戏">
-  <title>专题主题（标题）- 产品中文全称官方网站 - 腾讯游戏</title>
-  <link rel="stylesheet" type="text/css" href="./ossweb-img/css/idangerous.swiper.css">
-  <!-- <link rel="stylesheet" href="ossweb-img/css/swiper.min.css"> -->
+  <!-- 声明文档使用的字符编码 -->
+  <meta charset='utf-8'>
+  <!-- 优先使用 IE 最新版本和 Chrome -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- 页面描述 -->
+  <meta name="description" content="不超过150个字符" />
+  <!-- 页面关键词 -->
+  <meta name="keywords" content="" />
+  <!-- 网页作者 -->
+  <meta name="author" content="name, email@gmail.com" />
+  <!-- 搜索引擎抓取 -->
+  <meta name="robots" content="index,follow" />
+  <!-- 为移动设备添加 viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <!-- `width=device-width` 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式打开页面时出现黑边 http://bigc.at/ios-webapp-viewport-meta.orz -->
+  <!-- iOS 设备 begin -->
+  <meta name="apple-mobile-web-app-title" content="标题">
+  <!-- 添加到主屏后的标题（iOS 6 新增） -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">
+  <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <!-- 设置苹果工具栏颜色 -->
+  <meta name="format-detection" content="telphone=no, email=no" />
+  <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+  <!-- 启用360浏览器的极速模式(webkit) -->
+  <meta name="renderer" content="webkit">
+  <!-- 避免IE使用兼容模式 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+  <meta name="HandheldFriendly" content="true">
+  <!-- 微软的老式浏览器 -->
+  <meta name="MobileOptimized" content="320">
+  <!-- uc强制竖屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <!-- QQ强制竖屏 -->
+  <meta name="x5-orientation" content="portrait">
+  <!-- UC强制全屏 -->
+  <meta name="full-screen" content="yes">
+  <!-- QQ强制全屏 -->
+  <meta name="x5-fullscreen" content="true">
+  <!-- UC应用模式 -->
+  <meta name="browsermode" content="application">
+  <!-- QQ应用模式 -->
+  <meta name="x5-page-mode" content="app">
+  <!-- windows phone 点击无高光 -->
+  <meta name="msapplication-tap-highlight" content="no">
+  <!-- iOS 图标 begin -->
+  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57x57-precomposed.png" />
+  <!-- iPhone 和 iTouch，默认 57x57 像素，必须有 -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png" />
+  <!-- Retina iPhone 和 Retina iTouch，114x114 像素，可以没有，但推荐有 -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144-precomposed.png" />
+  <!-- Retina iPad，144x144 像素，可以没有，但推荐有 -->
+  <!-- iOS 图标 end -->
+  <!-- iOS 启动画面 begin -->
+  <link rel="apple-touch-startup-image" sizes="768x1004" href="/splash-screen-768x1004.png" />
+  <!-- iPad 竖屏 768 x 1004（标准分辨率） -->
+  <link rel="apple-touch-startup-image" sizes="1536x2008" href="/splash-screen-1536x2008.png" />
+  <!-- iPad 竖屏 1536x2008（Retina） -->
+  <link rel="apple-touch-startup-image" sizes="1024x748" href="/Default-Portrait-1024x748.png" />
+  <!-- iPad 横屏 1024x748（标准分辨率） -->
+  <link rel="apple-touch-startup-image" sizes="2048x1496" href="/splash-screen-2048x1496.png" />
+  <!-- iPad 横屏 2048x1496（Retina） -->
+  <link rel="apple-touch-startup-image" href="/splash-screen-320x480.png" />
+  <!-- iPhone/iPod Touch 竖屏 320x480 (标准分辨率) -->
+  <link rel="apple-touch-startup-image" sizes="640x960" href="/splash-screen-640x960.png" />
+  <!-- iPhone/iPod Touch 竖屏 640x960 (Retina) -->
+  <link rel="apple-touch-startup-image" sizes="640x1136" href="/splash-screen-640x1136.png" />
+  <!-- iPhone 5/iPod Touch 5 竖屏 640x1136 (Retina) -->
+  <!-- iOS 启动画面 end -->
+  <!-- iOS 设备 end -->
+  <meta name="msapplication-TileColor" content="#000" />
+  <!-- Windows 8 磁贴颜色 -->
+  <meta name="msapplication-TileImage" content="icon.png" />
+  <!-- Windows 8 磁贴图标 -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
+  <!-- 添加 RSS 订阅 -->
+  <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+  <!-- 添加 favicon icon -->
+  <link rel="stylesheet" href="ossweb-img/css/swiper.min.css">
   <link rel="stylesheet" type="text/css" href="ossweb-img/css/common.css">
+  <title>标题</title>
 </head>
 
 <body>
   <!-- SLIDE START HERE -->
+  <div class="drop"><img src="ossweb-img/image/icon-drop.png" alt=""></div>
   <div class="swiper-container wrapper" id="content">
     <div class="swiper-wrapper">
       <div class="swiper-slide nav slide-1">
-        <div class="slide">
-          <img src="./ossweb-img/image/slide-icon.png" alt="">
-        </div>
-        <div class="center">
-          <div class="logo"><img src="ossweb-img/image/LOGO.png" alt=""></div>
-          <a href="http://project.hivan.me/" alt="">进入官网</a>
-          <img src="ossweb-img/image/console-boat.png" alt="" class="console-boat">
-          <img src="ossweb-img/image/headset.png" alt="" class="headset">
-          <img src="ossweb-img/image/riflemen.png" alt="" class="riflemen">
-          <img src="ossweb-img/image/robot-2.png" alt="" class="robot-2">
-          <img src="ossweb-img/image/tablets.png" alt="" class="tablets">
-          <img src="ossweb-img/image/keyboard.png" alt="" class="keyboard">
-          <img src="ossweb-img/image/plane.png" alt="" class="plane">
-          <img src="ossweb-img/image/bg-nav.png" alt="" class="bg-nav">
-        </div>
+        <div class="logo"><img src="ossweb-img/image/logo-2.png" alt=""></div>
+        <img src="ossweb-img/image/console-boat.png" alt="" class="console-boat">
+        <img src="ossweb-img/image/headset.png" alt="" class="headset">
+        <img src="ossweb-img/image/riflemen.png" alt="" class="riflemen">
+        <img src="ossweb-img/image/plane.png" alt="" class="plane">
+        <img src="ossweb-img/image/plane2.png" alt="" class="plane2">
+        <img src="ossweb-img/image/bg-index.png" alt="" class="bg-index">
       </div>
       <div class="swiper-slide slide-2">
-        <div class="slide">
-          <img src="./ossweb-img/image/slide-icon.png" alt="">
-        </div>
         <div class="center">
           <div class="letter">
             <div class="envelope">
@@ -46,29 +112,30 @@
             </div>
             <div class="letter-paper info">
               <p class="title">腾讯游戏offer等你来拿</p>
-              <p>HR、校招面试官直接参与评审
-                <br> 赛事直达GM面，更有校招补录机会
-                <br> offer发放，一触即达</p>
+              <div class="content">
+                <p>HR、校招面试官直接参与评审
+                  <br> 赛事直达GM面，更有校招补录机会
+                  <br> offer发放，一触即达</p>
+              </div>
             </div>
           </div>
         </div>
         <div class="bg">
-          <img src="ossweb-img/image/slide-2-bg.png" alt="">
+          <img src="ossweb-img/image/bg-2.png" alt="">
         </div>
       </div>
       <div class="swiper-slide slide-3">
-        <div class="slide">
-          <img src="./ossweb-img/image/slide-icon-dark.png" alt="">
-        </div>
         <div class="center">
           <div class="info">
             <p class="title">游戏大咖全程伴左右</p>
-            <p>豪华阵容导师团，全程一对一指导
-              <br> 工作坊邀请资深游戏制作人、游戏研发专家进行面对面作品辅导
-              <br> 更有天美、光子、魔方、北极光工作室GM参与决赛评审</p>
+            <div class="content">
+              <p>豪华阵容导师团，全程一对一指导
+                <br> 工作坊邀请资深游戏制作人、游戏研发专家进行面对面作品辅导
+                <br> 更有天美、光子、魔方、北极光工作室GM参与决赛评审</p>
+            </div>
           </div>
           <div class="mentor">
-            <div class="mentor-1">
+            <div class="mentor-1 mentor-inner">
               <div class="person">
                 <div class="person-inner">
                   <div>
@@ -79,7 +146,7 @@
               </div>
               <img src="ossweb-img/image/walker.jpg" alt="">
             </div>
-            <div class="mentor-2">
+            <div class="mentor-2 mentor-inner">
               <div class="person">
                 <div class="person-inner">
                   <div>
@@ -90,7 +157,7 @@
               </div>
               <img src="ossweb-img/image/lishen.jpg" alt="">
             </div>
-            <div class="mentor-3">
+            <div class="mentor-3 checked mentor-inner">
               <div class="person">
                 <div class="person-inner">
                   <div>
@@ -101,18 +168,7 @@
               </div>
               <img src="ossweb-img/image/sammi.jpg" alt="">
             </div>
-            <div class="mentor-4">
-              <div class="person">
-                <div class="person-inner">
-                  <div>
-                    <div class="name">刘子建</div>
-                    <div class="intor">腾讯游戏学院副院长</div>
-                  </div>
-                </div>
-              </div>
-              <img src="ossweb-img/image/jim.jpg" alt="">
-            </div>
-            <div class="mentor-5">
+            <div class="mentor-4 mentor-inner">
               <div class="person">
                 <div class="person-inner">
                   <div>
@@ -123,22 +179,27 @@
               </div>
               <img src="ossweb-img/image/hanjin.jpg" alt="">
             </div>
+            <div class="mentor-5 mentor-inner">
+              <div class="person">
+                <div class="person-inner">
+                  <div>
+                    <div class="name">刘子建</div>
+                    <div class="intor">腾讯游戏学院副院长</div>
+                  </div>
+                </div>
+              </div>
+              <img src="ossweb-img/image/jim.jpg" alt="">
+            </div>
           </div>
         </div>
         <div class="bg">
-          <img src="ossweb-img/image/slide-3-bg.png" alt="">
+          <img src="ossweb-img/image/bg-3.png" alt="">
         </div>
       </div>
       <div class="swiper-slide slide-4">
-        <div class="slide">
-          <img src="./ossweb-img/image/slide-icon.png" alt="">
-        </div>
         <div class="center">
           <div class="info">
             <p class="title">真实游戏制作全过程</p>
-          </div>
-          <div class="line">
-            <img src="ossweb-img/image/line.png" alt="">
           </div>
           <div class="process">
             <div class="process-item item-1">
@@ -146,47 +207,77 @@
               <img src="ossweb-img/image/icon-1.png" alt="">
             </div>
             <div class="process-item item-2">
-              <p>游戏策划专业指导资料</p>
+              <p>游戏策划
+                <br>专业指导资料</p>
               <img src="ossweb-img/image/icon-2.png" alt="">
             </div>
             <div class="process-item item-3">
               <p>前沿创新实验室
-                <br> Next <span>（New Experience and Technology）</span>
-                <br> 研发中心支持创意孵化 </p>
+                <br>
+                <span>Next（New Experience and Technology）</span>
+                <br> 研发中心支持创意孵化
+              </p>
               <img src="ossweb-img/image/icon-3.png" alt="">
             </div>
             <div class="process-item item-4">
-              <p>2017全新战略项目
-                <br> “极光计划”
+              <p>2017全新战略项目 “极光计划”
                 <br> 扶持作品制作上线</p>
               <img src="ossweb-img/image/icon-4.png" alt=""></div>
           </div>
         </div>
         <div class="bg">
-          <img src="ossweb-img/image/slide-4-bg.png" alt="">
+          <img src="ossweb-img/image/bg-4.png" alt="">
         </div>
       </div>
       <div class="swiper-slide slide-5">
-        <div class="slide">
-          <img src="./ossweb-img/image/slide-icon-dark.png" alt="">
-        </div>
         <div class="center">
-          <a href="http://project.hivan.me/" alt="">进入官网</a>
+          <a href="javascript:;" alt="" id="sign-up">点击报名</a>
           <div class="info">
             <p class="title">重磅奖励惊喜多多</p>
           </div>
           <div class="center-element">
-            <img class="left element" src="ossweb-img/image/element-left.png" alt="">
             <img class="element item-1" src="ossweb-img/image/element-1.png" alt="">
             <img class="element item-2" src="ossweb-img/image/element-2.png" alt="">
             <img class="element item-3" src="ossweb-img/image/element-3.png" alt="">
             <img class="element item-4" src="ossweb-img/image/element-4.png" alt="">
             <img class="element item-5" src="ossweb-img/image/element-5.png" alt="">
-            <img class="right element" src="ossweb-img/image/element-right.png" alt="">
           </div>
         </div>
         <div class="bg">
-          <img src="ossweb-img/image/slide-5-bg.png" alt="">
+          <img src="ossweb-img/image/bg-5.png" alt="">
+        </div>
+      </div>
+      <div class="swiper-slide slide-6">
+        <div class="center">
+          <div class="title">大赛报名</div>
+          <form action="index_submit" method="get" accept-charset="utf-8">
+            <div class="input-item">
+              <label for="">QQ</label>
+              <input type="text" placeholder="输入QQ号">
+            </div>
+            <div class="input-item">
+              <label for="">姓名</label>
+              <input type="text" placeholder="输入姓名">
+            </div>
+            <div class="input-item">
+              <label for="">手机</label>
+              <input type="text" placeholder="输入手机号">
+            </div>
+            <div class="input-item">
+              <label for="">邮箱</label>
+              <input type="text" placeholder="输入邮箱">
+            </div>
+            <div class="info blue-font"><span>*</span>
+              <p>为了保证参赛用户的权益，请您到大赛PC端官网继续完善您的报名信息。</p>
+            </div>
+            <div class="info copy-font"><span> </span>
+              <p>PC端官网地址：
+                <br>
+                <input type="text" id="webUrl" value="http://gameinstitute.qq.com/yxds" readonly> (点击复制)
+              </p>
+            </div>
+            <input type="submit" value="提交">
+          </form>
         </div>
       </div>
     </div>
@@ -196,63 +287,12 @@
   <canvas id="canvas"></canvas>
   <div class="bg"></div>
   <script type="text/javascript" src="//cdnjs.gtimg.com/cdnjs/libs/jquery/2.1.1/jquery.min.js"></script>
-  <!-- <script type="text/javascript" src="ossweb-img/js/swiper.min.js"></script> -->
-  <script type="text/javascript" src="./ossweb-img/js/idangerous.swiper.min.js"></script>
-  <script src="//ossweb-img.qq.com/images/js/title.js"></script>
+  <script type="text/javascript" src="ossweb-img/js/swiper.min.js"></script>
   <script type="text/javascript" src="ossweb-img/js/common.js"></script>
-  <script src="//ossweb-img.qq.com/images/js/PTT/ping_tcss_tgideas_https_min.js"></script>
-  <script src="//qzs.qq.com/tencentvideo_v1/js/tvp/tvp.player.js" charset="utf-8"></script>
-  <script src="//game.gtimg.cn/images/js/milo/milo-min.js"></script>
   <script type="text/javascript">
   $(function() {
-    var mySwiper = $('.swiper-container').swiper({
-      mode: 'vertical',
-      mousewheelControl: true,
-      onSlideChangeEnd: function(swiper) {
-        var _index = swiper.activeIndex;
-        slideAnimationEnd(_index);
-      },
-      onSetWrapperTransition: function(swiper) {
-        var _index = swiper.activeIndex;
-        slideAnimationStart(_index);
-      },
-      onSlideReset: function(swiper) {
-        var _index = swiper.activeIndex;
-        slideanimationRestart(_index);
-      }
-    });
+    app.init();
   })
-  </script>
-  <script>
-  var isIE = function(ver) {
-    var b = document.createElement('b')
-    b.innerHTML = '<!--[if IE ' + ver + ']><i></i><![endif]-->'
-    return b.getElementsByTagName('i').length === 1
-  }
-  if (isIE(6)) {
-    // IE 6
-  }
-  // ...
-  if (isIE(9)) {
-    // IE 9
-  }
-  var ie = isIE()
-  if (isIE(6) || isIE(7) || isIE(8)) {
-    $('.mask').show();
-  } else {
-    $('.mask').hide();
-  }
-
-  // //此段代码不能放到外链JS中，
-  // var setSite = { //设置网站属性
-  //   siteType: "os" || "a20160711xxx", //必填项:"os"代表是官网，如果不是，则填写actName例如a20160701xxx
-  //   pageType: "index", //必填项:本页面的定位；按照页面含义填写例如main||list||detail||download||share||page1||pageN
-  //   pageName: "首页", //必填项:页面中文名
-  //   osact: 0, //选填项:是否是官网专题(在官网运营的专题)boolean；默认是0；可以在链接上加入参数osact=1来灵活设置
-  //   ingame: 0, //选填项:是否投放在游戏APP内boolean；默认是0；可以在链接上加入参数ingame=1来灵活设置
-  //   stayTime: 0 //选填项:是否需要统计停留时长boolean；默认是0
-  // }
-  // if (typeof(pgvMain) == 'function') pgvMain(); //千万不能忘记！
   </script>
 </body>
 
