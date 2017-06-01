@@ -170,6 +170,8 @@ var slideAnimationEnd = function(index, mySwiper) {
   }
 
   if (_index == 2) {
+    $('.drop').removeClass('blue');
+    $('.drop').addClass('white');
     setTimeout(function() {
       $('.letter').addClass('letter-fadeIn');
     }, 400);
@@ -190,6 +192,8 @@ var slideAnimationEnd = function(index, mySwiper) {
   }
 
   if (_index == 3) {
+      $('.drop').addClass('blue');
+      $('.drop').removeClass('white');
       setTimeout(function() {
         $('.slide-3 .info').addClass('fadeInUp');
       }, 100);
@@ -210,6 +214,8 @@ var slideAnimationEnd = function(index, mySwiper) {
     }
 
     if (_index == 4) {
+      $('.drop').addClass('blue');
+      $('.drop').removeClass('white');
       mySwiper.unlockSwipeToNext()
       $('.drop').show();
       setTimeout(function() {

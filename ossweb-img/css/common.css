@@ -184,7 +184,7 @@ body {
 }
 
 html {
-  background: url(../image/bg.jpg) no-repeat;
+  background: url("//game.gtimg.cn/images/gameinstitute/act/a20170601nextidea/bg.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -387,9 +387,10 @@ html {
   transition: all .3s;
 }
 .slide-3 .slide {
-  background: url(../image/slide-dark.png) no-repeat;
+  background: url("//game.gtimg.cn/images/gameinstitute/act/a20170601nextidea/slide-dark.png") no-repeat;
 }
 .slide-3 .content {
+  text-align: justify;
   margin-top: 0.1rem;
 }
 
@@ -438,7 +439,6 @@ html {
   height: 0.6rem;
   display: none;
   color: #fff;
-  font-size: 0.11rem;
   background-color: rgba(36, 113, 221, 0.9);
   cursor: pointer;
   line-height: 24px;
@@ -468,7 +468,7 @@ html {
 .mentor .mentor-3 .person .intor,
 .mentor .mentor-4 .person .intor,
 .mentor .mentor-5 .person .intor {
-  font-size: 0.11rem;
+  font-size: 0.10rem;
 }
 .mentor .mentor-1:hover,
 .mentor .mentor-2:hover,
@@ -485,24 +485,24 @@ html {
   display: flex;
 }
 .mentor .mentor-1 {
-  width: 1.1rem;
-  height: 1.37rem;
+  width: 1.25rem;
+  height: 1.6rem;
   top: 0.5rem;
   left: 0.025rem;
   transition: all .3s;
 }
 .mentor .mentor-2 {
-  width: 1.58rem;
-  height: 1.97rem;
+  width: 1.25rem;
+  height: 1.6rem;
   top: 0;
   right: 0;
   transition: all .3s .2s;
 }
 .mentor .mentor-3 {
-  width: 1.61rem;
-  height: 2rem;
+  width: 1.25rem;
+  height: 1.6rem;
   top: 1.16rem;
-  left: 0.67rem;
+  left: 1rem;
   z-index: 998;
   transition: all 1s .4s;
 }
@@ -514,9 +514,9 @@ html {
   transition: all 0.3s .4s;
 }
 .mentor .mentor-5 {
-  width: 1.3rem;
-  height: 1.52rem;
-  right: 0.04rem;
+  width: 1.25rem;
+  height: 1.6rem;
+  right: -0.1rem;
   bottom: 0.26rem;
   transition: all 0.3s .3s;
 }
@@ -531,26 +531,30 @@ html {
 }
 .slide-4 .info {
   position: absolute;
+  left: 0;
   top: 0.3rem;
   width: 100%;
   display: inline-block;
   text-align: center;
   transition: all .5s;
 }
+.slide-4 .title {
+  text-align: center;
+}
 
 .process {
   position: absolute;
-  width: 3.32rem;
-  height: 3.68rem;
-  top: 1.25rem;
+  width: 3rem;
+  height: 3.32rem;
+  top: 1.5rem;
   left: 50%;
-  margin-left: -1.66rem;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
 }
 .process .process-item {
-  width: 1.14rem;
-  height: 1.275rem;
+  width: 0.9rem;
+  height: 1.02rem;
   position: absolute;
   opacity: 0;
 }
@@ -559,7 +563,11 @@ html {
 }
 .process .process-item p {
   position: absolute;
-  font-size: 0.14rem;
+  font-size: 0.12rem;
+  width: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
 }
 .process .process-item p span {
   font-size: 12px;
@@ -567,38 +575,36 @@ html {
 .process .item-1 {
   top: 0;
   left: 50%;
-  margin-left: -0.57rem;
-  transition: all .3s;
+  margin-left: -0.45rem;
+  transition: all .6s .1s;
 }
 .process .item-1 p {
-  top: 0.45rem;
-  width: 0.62rem;
-  left: -0.7rem;
+  color: #fff;
+  top: -0.35rem;
 }
 .process .item-2 {
+  color: #fff;
   top: 1.17rem;
   right: 0;
-  transition: all .6s;
+  transition: all .6s .2s;
 }
 .process .item-2 p {
-  top: -0.5rem;
+  top: -0.48rem;
   text-align: center;
-  left: 0.17rem;
 }
 .process .item-3 {
   top: 1.17rem;
   left: 0;
+  transition: all .6s .3s;
 }
 .process .item-3 p {
   line-height: 0.16rem;
-  color: #fff;
-  width: 1.12rem;
-  top: 1.35rem;
-  left: -0.05rem;
-  transition: all .9s;
-  transition: all .9s;
+  top: 1.1rem;
 }
 .process .item-3 p span {
+  display: flex;
+  width: 1.5rem;
+  justify-content: start;
   position: absolute;
   top: 0.21rem;
   line-height: 0.03rem;
@@ -607,15 +613,11 @@ html {
 .process .item-4 {
   bottom: 0;
   left: 50%;
-  margin-left: -0.57rem;
-  transition: all 1.2s;
+  margin-left: -0.45rem;
+  transition: all .6s .4s;
 }
 .process .item-4 p {
-  color: #fff;
-  top: 1.35rem;
-  width: 3.75rem;
-  left: 50%;
-  margin-left: -1.875rem;
+  top: 1.1rem;
   text-align: center;
 }
 
@@ -628,11 +630,12 @@ html {
   transition: all .3s;
 }
 .slide-5 .slide {
-  background: url(../image/slide-dark.png) no-repeat;
+  background: url("//game.gtimg.cn/images/gameinstitute/act/a20170601nextidea/slide-dark.png") no-repeat;
 }
 .slide-5 .info {
   position: absolute;
   top: 0.3rem;
+  left: 0;
   width: 100%;
   display: inline-block;
   text-align: center;
@@ -659,7 +662,7 @@ html {
 .slide-5 .center-element {
   position: absolute;
   width: 2.84rem;
-  height: 3.32rem;
+  height: 3.52rem;
   top: 1.24rem;
   left: 0.45rem;
 }
@@ -676,27 +679,27 @@ html {
 .slide-5 .center-element .item-1 {
   top: 0;
   left: 0;
-  transition: all .3s;
+  transition: all .6s .1s;
 }
 .slide-5 .center-element .item-2 {
-  top: 0;
-  right: 0;
-  transition: all .8s;
+  top: 0.1rem;
+  right: -0.1rem;
+  transition: all .6s .2s;
 }
 .slide-5 .center-element .item-3 {
   top: 1.06rem;
   left: 0.87rem;
-  transition: all .6s;
+  transition: all .6s .3s;
 }
 .slide-5 .center-element .item-4 {
-  left: 0;
-  bottom: 0;
-  transition: all .9s;
+  left: -0.1rem;
+  bottom: 0.1rem;
+  transition: all .6s .4s;
 }
 .slide-5 .center-element .item-5 {
   bottom: 0;
   right: 0;
-  transition: all 1.2s;
+  transition: all .6s .5s;
 }
 
 .slide-6 {
@@ -792,7 +795,6 @@ html {
 
 #webUrl {
   display: inline-block;
-  margin-right: 0.02rem;
 }
 
 .updown {
@@ -857,16 +859,24 @@ html {
 }
 
 .drop {
-  width: 0.2rem;
+  width: 0.15rem;
+  height: 0.3rem;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 0.05rem;
+  bottom: 0.8rem;
   z-index: 99999;
   animation: down 2s ease infinite;
 }
-.drop img {
-  width: 100%;
+
+.drop.white {
+  background: url("//game.gtimg.cn/images/gameinstitute/act/a20170601nextidea/icon-drop.png") no-repeat;
+  background-size: cover;
+}
+
+.drop.blue {
+  background: url("//game.gtimg.cn/images/gameinstitute/act/a20170601nextidea/icon-drop2.png") no-repeat;
+  background-size: cover;
 }
 
 @keyframes slideIcon {

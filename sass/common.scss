@@ -10,7 +10,7 @@ body {
 }
 
 html {
-  background: url(../image/bg.jpg) no-repeat;
+  background: url("//game.gtimg.cn/images/gameinstitute/act/a20170601nextidea/bg.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -149,16 +149,24 @@ html {
 }
 
 .drop{
-  width: 0.2rem;
+  width: 0.15rem;
+  height:0.3rem;
   position: fixed;
   left:50%;
   transform: translateX(-50%);
-  bottom:0.05rem;
+  bottom:0.8rem;
   z-index:99999;
-  img{
-    width: 100%;
-  }
   animation: down 2s ease infinite;
+}
+
+.drop.white{
+  background:url('//game.gtimg.cn/images/gameinstitute/act/a20170601nextidea/icon-drop.png') no-repeat;
+  background-size: cover;
+}
+
+.drop.blue{
+  background:url('//game.gtimg.cn/images/gameinstitute/act/a20170601nextidea/icon-drop2.png') no-repeat;
+  background-size: cover;
 }
 
 @keyframes slideIcon {
