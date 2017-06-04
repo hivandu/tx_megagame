@@ -1,10 +1,5 @@
 var app = {
-  init: function() {
-    // app.canvas();
-    app.swiper();
-    app.mentor();
-  },
-
+  // 设置星空效果
   canvas: function() {
     //宇宙特效
     var canvas = document.getElementById('canvas'),
@@ -18,7 +13,6 @@ var app = {
       stars = [],
       count = 0,
       maxStars = 1300; //星星数量
-
     var canvas2 = document.createElement('canvas'),
       ctx2 = canvas2.getContext('2d');
     canvas2.width = 100;
@@ -112,154 +106,137 @@ var app = {
     animation();
   },
 
+  // swiper事件
   swiper: function() {
     var mySwiper = $('.swiper-container').swiper({
       mode: 'vertical',
       mousewheelControl: true,
+      simulateTouch: false,
+      shortSwipes: false,
       onSlideChangeEnd: function(swiper) {
         var _index = swiper.activeIndex;
-        slideAnimationEnd(_index);
+        app.slideAnimationEnd(_index);
       },
       onSlideChangeStart: function(swiper) {
         var _index = swiper.activeIndex;
-        slideAnimationStart(_index);
+        app.slideAnimationStart(_index);
       },
       onSlideReset: function(swiper) {
         var _index = swiper.activeIndex;
-        slideanimationRestart(_index);
+        app.slideanimationRestart(_index);
       }
     });
   },
 
-  mentor: function() {
-    var _w = window.innerWidth;
-    var _h = window.innerHeight;
-    app.setPoint(_w, _h);
-    window.onresize = function() {
-      _w = window.innerWidth;
-      _h = window.innerHeight;
-      app.setPoint(_w, _h);
+  // 首页动画
+
+  slideAnimationEnd: function(index) {
+    var _index = index + 1;
+    if (_index != 1) {
+      $('.planet').addClass('planet-second undis');
+      $('.robot').addClass('robot-second undis');
+      $('.keyboard').addClass('undis');
+      $('.swiper-slide').find('.bg').removeClass('push-in');
+      $('.slide-' + _index).find('.bg').addClass('push-in');
+    } else {
+      $('.swiper-slide').find('.bg').removeClass('push-in');
+      $('.planet').removeClass('planet-second undis');
+      $('.robot').removeClass('robot-second undis');
+    }
+
+    if (_index == 2) {
+      setTimeout(function() {
+        $('.letter').addClass('letter-fadeIn');
+      }, 400);
+      setTimeout(function() {
+        $('.letter-paper').addClass('paper-pushUp')
+      }, 1000);
+      setTimeout(function() {
+        $('.letter-paper .title').addClass('faedInUp')
+      }, 1500);
+      setTimeout(function() {
+        $('.letter-paper .content').addClass('faedInUp')
+      }, 1800);
+    } else {
+      $('.letter-paper .title').removeClass('faedInUp')
+      $('.letter-paper .content').removeClass('faedInUp')
+      $('.letter').removeClass('letter-fadeIn');
+      $('.letter-paper').removeClass('paper-pushUp')
+    }
+
+    if (_index == 3) {
+      $('.slide-3 .mentor-inner').addClass('mentorAnimation');
+      setTimeout(function() {
+        $('.slide-3 .info').addClass('faedInUp');
+      }, 100);
+      setTimeout(function() {
+        $('.slide-3 .title').addClass('faedInUp');
+      }, 1200);
+      setTimeout(function() {
+        $('.slide-3 .content').addClass('faedInUp');
+      }, 1500);
+    } else {
+      $('.slide-3 .info').removeClass('faedInUp');
+      $('.slide-3 .title').removeClass('faedInUp');
+      $('.slide-3 .content').removeClass('faedInUp');
+      $('.slide-3 .mentor-inner').removeClass('faedInUp');
+      $('.slide-3 .mentor-inner').removeClass('mentorAnimation');
+    }
+
+    if (_index == 4) {
+      setTimeout(function() {
+        $('.slide-4 .title').addClass('faedInUp');
+      }, 200);
+      setTimeout(function() {
+        $('.process-item').addClass('faedInUp');
+      }, 900);
+      setTimeout(function() {
+        $('.line').addClass('faedInUp');
+      }, 500);
+    } else {
+      $('.process-item').removeClass('faedInUp');
+      $('.slide-4 .title').removeClass('faedInUp');
+      $('.line').removeClass('faedInUp');
+    }
+
+    if (_index == 5) {
+      setTimeout(function() {
+        $('.slide-5 .title').addClass('faedInUp');
+      }, 200);
+      setTimeout(function() {
+        $('.slide-5 .element').addClass('faedInUp');
+      }, 1000);
+      setTimeout(function() {
+        $('.slide-5 .center').find('a').addClass('faedInUp');
+      }, 2000);
+    } else {
+      $('.slide-5 .element').removeClass('faedInUp');
+      $('.slide-5 .center').find('a').removeClass('faedInUp');
+      $('.slide-5 .title').removeClass('faedInUp');
     }
   },
 
-  setPoint: function(_x,  _y) {
-    document.onmousemove = function(evt) {
-      evt = evt || window.event;
-      showP(evt.clientX, evt.clientY);
+  slideAnimationStart: function(index) {
+    var _index = index + 1;
+    $('.slide-' + _index).find('.bg').removeClass('push-in');
+    if (_index != 1) {
+      $('.planet').addClass('planet-second undis');
+      $('.robot').addClass('robot-second undis');
+      $('.keyboard').addClass('undis');
     }
-    var middleX = _x / 2,
-      middleY = _y / 2 //中心坐标
-    function showP(x, y) {
-      xP = (x - 500) / 500;
-      yP = (y - 250) / 250;
-      $(".mentor-1").css('left',(20 + xP * 20) + "px") // lay1的左右移动区间是正负20像素
-      $(".mentor-1").css('top', (20 + yP * 15) + "px"); // lay1的上下移动区间是正负15像素
+  },
 
-      $(".mentor-2").css('right',(60 - xP * 30) + "px") // lay2的左右移动区间是正负40像素
-      $(".mentor-2").css('top', (40 + yP * 27) + "px"); // lay2的上下移动区间是正负27像素
-
-      $(".mentor-3").css('left',(220 + xP * 25) + "px") // lay3的左右移动区间是正负60像素
-      $(".mentor-3").css('top', (125 + yP * 35) + "px"); // lay3的上下移动区间是正负35像素
-
-      $(".mentor-4").css('left',(50 + xP * 25) + "px") // lay3的左右移动区间是正负60像素
-      $(".mentor-4").css('bottom', (40 - yP * 35) + "px"); // lay3的上下移动区间是正负35像素
-
-      $(".mentor-5").css('right',(20 - xP * 25) + "px") // lay3的左右移动区间是正负60像素
-      $(".mentor-5").css('bottom', (20 - yP * 35) + "px"); // lay3的上下移动区间是正负35像素
-    }
-
-  }
-}
-
-
-
-// 首页动画
-
-var slideAnimationEnd = function(index) {
-  var _index = index + 1;
-  if (_index != 1) {
-    $('.planet').addClass('planet-second undis');
-    $('.robot').addClass('robot-second undis');
-    $('.keyboard').addClass('undis');
-    $('.swiper-slide').find('.bg').removeClass('push-in');
+  slideanimationRestart: function(index) {
+    var _index = index + 1;
     $('.slide-' + _index).find('.bg').addClass('push-in');
-  } else {
-    $('.swiper-slide').find('.bg').removeClass('push-in');
-    $('.planet').removeClass('planet-second undis');
-    $('.robot').removeClass('robot-second undis');
+  },
+
+  init: function() {
+    app.canvas();
+    app.swiper();
+    var _w = window.innerWidth;
+    var _h = window.innerHeight;
+    console.log('width:' + _w + "; height:" + _h);
+    alert('width:' + _w + "; height:" + _h);
   }
-
-  if (_index == 2) {
-    setTimeout(function() {
-      $('.letter').addClass('letter-fadeIn');
-    }, 300);
-    setTimeout(function() {
-      $('.letter-paper').addClass('paper-pushUp')
-    }, 600);
-  } else {
-    $('.letter').removeClass('letter-fadeIn');
-    $('.letter-paper').removeClass('paper-pushUp')
-  }
-
-  if (_index == 3) {
-    setTimeout(function() {
-      $('.slide-3 .info').addClass('info-fadeIn');
-    }, 300);
-    setTimeout(function() {
-      $('.slide-3 .title').addClass('info-fadeIn');
-    }, 1000);
-  } else {
-    $('.slide-3 .info').removeClass('info-fadeIn');
-    $('.slide-3 .title').removeClass('info-fadeIn');
-  }
-
-  if (_index == 4) {
-    setTimeout(function() {
-      $('.slide-4 .info').addClass('info-fadeIn');
-      $('.process-item').addClass('info-fadeIn');
-    }, 300);
-    setTimeout(function() {
-      $('.line').addClass('info-fadeIn');
-      $('.slide-4 .title').addClass('info-fadeIn');
-    }, 1200);
-  } else {
-    $('.slide-4 .info').removeClass('info-fadeIn');
-    $('.process-item').removeClass('info-fadeIn');
-    $('.slide-4 .title').removeClass('info-fadeIn');
-    $('.line').removeClass('info-fadeIn');
-  }
-
-  if (_index == 5) {
-    setTimeout(function() {
-      $('.slide-5 .info').addClass('info-fadeIn');
-    }, 300);
-    setTimeout(function() {
-      $('.slide-5 .element').addClass('fadeIn');
-    }, 500);
-
-    setTimeout(function() {
-      $('.slide-5 .center').find('a').addClass('info-fadeIn');
-      $('.slide-5 .title').addClass('info-fadeIn');
-    }, 1300);
-  } else {
-    $('.slide-5 .info').removeClass('info-fadeIn');
-    $('.slide-5 .element').removeClass('fadeIn');
-    $('.slide-5 .center').find('a').removeClass('info-fadeIn');
-    $('.slide-5 .title').removeClass('info-fadeIn');
-  }
-}
-
-var slideAnimationStart = function(index) {
-  var _index = index + 1;
-  $('.slide-' + _index).find('.bg').removeClass('push-in');
-  if (_index != 1) {
-    $('.planet').addClass('planet-second undis');
-    $('.robot').addClass('robot-second undis');
-    $('.keyboard').addClass('undis');
-  }
-}
-
-var slideanimationRestart = function(index) {
-  var _index = index + 1;
-  $('.slide-' + _index).find('.bg').addClass('push-in');
 }
