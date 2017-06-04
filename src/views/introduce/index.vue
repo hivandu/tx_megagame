@@ -14,21 +14,21 @@
           <li class="time-1">
             <img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/time-line-point.png" alt="" class="point">
             <div class="info">
-              <p class="date">2017.6.6-7.21</p>
+              <p class="date">2017.6.6-8.11</p>
               <p class="link"><span class="blue-font">初赛报名及作品提交</span></p>
             </div>
           </li>
           <li class="time-2">
             <img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/time-line-point.png" alt="" class="point">
             <div class="info">
-              <p class="date">2017.7.24-8.4</p>
+              <p class="date">2017.8.14-8.25</p>
               <p class="link"><span class="blue-font">初赛评审</span></p>
             </div>
           </li>
           <li class="time-3">
             <img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/time-line-point.png" alt="" class="point">
             <div class="info">
-              <p class="date">2017.8.7-9.15</p>
+              <p class="date">2017.8.28-10.13</p>
               <p class="link">
                 <span class="blue-font">导师团介入指导<br>复赛作品优化及作品提交</span>
               </p>
@@ -37,14 +37,14 @@
           <li class="time-4">
             <img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/time-line-point.png" alt="" class="point">
             <div class="info">
-              <p class="date">2017.9.18-9.29</p>
+              <p class="date">2017.10.16-10.27</p>
               <p class="link"><span class="blue-font">复赛评审</span></p>
             </div>
           </li>
           <li class="time-5">
             <img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/time-line-point.png" alt="" class="point">
             <div class="info">
-              <p class="date">2017.10.16-10.20</p>
+              <p class="date">2017.11.6-11.17</p>
               <p class="link"><span class="blue-font">总决赛评审及现场点评</span></p>
             </div>
           </li>

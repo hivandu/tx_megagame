@@ -12,7 +12,8 @@
     font-weight: bold;
     width: 100%;
     display: table;
-    a {
+    div {
+      cursor: pointer;
       border-right: 1px solid #136fe4;
       display: table-cell;
       width: 50%;

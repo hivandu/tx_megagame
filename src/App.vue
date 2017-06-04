@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <index v-on:accSubmit="subSuccess" :user="userInfo">
-      <t-submit slot="submit" v-on:undisSubmit="undisSubmit" v-show="display"></t-submit>
+    <index :user="userInfo">
       <t-slide class="slide" slot="slide" :path="path"></t-slide>
       <div slot="login" class="login">
         <div class="logged" id="logined">
@@ -72,16 +71,6 @@ export default {
     login() {
       let _l = LoginManager.login();
       console.log(_l);
-    },
-
-    // 显示提交成功
-    subSuccess(e) {
-      console.log('subSuccess');
-      this.display = true;
-    },
-
-    undisSubmit() {
-      this.display = false
     }
   }
 }

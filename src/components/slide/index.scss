@@ -21,11 +21,13 @@
       font-size: 18px;
       color: #fff;
       &:hover{
-        a{
+        b{
           color: #136fe4;
         }
       }
       a {
+        font-weight: normal;
+        cursor: pointer;
         color: #fff;
         text-decoration: none;
       }

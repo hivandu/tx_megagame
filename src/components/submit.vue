@@ -1,6 +1,7 @@
 <template>
-  <div id="submit" class="success">
+  <div id="submit-success" class="success">
     <div class="close" @click="undis"></div>
+    <div class="success-text">{{text}}</div>
     <img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/submit-success.jpg" alt="">
     <div class="submit-mask"></div>
   </div>
@@ -9,6 +10,7 @@
 
 export default{
   name:'submit',
+  props:['text'],
   data(){
     return{
 
@@ -17,23 +19,32 @@ export default{
   methods:{
     undis(){
       this.$emit('undisSubmit');
+      this.$router.push({path:'/home'})
     }
   }
 }
 </script>
 <style lang="scss">
-  #submit{
-    width:690px;
-    height:480px;
+  #submit-success{
+    width:520px;
+    height:350px;
     position: fixed;
     top:50%;
     left:50%;
-    margin-top: -240px;
-    margin-left: -345px;
-    z-index:999;
+    // transform: translate(-50%, -50%);
+    margin-top: -175px;
+    margin-left: -260px;
+    z-index:9999999;
     img{
       width:100%;
       height:100%;
+    }
+    .success-text{
+      position: absolute;
+      top:65%;
+      left:50%;
+      transform: translateX(-50%);
+      font-size: 24px;
     }
     .submit-mask{
       background-color: #000;

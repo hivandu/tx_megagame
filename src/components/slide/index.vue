@@ -4,7 +4,7 @@
     <div :class="['point', index]"></div>
     <ul>
       <li v-for="(item, index) in items" @click="route(item,index)" :class="['slide-'+index, item.link == path?'selected':'', index==1?'second':'', 'slide-item']">
-        <span></span><a href="javascript:;">{{item.name}}</a>
+        <router-link :to="item.link"><span></span>{{item.name}}</router-link>
       </li>
     </ul>
   </div>

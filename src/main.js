@@ -6,19 +6,19 @@ import App from './App'
 // 导入视图组件定义文件
 import Views from './views/'
 
+
 // 导入路由设置
 import routes from './libs/routes'
 
 // 引入axios，替代vue-resoure和jQuery ajax
 import axios from 'axios'
 
+import 'babel-polyfill'
+
 // 导入base64转换
 import VueBase64FileUpload from 'vue-base64-file-upload'
 
-import Swiper from 'swiper'
-
 Vue.use(VueRouter)
-
 
 let qs = require('querystring');
 
@@ -33,12 +33,14 @@ Vue.prototype.$http = axios.create({
   }]
 })
 
-const mySwiper = new Swiper();
+// let mySwiper = new Swiper();
 
-console.log(mySwiper);
+// 引入访问路径前缀
+let _pathUrlPrefix = ENV.getEnv('pathUrlPrefix');
 
 const router = new VueRouter({
   mode: 'hash',
+  base: _pathUrlPrefix,
   template: '<App/>',
   components: { App },
   routes
@@ -48,7 +50,7 @@ Vue.config.productionTip = false
 
 
 /* eslint-disable no-new */
-new Vue({
+let vm = new Vue({
   router,
   render: h => h(App)
 }).$mount('#app-box')

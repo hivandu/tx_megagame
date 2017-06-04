@@ -30,13 +30,13 @@
   </div>
 </template>
 <script>
-import Swiper from 'swiper'
+// import Swiper from 'swiper'
 
 export default {
   name: 'mentor',
   data() {
     return {
-      Swiper: Swiper,
+      // Swiper: Swiper,
       mentorData: Array
     }
   },
@@ -45,12 +45,18 @@ export default {
       deep: true,
       handler: function(val, oldVal) {
         this.setSwiper();
-        $('.swiper-button-next').removeClass('class name')
+        // $('.swiper-button-next').removeClass('class name')
       }
     }
   },
   created() {
     this.getMentor();
+  },
+  mounted() {
+    const _this = this;
+    setTimeout(function() {
+      _this.setSwiper();
+    }, 500);
   },
   methods: {
     getMentor() {
@@ -67,15 +73,17 @@ export default {
     setSwiper() {
       var mySwiper = new Swiper('.swiper-container', {
         direction: 'horizontal',
-        autoplay : 5000,
-        autoplayDisableOnInteraction : true,
+        autoplay: 5000,
+        autoplayDisableOnInteraction: true,
         // 如果需要前进后退按钮
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
-        observer:true,
+        observer: true,
         // 关闭拖动
         onlyExternal: true,
-      });
+        DOMAnimation: true,
+        updateOnImagesReady: true
+      })
     }
   }
 }

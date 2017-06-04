@@ -5,6 +5,7 @@
       <div class="second-title blue-font">ALL WORKS</div>
     </div>
     <div class="info scroll">
+      <div class="no-work" v-if="haveWork">尚未有作品上传，敬请期待</div>
       <ul class="items">
         <li class="item" v-for="(item, index) in workItems" @click="gotoInfo(item)">
           <img :src=item.img alt="">
@@ -26,7 +27,8 @@
     },
     data(){
       return{
-        workItems: Array
+        workItems: Array,
+        haveWork: false
       }
     },
     methods:{
@@ -37,6 +39,10 @@
           console.log(res.data);
           if (res.data.success) {
             _this.workItems = res.data.obj.result;
+            console.log(_this.workItems.length);
+            if (_this.workItems.length == 0) {
+              _this.haveWork = true;
+            }
           }else{
             alert('error');
           }

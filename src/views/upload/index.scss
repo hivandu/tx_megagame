@@ -13,34 +13,39 @@
         margin-top: 10px;
         clear: both;
         display: table;
+        position: relative;
+        align-items: center;
         &.submit {
           label {
             background: none;
           }
+        }
+        .input-error {
+          color: #CE0A54;
         }
       }
       input[type="text"],
       textarea {
         background-color: #d7e2ff;
       }
-      .judgment{
-        clear:both;
-        display:table;
+      .judgment {
+        clear: both;
+        display: table;
         line-height: 40px;
-        .title{
+        .title {
           width: 100px;
-          margin-right:10px;
+          margin-right: 10px;
         }
-        div{
-          float:left;
-          margin-right:10px;
+        div {
+          float: left;
+          margin-right: 10px;
         }
-        input[type="radio"]{
-          float:left;
-          margin-top:12px;
+        input[type="radio"] {
+          float: left;
+          margin-top: 12px;
         }
-        label{
-          width:30px;
+        label {
+          width: 30px;
           background: none;
         }
       }
@@ -55,7 +60,7 @@
         background-color: #0e3b73;
         vertical-align: top;
       }
-      input[type="text"] {
+      input[type="text"], input[type="tel"] {
         float: left;
         width: 481px;
         height: 38px;
@@ -65,8 +70,16 @@
         padding-left: 10px;
         background-color: #d7e2ff;
         color: #041540;
-        &:disabled{
+        &:disabled {
           background-color: #ddd;
+        }
+        &.teammeber {
+          width: 105px;
+          margin-left: 10px;
+          float: left;
+          &.first{
+            margin-left:0;
+          }
         }
       }
       textarea {
@@ -78,7 +91,7 @@
         background-color: #d7e2ff;
         color: #041540;
         font-size: 18px;
-        &:disabled{
+        &:disabled {
           background-color: #ddd;
         }
       }
@@ -103,12 +116,12 @@
         color: #fff;
         border: none;
         float: left;
-        &:disabled{
+        &:disabled {
           opacity: 0.5;
         }
       }
-      input[type="button"]{
-        &:disabled{
+      input[type="button"] {
+        &:disabled {
           opacity: 0.5;
         }
       }

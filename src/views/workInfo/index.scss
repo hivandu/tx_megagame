@@ -4,17 +4,22 @@
   }
 }
 
-.game-info {
-  margin-top: 30px;
+#activity-info {
+  .game-info {
+    margin-top: 30px;
+    p{
+      width: 650px;
+    }
+  }
 }
 
 .members {
-  margin-top:20px;
+  margin-top: 20px;
   p {
     margin-top: 20px;
   }
   table {
-    margin-top:10px;
+    margin-top: 10px;
     tr {
       th,
       td {
@@ -30,20 +35,20 @@ table {
   td {
     text-align: left;
   }
-  td {
-    color: #2c8aff;
-  }
 }
 
 embed {
   margin-top: 50px;
-  width: 640px;
+  width: 650px;
   height: 500px;
 }
 
-
-.nav-guide{
+.nav-guide {
   font-size: 12px;
-  margin-bottom:15px;
-  cursor:pointer;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.game-ppt {
+  margin-top: 20px;
 }

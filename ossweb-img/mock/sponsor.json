@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "msg":"",
+  "obj":{
+    "sponsor":[{
+      "url":"//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/logo/01.png"
+    }],
+    "organizer":[{
+      "url":"//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/logo/02.png"
+    }],
+    "strategic":[{
+      "url":"//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/logo/03.png"
+    }],
+    "media":[{
+      "url":"//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/logo/04.png"
+    },{
+      "url":"//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/logo/05.png"
+    },{
+      "url":"//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/logo/06.png"
+    },{
+      "url":"//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/logo/07.png"
+    },{
+      "url":"//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/logo/08.png"
+    }]
+  }
+}

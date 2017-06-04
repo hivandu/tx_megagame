@@ -2,7 +2,7 @@
   <div id="qrcode">
     <div class="qrcode">
       <div class="tab">
-        <a href="javascript:;" :class="['tab blue-font',qrIndex == 1?'selected':'']" @click="tabClick('1')">快速组队</a><a href="javascript:;" class="tab" @click="tabClick('2')" :class="['tab blue-font',qrIndex == 2?'selected':'']">赛事资讯</a>
+        <div href="javascript:;" :class="['tab blue-font',qrIndex == 1?'selected':'']" @click="tabClick('1')">快速组队</div><div href="javascript:;" class="tab" @click="tabClick('2')" :class="['tab blue-font',qrIndex == 2?'selected':'']">赛事资讯</div>
       </div>
       <div class="content" v-show="qrIndex == 1">
         <div class="qrcode-code">

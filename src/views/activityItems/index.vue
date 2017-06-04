@@ -7,9 +7,9 @@
     <div class="info scroll">
       <ul class="items">
         <li class="item" v-for="(item, index) in activityItems" @click="gotoInfo(item)">
-          <img :src=item.img alt="">
+          <img :src=item.iInfoImg alt="">
           <div class="link">
-            <a href="javascript:;">{{item.title}}</a>
+            <a href="javascript:;">{{item.sInfoTitle}}</a>
           </div>
         </li>
       </ul>
@@ -30,13 +30,22 @@
     methods:{
       // 获取资讯信息
       getActivityItems(){
+        console.log('getActivityItems');
         const _this = this;
-        this.$http.get(PathUtil.getPath('getActivityItems')).then(function(res){
-          console.log(res.data);
-          if (res.data.success) {
-            _this.activityItems = res.data.obj.result;
+        this.$http.get(PathUtil.getPath('getActivityItems'),{
+          params:{
+            gid: 434,
+            artType: 1,
+            from: 'pweb',
+            cid: 'all'
+          }
+        }).then(function(res){
+          let _fun = new Function('var _res ='+res.data+'; return _res');
+          let _res = _fun();
+          if (_res.status == 0) {
+            _this.activityItems = _res.msg.result;
           }else{
-            alert('error');
+            console.log('error');
           }
         }).catch(function(err){
           console.log(err);
@@ -45,10 +54,8 @@
 
       // 转到详情页
       gotoInfo(item){
-        console.log('goto click');
-        this.$router.push({path:'/activityInfo', query:{"id": item.id}});
-        // 正式环境替换为资讯详情页面路径
-        // this.$router.push({path:item.link});
+        console.log(item);
+        this.$router.push({path:'/activityInfo', query:{"id":item.iInfoId}});
       }
     }
   }

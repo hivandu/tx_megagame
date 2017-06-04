@@ -25,10 +25,16 @@
   }
   ul.other{
     li{
+      position: relative;
       text-align: left;
       padding:3px 0;
       clear:both;
       display:table;
+      padding-left:20px;
+      span{
+        position: absolute;
+        left:0px;
+      }
     }
   }
   ul {
