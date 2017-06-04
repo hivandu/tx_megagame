@@ -535,11 +535,11 @@ export default {
             } else {
               _this.picked = 'false'
             }
-            if (_data.isHaveTeam == 1) {
-              debugger;
-              _this.isHaveTeam = 1;
-              _this.getTeamInfo();
-            }
+          }
+          if (_data.isHaveTeam == 1) {
+            debugger;
+            _this.isHaveTeam = 1;
+            _this.getTeamInfo();
           }
           _this.setTeamInfoCanChange();
           _this.setCanChangeCaptale();
