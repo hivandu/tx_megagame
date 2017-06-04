@@ -1,0 +1,79 @@
+{
+  status: 0,
+  msg: {
+    result: [{
+      iInfoId: 201326,
+      iInfoVid: "",
+      iInfoGid: 434,
+      iInfoCate: 1,
+      sInfoTitle: "格子在波士顿和球迷合影",
+      sInfoData: "//itea-cdn.qq.com/file/tglStatic/details/434/6/art201326.js",
+      sInfoDetail: "//gameinstitute.qq.com/tgl/detail.shtml?dt=%2F%2Fitea-cdn.qq.com%2Ffile%2FtglStatic%2Fdetails%2F434%2F6%2Fart201326.js",
+      sInfoSummary: "121312",
+      iInfoTypeId: "9392",
+      iInfoType: "活动资讯",
+      iInfoJumpUrl: "",
+      iInfoTop: "0",
+      iInfoComments: 0,
+      iInfoPv: 0,
+      iInfoVv: 0,
+      iInfoTime: "2017-05-26 15:54:02",
+      iInfoAuthor: "",
+      iInfoImg: "//itea-cdn.qq.com/file/tgl/20170526/005Ugbtxgy1ffy22yd568j30ku0kqjuu.1495784559.60450c19bc4c7f12c77134510e3699ab.jpg",
+      iInfoFavNum: 0,
+      iInfoChannels: {
+        iInfoChannelId: "9392",
+        iInfoChannelName: "活动资讯"
+      },
+      iInfoTags: [{
+        tagIdParent: "0",
+        tagNameParent: null,
+        tagId: "1515",
+        tagName: "游戏创意制作大赛"
+      }],
+      iInfoKeyword: [{
+        keywordId: "4602",
+        keywordName: "游戏创意制作大赛"
+      }]
+    }, {
+      iInfoId: 201283,
+      iInfoVid: "",
+      iInfoGid: 434,
+      iInfoCate: 1,
+      sInfoTitle: "测试",
+      sInfoData: "//itea-cdn.qq.com/file/tglStatic/details/434/3/art201283.js",
+      sInfoDetail: "//gameinstitute.qq.com/tgl/detail.shtml?dt=%2F%2Fitea-cdn.qq.com%2Ffile%2FtglStatic%2Fdetails%2F434%2F3%2Fart201283.js",
+      sInfoSummary: "测试测试测试测试测试测试测试测试测试测试测试测试测试",
+      iInfoTypeId: "9392",
+      iInfoType: "活动资讯",
+      iInfoJumpUrl: "",
+      iInfoTop: "0",
+      iInfoComments: 0,
+      iInfoPv: 0,
+      iInfoVv: 0,
+      iInfoTime: "2017-05-26 14:02:40",
+      iInfoAuthor: "",
+      iInfoImg: "//itea-cdn.qq.com/file/tgl/20170526/kv.1495778223.978fb43172a0e804ac32615b077946b2.jpg",
+      iInfoFavNum: 0,
+      iInfoChannels: {
+        iInfoChannelId: "9392",
+        iInfoChannelName: "活动资讯"
+      },
+      iInfoTags: [{
+        tagIdParent: "0",
+        tagNameParent: null,
+        tagId: "1515",
+        tagName: "游戏创意制作大赛"
+      }],
+      iInfoKeyword: [{
+        keywordId: "4602",
+        keywordName: "游戏创意制作大赛"
+      }]
+    }],
+    total: 2,
+    pagesize: 20,
+    totalpage: 1,
+    page: 1,
+    infoStatUrl: "//tgl.qq.com/api/tglStatic/list/tglMoni.js?aid=201326|201283&gid=434&cid=pweb&type=20"
+  }
+}

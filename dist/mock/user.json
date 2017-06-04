@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "msg": "",
+  "obj": {
+    "status": 1,
+    "userInfo": {
+      "name": "",
+      "qq": "00000",
+      "wechat": "youxi",
+      "nickName": "游戏学院"
+    }
+  }
+}
