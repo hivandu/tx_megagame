@@ -48,9 +48,9 @@
           <div class="title second-title blue-font" for="">团队信息</div>
           <div>{{uHaveTeamText}}</div>
           <div v-show="canChangeCaptale">
-            <input type="radio" id="captain" value="true" v-model="picked">
+            <input type="radio" id="captain" value="true" v-model="picked" :disabled="!inputCanChange">
             <label for="captain">是</label>
-            <input type="radio" id="uncaptain" value="false" v-model="picked">
+            <input type="radio" id="uncaptain" value="false" v-model="picked" :disabled="!inputCanChange">
             <label for="uncaptain">否</label><span v-show="isCaptale" class="blue-font">以下为必填项</span>
           </div>
         </div>
