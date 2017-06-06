@@ -32,12 +32,14 @@
       getActivityItems(){
         console.log('getActivityItems');
         const _this = this;
-        this.$http.get(PathUtil.getPath('getActivityItems'),{
+        this.$http.get('http://tgl.qq.com/api/tglStatic/list/search.js',{
           params:{
             gid: 434,
             artType: 1,
             from: 'pweb',
-            cid: 'all'
+            cid: 'all',
+            pagesize:20,
+            page: 1
           }
         }).then(function(res){
           let _fun = new Function('var _res ='+res.data+'; return _res');

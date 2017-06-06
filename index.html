@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="robots" content="all">
   <meta name="author" content="Tencent-CP">
   <meta name="Copyright" content="Tencent">
@@ -78,22 +79,7 @@
   <script>
   var userStatus = true;
   var userName = null;
-  var userQQ;
-  milo.ready(function() {
-    need("biz.login-min", function(LoginManager) {
-      LoginManager.checkLogin(function() {
-        g("login_qq_span").innerHTML = LoginManager.getUserUin(); //获取QQ号
-        LoginManager.getNickName(function(loginInfo) {
-          if (loginInfo.isLogin) {
-            g("login_nickname_span").innerHTML = loginInfo.nickName;
-          }
-          key = 1;
-        });
-      }, function() {
-        LoginManager.login();
-      });
-    });
-  });
+  var userQQ
   milo.ready(function() {
     need("biz.login-min", function(LoginManager) {
         LoginManager.checkLogin(function() {

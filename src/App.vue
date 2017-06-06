@@ -45,6 +45,7 @@ export default {
   },
   mounted() {
     console.log(this.userStatus);
+    console.log('为了脸萌，大地母亲在忽悠着你。。。')
     this.path = this.$route.path;
     if (userName) {
       this.userInfo.userName = userName;
