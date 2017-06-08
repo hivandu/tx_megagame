@@ -30,9 +30,8 @@
     methods:{
       // 获取资讯信息
       getActivityItems(){
-        console.log('getActivityItems');
         const _this = this;
-        this.$http.get('http://tgl.qq.com/api/tglStatic/list/search.js',{
+        this.$http.get(PathUtil.getPath('getActivityItems'),{
           params:{
             gid: 434,
             artType: 1,
