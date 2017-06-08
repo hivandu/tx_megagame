@@ -5,25 +5,35 @@
     top: 0.2rem;
     left: 0.3rem;
     width: 2.8rem;
+    -webkit-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    -o-transform: translateY(200px);
     transform: translateY(200px);
     opacity: 0;
-    transition: all 0.5s;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
     font-size: 0.12rem;
   }
   .bg {
     position: absolute;
     top: 0;
     left: 0;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
     transform: translateX(-100%);
     opacity: 0;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
   }
   .slide {
-    background: url("//game.gtimg.cn/images/gameinstitute/act/a20170601nextidea/slide-dark.png") no-repeat;
+    background: url("//game.gtimg.cn/images/gameinstitute/act/a20170524match/slide-dark.png") no-repeat;
   }
-  .content{
+  .content {
     text-align: justify;
-    margin-top:0.1rem;
+    margin-top: 0.1rem;
   }
 }
 
@@ -41,10 +51,20 @@
   .mentor-5 {
     position: absolute;
     overflow: hidden;
-    opacity:0;
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
     transform: translateY(10px);
+    &.shadow {
+      box-shadow: 0 3px 5px #000;
+    }
     &.checked {
       box-shadow: 0 3px 5px #000;
+      z-index: 999;
+      .person {
+        display: inline-block;
+      }
     }
     img {
       width: 100%;
@@ -74,13 +94,7 @@
         font-size: 0.14rem;
       }
       .intor {
-        font-size: 0.10rem; 
-      }
-    }
-    &:hover {
-      z-index: 999;
-      .person {
-        display: flex;
+        font-size: 0.10rem;
       }
     }
   }
@@ -89,14 +103,20 @@
     height: 1.6rem;
     top: 0.5rem;
     left: 0.025rem;
-    transition: all .3s;
+    &.mentorAnimation {
+      -webkit-animation: fadeInUp .3s ease forwards;
+      animation: fadeInUp .3s ease forwards;
+    }
   }
   .mentor-2 {
     width: 1.25rem;
     height: 1.6rem;
     top: 0;
     right: 0;
-    transition: all .3s .2s;
+    &.mentorAnimation {
+      -webkit-animation: fadeInUp .3s .2s ease forwards;
+      animation: fadeInUp .3s .2s ease forwards;
+    }
   }
   .mentor-3 {
     width: 1.25rem;
@@ -104,21 +124,70 @@
     top: 1.16rem;
     left: 1rem;
     z-index: 998;
-    transition: all 1s .4s;
+    &.mentorAnimation {
+      -webkit-animation: fadeInUp 1s .5s ease forwards;
+      animation: fadeInUp 1s .5s ease forwards;
+    }
   }
   .mentor-4 {
     width: 1.25rem;
     height: 1.6rem;
     left: 0;
     bottom: 0;
-    transition: all 0.3s .4s;
+    &.mentorAnimation {
+      -webkit-animation: fadeInUp .3s .4s ease forwards;
+      animation: fadeInUp .3s .4s ease forwards;
+    }
   }
   .mentor-5 {
     width: 1.25rem;
     height: 1.6rem;
     right: -0.1rem;
     bottom: 0.26rem;
-    transition: all 0.3s .3s;
+    &.mentorAnimation {
+      -webkit-animation: fadeInUp .3s .3s ease forwards;
+      animation: fadeInUp .3s .3s ease forwards;
+    }
   }
 }
 
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+};
+@-ms-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -ms-transform: translate3d(0, 10px, 0);
+  }
+  100% {
+    opacity: 1;
+    -ms-transform: translate3d(0, 0, 0);
+  }
+};
+@-o-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -o-transform: translate3d(0, 10px, 0);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: translate3d(0, 0, 0);
+  }
+};
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+};

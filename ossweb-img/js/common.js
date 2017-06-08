@@ -3,6 +3,7 @@ var app = {
     app.font();
     app.swiper();
     app.canvas();
+    app.mentor();
   },
 
   font: function() {
@@ -128,6 +129,9 @@ var app = {
     app.mySwiper = $('.swiper-container').swiper({
       direction: 'vertical',
       mousewheelControl: true,
+      longSwipesRatio:0.1,
+      // simulateTouch:false,
+      // preventDefault:true,
       onSlideChangeEnd: function(swiper) {
         var _index = swiper.activeIndex;
         slideAnimationEnd(_index, app.mySwiper);
@@ -148,9 +152,66 @@ var app = {
     $('.copy-font').click(function() {
       $('#webUrl').select();
     })
-  }
+  },
+
+  mentor: function() {
+    // 导师点击事件
+    $('.mentor-inner').click(function() {
+      $('.mentor-inner').removeClass('checked');
+      // $('.mentor-inner').removeClass('shadow');
+      $(this).addClass('checked');
+    })
+  },
+
+  addPlayerInfo: function(data) {
+    // 提交用户信息
+    const _this = this;
+    $.ajax({
+      url: 'https://apps.game.qq.com/poker/a20161008charlieben/charlieFrame/index.php/yxds/playerImfInsertMb',
+      type: 'post',
+      data: {
+        qq: encodeURIComponent(data.qq),
+        name: encodeURIComponent(data.name),
+        tel: encodeURIComponent(data.tel),
+        email: encodeURIComponent(data.email)
+      },
+      success: function(res) {
+        // 转对象
+        var _res = JSON.parse(res);
+        if (_res.iRet == 0) {
+          if (_res.jData.changeNum > 0) {
+            alert('提交报名成功！');
+
+          } else if (_res.jData.changeNum == -2) {
+            alert('报名时间已截止！');
+          } else {
+            alert('您已提交过报名，请到官网修改信息。');
+          }
+          // 解锁滑动并跳转到第一屏
+          app.mySwiper.unlockSwipes();
+          app.mySwiper.slideTo(0);
+        } else {
+          alert('提交失败，请重试！')
+        }
+      },
+      error: function(err) {
+        alert('提交失败，请重试！')
+      }
+    })
+  },
 }
 
+// 监视设备方向
+window.addEventListener("orientationchange", function() {
+  media();
+}, false);
+
+function media(arg){
+  setTimeout(function(){
+    app.font();
+    app.mySwiper.update();
+  }, 200);
+}
 
 
 // 首页动画
@@ -192,68 +253,71 @@ var slideAnimationEnd = function(index, mySwiper) {
   }
 
   if (_index == 3) {
-      $('.drop').addClass('blue');
-      $('.drop').removeClass('white');
-      setTimeout(function() {
-        $('.slide-3 .info').addClass('fadeInUp');
-      }, 100);
-      setTimeout(function() {
-        $('.slide-3 .mentor-inner').addClass('fadeInUp');
-      }, 200);
-      setTimeout(function() {
-        $('.slide-3 .title').addClass('fadeInUp');
-      }, 1200);
-      setTimeout(function() {
-        $('.slide-3 .content').addClass('fadeInUp');
-      }, 1500);
-    } else {
-      $('.slide-3 .info').removeClass('fadeInUp');
-      $('.slide-3 .title').removeClass('fadeInUp');
-      $('.slide-3 .content').removeClass('fadeInUp');
-      $('.slide-3 .mentor-inner').removeClass('fadeInUp');
-    }
+    $('.drop').addClass('blue');
+    $('.drop').removeClass('white');
+    setTimeout(function() {
+      $('.slide-3 .info').addClass('fadeInUp');
+    }, 100);
+    setTimeout(function() {
+      $('.slide-3 .mentor-inner').addClass('mentorAnimation');
+      $('.slide-3 .mentor-3').addClass('shadow');
+    }, 200);
+    setTimeout(function() {
+      $('.slide-3 .title').addClass('fadeInUp');
+    }, 1200);
+    setTimeout(function() {
+      $('.slide-3 .content').addClass('fadeInUp');
+    }, 1500);
+  } else {
+    $('.slide-3 .info').removeClass('fadeInUp');
+    $('.slide-3 .title').removeClass('fadeInUp');
+    $('.slide-3 .content').removeClass('fadeInUp');
+    $('.slide-3 .mentor-inner').removeClass('mentorAnimation');
+    $('.slide-3 .mentor-inner').removeClass('checked');
+  }
 
-    if (_index == 4) {
-      $('.drop').addClass('blue');
-      $('.drop').removeClass('white');
-      mySwiper.unlockSwipeToNext()
-      $('.drop').show();
-      setTimeout(function() {
-        $('.slide-4 .title').addClass('fadeInUp');
-      }, 200);
-      setTimeout(function() {
-        $('.process-item').addClass('fadeInUp');
-      }, 900);
-      setTimeout(function() {
-        $('.line').addClass('fadeInUp');
-      }, 500);
-    } else {
-      $('.process-item').removeClass('fadeInUp');
-      $('.slide-4 .title').removeClass('fadeInUp');
-      $('.line').removeClass('fadeInUp');
-    }
+  if (_index == 4) {
+    $('.drop').addClass('blue');
+    $('.drop').removeClass('white');
+    mySwiper.unlockSwipeToNext()
+    $('.drop').show();
+    setTimeout(function() {
+      $('.slide-4 .title').addClass('fadeInUp');
+    }, 200);
+    setTimeout(function() {
+      $('.process-item').addClass('fadeInUp');
+    }, 900);
+    setTimeout(function() {
+      $('.line').addClass('fadeInUp');
+    }, 500);
+  } else {
+    $('.process-item').removeClass('fadeInUp');
+    $('.slide-4 .title').removeClass('fadeInUp');
+    $('.line').removeClass('fadeInUp');
+  }
 
-    if (_index == 5) {
-      mySwiper.lockSwipeToNext()
-      $('.drop').hide();
-      setTimeout(function(){
-        $('.slide-5 .title').addClass('fadeInUp');
-      }, 200);
-      setTimeout(function() {
-        $('.slide-5 .element').addClass('fadeInUp');
-      }, 1000);
-      setTimeout(function() {
-        $('.slide-5 .center').find('a').addClass('fadeInUp');
-      }, 2000);
-    } else {
-      $('.slide-5 .element').removeClass('fadeInUp');
-      $('.slide-5 .center').find('a').removeClass('fadeInUp');
-      $('.slide-5 .title').removeClass('fadeInUp');
-    }
+  if (_index == 5) {
+    mySwiper.lockSwipeToNext()
+    $('.drop').hide();
+    setTimeout(function() {
+      $('.slide-5 .title').addClass('fadeInUp');
+    }, 200);
+    setTimeout(function() {
+      $('.slide-5 .element').addClass('fadeInUp');
+    }, 1000);
+    setTimeout(function() {
+      $('.slide-5 .center').find('a').addClass('fadeInUp');
+    }, 2000);
+  } else {
+    $('.slide-5 .element').removeClass('fadeInUp');
+    $('.slide-5 .center').find('a').removeClass('fadeInUp');
+    $('.slide-5 .title').removeClass('fadeInUp');
+  }
 
-    if(_index == 6){
-      mySwiper.lockSwipes();
-    }
+  if (_index == 6) {
+    mySwiper.lockSwipes();
+    $('.drop').hide();
+  }
 }
 
 var slideAnimationStart = function(index) {

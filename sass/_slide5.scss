@@ -3,12 +3,17 @@
     position: absolute;
     top: 0;
     left: 0;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
     transform: translateX(-100%);
     opacity: 0;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
   }
   .slide {
-    background: url("//game.gtimg.cn/images/gameinstitute/act/a20170601nextidea/slide-dark.png") no-repeat;
+    background: url("//game.gtimg.cn/images/gameinstitute/act/a20170524match/slide-dark.png") no-repeat;
   }
   .info {
     position: absolute;
@@ -25,7 +30,7 @@
   .center {
     a {
       position: absolute;
-      bottom: 0.3rem;
+      bottom: 1rem;
       left: 1.1rem;
       text-decoration: none;
       font-size: 0.16rem;
@@ -36,6 +41,8 @@
       border-radius: 0.7rem;
       color: #fff;
       opacity: 0;
+      -webkit-transition: all 1.3s;
+      -o-transition: all 1.3s;
       transition: all 1.3s;
       display:block;
       text-align:center;
@@ -60,26 +67,36 @@
     .item-1 {
       top:0;
       left:0;
+      -webkit-transition: all .6s .1s;
+      -o-transition: all .6s .1s;
       transition: all .6s .1s;
     }
     .item-2 {
       top:0.1rem;
       right:-0.1rem;
+      -webkit-transition: all .6s .2s;
+      -o-transition: all .6s .2s;
       transition: all .6s .2s;
     }
     .item-3 {
       top: 1.06rem;
       left:0.87rem;
+      -webkit-transition: all .6s .3s;
+      -o-transition: all .6s .3s;
       transition: all .6s .3s;
     }
     .item-4 {
       left:-0.1rem;
       bottom:0.1rem;
+      -webkit-transition: all .6s .4s;
+      -o-transition: all .6s .4s;
       transition: all .6s .4s;
     }
     .item-5 {
       bottom: 0;
       right:0;
+      -webkit-transition: all .6s .5s;
+      -o-transition: all .6s .5s;
       transition: all .6s .5s;
     }
   }

@@ -1,7 +1,5 @@
 // slide-1 上悬浮小元素较多
 .slide-1 {
-  // background: url(../image/bg-index.png) no-repeat;
-  // background-size: cover;
   .bg-index {
     width: 100%;
     height: 100%;
@@ -11,6 +9,7 @@
     position: absolute;
     top: 0.4rem;
     left: 0.5rem;
+    -webkit-animation: leftRight 15s ease-in-out infinite;
     animation: leftRight 15s ease-in-out infinite;
   }
   .console-boat {
@@ -18,6 +17,7 @@
     position: absolute;
     bottom: 1rem;
     right: -0.5rem;
+    -webkit-animation: updown 15s ease-in-out infinite;
     animation: updown 15s ease-in-out infinite;
     z-index: 998;
   }
@@ -26,6 +26,7 @@
     position: absolute;
     bottom: 2.3rem;
     right: -0.3rem;
+    -webkit-animation: updown 12s ease-in-out infinite;
     animation: updown 12s ease-in-out infinite;
     z-index: 997;
   }
@@ -34,6 +35,7 @@
     position: absolute;
     bottom: 0.7rem;
     left: 1.2rem;
+    -webkit-animation: updown 10s ease-in-out infinite;
     animation: updown 10s ease-in-out infinite;
     z-index: 994;
   }
@@ -42,6 +44,7 @@
     position: absolute;
     bottom: 0.2rem;
     right: 0;
+    -webkit-animation: updown 19s ease-in-out infinite;
     animation: updown 19s ease-in-out infinite;
     z-index: 992;
   }
