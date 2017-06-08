@@ -3,13 +3,14 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="robots" content="all">
   <meta name="author" content="Tencent-CP">
   <meta name="Copyright" content="Tencent">
   <meta name="Description" content="">
   <meta name="Keywords" content="腾讯游戏">
   <title>专题主题（标题）- 产品中文全称官方网站 - 腾讯游戏</title>
-  <link rel="stylesheet" type="text/css" href="//gameinstitute.qq.com/act/a20170522nextidea/css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
   <style>
   .ie-fix {
     display: block;
@@ -58,7 +59,7 @@
 </head>
 
 <body>
-  <img src="//game.gtimg.cn/images/gameinstitute/act/a20170522nextidea/kv.jpg" alt="" class="ie-fix">
+  <img src="ossweb-img/image/kv.jpg" alt="" class="ie-fix">
   <div class="mask">
     <div class="inner">
       您当前浏览器不支持本页面功能，请升级您的浏览器，或使用<a href="http://www.google.cn/chrome/">Google Chrome</a>, <a href="http://www.firefox.com.cn/download/">Firefox</a>等高级浏览器，将会得到更好的体验！
@@ -67,7 +68,7 @@
   <div id="app-box" :userStatus="userStatus"></div>
   <!-- built files will be auto injected -->
   <script src="//ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script>
-  <script type="text/javascript" src="//gameinstitute.qq.com/act/a20170522nextidea/js/swiper.min.js"></script>
+  <script type="text/javascript" src="js/swiper.min.js"></script>
   <!-- <script type="text/javascript" src="//gameinstitute.qq.com/act/a20170522nextidea/js/config.js"></script> -->
   <script type="text/javascript" src="js/config.js"></script>
   <!-- <script src="//ossweb-img.qq.com/images/js/title.js"></script> -->
@@ -78,47 +79,32 @@
   <script>
   var userStatus = true;
   var userName = null;
-  var userQQ;
+  var userQQ
   milo.ready(function() {
     need("biz.login-min", function(LoginManager) {
       LoginManager.checkLogin(function() {
-        g("login_qq_span").innerHTML = LoginManager.getUserUin(); //获取QQ号
+        console.log('checkLogin');
+        // 如果页面内有这个id则插入值，没有则抛异常
+        try {
+          g("login_qq_span").value = LoginManager.getUserUin();
+        } catch (err) {
+          console.log(err);
+        }
+        userQQ = LoginManager.getUserUin(); //获取QQ号
+        console.log(userQQ);
         LoginManager.getNickName(function(loginInfo) {
           if (loginInfo.isLogin) {
+            userStatus = true;
             g("login_nickname_span").innerHTML = loginInfo.nickName;
+            userName = loginInfo.nickName;
+          } else {
+            userStatus = false;
           }
           key = 1;
         });
       }, function() {
         LoginManager.login();
       });
-    });
-  });
-  milo.ready(function() {
-    need("biz.login-min", function(LoginManager) {
-        LoginManager.checkLogin(function() {
-          console.log('checkLogin');
-          // 如果页面内有这个id则插入值，没有则抛异常
-          try {
-            g("login_qq_span").value = LoginManager.getUserUin();
-          } catch (err) {
-            console.log(err);
-          }
-          userQQ = LoginManager.getUserUin(); //获取QQ号
-          console.log(userQQ);
-          LoginManager.getNickName(function(loginInfo) {
-            if (loginInfo.isLogin) {
-              userStatus = true;
-              g("login_nickname_span").innerHTML = loginInfo.nickName;
-              userName = loginInfo.nickName;
-            } else {
-              userStatus = false;
-            }
-            key = 1;
-          });
-        }, function() {
-          LoginManager.login();
-        });
     });
   });
 

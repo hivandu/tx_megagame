@@ -9,7 +9,7 @@
       <div>报名须知：本届大赛支持团队报名，每个团队人数最多不能超过五人，个人信息可自行填写和修改，团队信息需队长填写和修改。</div>
       <form @submit.prevent="submitForm($event)" action="index_submit" method="get" accept-charset="utf-8">
         <div class="form-line judgment">
-          <div class="title second-title blue-font" for="">个人信息</div><span class="blue-font">{{isToSigned}}</span>
+          <div class="title second-title blue-font" for="">个人信息</div><span>{{isToSigned}}</span>
         </div>
         <div class="form-line">
           <label for="">个人QQ</label>
@@ -48,9 +48,9 @@
           <div class="title second-title blue-font" for="">团队信息</div>
           <div>{{uHaveTeamText}}</div>
           <div v-show="canChangeCaptale">
-            <input type="radio" id="captain" value="true" v-model="picked">
+            <input type="radio" id="captain" value="true" v-model="picked" :disabled="!inputCanChange">
             <label for="captain">是</label>
-            <input type="radio" id="uncaptain" value="false" v-model="picked">
+            <input type="radio" id="uncaptain" value="false" v-model="picked" :disabled="!inputCanChange">
             <label for="uncaptain">否</label><span v-show="isCaptale" class="blue-font">以下为必填项</span>
           </div>
         </div>

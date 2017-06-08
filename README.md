@@ -1,6 +1,20 @@
 # SISO-腾讯外包项目《游戏创意大赛》
 
+这里是官网源代码，新增guide和mobile分支，将引导页和移动引导页并入项目中。
+
+https://github.com/hivandu/tx_megagame/tree/guide
+
+https://github.com/hivandu/tx_megagame/tree/mobile
+
+
 > 此项目为腾讯的游戏创意大赛外包项目，使用vue2+webpack构建
+
+项目官方地址: `http://gameinstitute.qq.com/act/a20170522nextidea/index.shtml#/`
+
+个人展示地址(无法使用腾讯登录插件，所以部分功能受限):
+
+
+
 
 ## 基本说明
 四个组件为在`src/components/`内
