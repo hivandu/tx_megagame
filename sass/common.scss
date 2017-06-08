@@ -53,7 +53,7 @@ body {
     left: 50%;
     margin-left: -72px;
     // transform: translateX(-50%);
-    background-color: rgba(19,111,228, 0.7);
+    background-color: rgba(19, 111, 228, 0.7);
     border-radius: 30px;
     text-align: center;
     text-decoration: none;
@@ -245,6 +245,9 @@ body {
   .slide {
     background: url("//game.gtimg.cn/images/gameinstitute/act/a20170526guide/slide-dark.png") no-repeat;
   }
+  .content{
+    width:340px !important;
+  }
 }
 
 .slide-4 {
@@ -316,13 +319,13 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 800px;
-  height: 483px;
-  font-size: 24px;
+  width: 635px;
+  height: 383px;
+  font-size: 18px;
   background-color: #000b28;
-  transform:translateY(10%);
-  margin-left:-400px;
-  margin-top:-242px;
+  transform: translateY(10%);
+  margin-left: -317px;
+  margin-top: -191px;
   opacity: 0;
   transition: all 1s;
 }
@@ -332,7 +335,7 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 448px;
+  height: 348px;
   z-index: 999;
   img {
     width: 100%;
@@ -346,11 +349,11 @@ body {
 
 .letter-paper {
   position: absolute;
-  width: 674px;
-  height: 360px;
+  width: 534px;
+  height: 300px;
   left: 50%;
-  bottom: 200px;
-  margin-left:-337px;
+  bottom: 150px;
+  margin-left: -267px;
   transform: translateY(110px);
   background-color: #fff;
   opacity: 0;
@@ -386,13 +389,13 @@ body {
 }
 
 .mentor {
-  width: 630px;
-  height: 540px;
+  width: 500px;
+  height: 440px;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top:-270px;
-  margin-left:-315px;
+  margin-top: -220px;
+  margin-left: -250px;
   transform: translateY(10%);
   .mentor-1,
   .mentor-2,
@@ -402,8 +405,8 @@ body {
     position: absolute;
     float: left;
     overflow: hidden;
-    width: 180px;
-    height: 225px;
+    width: 140px;
+    height: 174px;
     opacity: 0;
     -webkit-transform: translateY(10px);
     transform: translateY(10px);
@@ -419,23 +422,23 @@ body {
       height: 60px;
       display: none;
       color: #fff;
-      font-size: 16px;
+      font-size: 12px;
       background-color: rgba(19, 111, 228, 0.8);
       cursor: pointer;
       line-height: 24px;
       .person-inner {
         width: 90%;
-        height:100%;
+        height: 100%;
         position: absolute;
         display: flex;
         align-items: center;
         left: 10px;
       }
       .name {
-        font-size: 18px;
+        font-size: 14px;
       }
       .intor {
-        font-size: 16px;
+        font-size: 12px;
       }
     }
     &:hover {
@@ -636,8 +639,6 @@ body {
   }
 }
 
-
-
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -647,7 +648,9 @@ body {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
   }
-};
+}
+
+;
 @-ms-keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -657,7 +660,9 @@ body {
     opacity: 1;
     -ms-transform: translate3d(0, 0, 0);
   }
-};
+}
+
+;
 @-o-keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -667,7 +672,9 @@ body {
     opacity: 1;
     -o-transform: translate3d(0, 0, 0);
   }
-};
+}
+
+;
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -677,4 +684,6 @@ body {
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
-};
+}
+
+;

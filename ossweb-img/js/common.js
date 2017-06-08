@@ -234,9 +234,9 @@ var app = {
   init: function() {
     app.canvas();
     app.swiper();
-    var _w = window.innerWidth;
-    var _h = window.innerHeight;
-    console.log('width:' + _w + "; height:" + _h);
-    alert('width:' + _w + "; height:" + _h);
+    // var _w = window.innerWidth;
+    // var _h = window.innerHeight;
+    // console.log('width:' + _w + "; height:" + _h);
+    // alert('width:' + _w + "; height:" + _h);
   }
 }
