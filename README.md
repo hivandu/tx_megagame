@@ -8,7 +8,7 @@ https://github.com/hivandu/tx_megagame/tree/mobile
 
 设计稿存于百度网盘:
 
-链接: https://pan.baidu.com/s/1geBbQEZ 密码: 34m2
+链接: https://pan.baidu.com/s/1geBbQEZ 密码: `34m2`
 
 > 此项目为腾讯的游戏创意大赛外包项目，使用vue2+webpack构建
 
